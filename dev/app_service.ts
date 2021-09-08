@@ -1,10 +1,5 @@
 import {Construct} from "constructs";
-import {
-    AppService,
-    AppServicePlan,
-    MysqlServer,
-    ResourceGroup,
-} from "@cdktf/provider-azurerm";
+import {AppService, AppServicePlan, MysqlServer, ResourceGroup,} from "@cdktf/provider-azurerm";
 import "./dev-config";
 
 interface AppServiceStackProps {
@@ -33,7 +28,7 @@ export class AppServiceConstruct extends Construct {
         // create MySQL Database
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service
         this.app_service = new AppService(this, "iShare App", {
-            name: process.env.APP_SERVICE_NAME!+ process.env.SUFFIX,
+            name: process.env.APP_SERVICE_NAME! + process.env.SUFFIX,
             resourceGroupName: app_rg.name,
             location: app_rg.location,
             appServicePlanId: app_service_plan.id,

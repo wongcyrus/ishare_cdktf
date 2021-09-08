@@ -24,7 +24,7 @@ export class ApplicationInsightsConstruct extends Construct {
             this,
             "iShare dev application_insights",
             {
-                name: process.env.APPLICATION_INSIGHTS_NAME!+ process.env.SUFFIX,
+                name: process.env.APPLICATION_INSIGHTS_NAME! + process.env.SUFFIX,
                 applicationType: process.env.APPLICATION_INSIGHTS_TYPE!,
                 resourceGroupName: ai_rg.name,
                 location: ai_rg.location,

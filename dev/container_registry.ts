@@ -23,7 +23,7 @@ export class ContainerRegistrySConstruct extends Construct {
             this,
             "iShare dev container registry",
             {
-                name: process.env.CONTAINER_REGISTRY!+ process.env.SUFFIX,
+                name: process.env.CONTAINER_REGISTRY! + process.env.SUFFIX,
                 sku: process.env.CONTAINER_REGISTRY_SKU!,
                 resourceGroupName: cr_rg.name,
                 location: cr_rg.location,

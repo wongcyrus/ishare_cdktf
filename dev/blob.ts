@@ -1,5 +1,5 @@
 import {Construct} from "constructs";
-import { ResourceGroup, StorageAccount, StorageContainer,} from "@cdktf/provider-azurerm";
+import {ResourceGroup, StorageAccount, StorageContainer,} from "@cdktf/provider-azurerm";
 import "./dev-config";
 
 interface BlobStorageStackProps {
@@ -22,7 +22,7 @@ export class BlobStorageConstruct extends Construct {
             this,
             "iShare dev storage account",
             {
-                name: process.env.STORAGE_ACCOUNT_NAME!+ process.env.SUFFIX,
+                name: process.env.STORAGE_ACCOUNT_NAME! + process.env.SUFFIX,
                 resourceGroupName: bs_rg.name,
                 location: bs_rg.location,
                 accountTier: process.env.STORAGE_ACCOUNT_TIER!,

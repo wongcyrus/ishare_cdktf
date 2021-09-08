@@ -1,5 +1,5 @@
 import {Construct} from "constructs";
-import {ResourceGroup, MysqlFirewallRule, MysqlServer,} from "@cdktf/provider-azurerm";
+import {MysqlFirewallRule, MysqlServer, ResourceGroup,} from "@cdktf/provider-azurerm";
 import "./dev-config";
 
 interface MySQLFirewallStackProps {
@@ -21,7 +21,7 @@ export class MySQLFirewallConstruct extends Construct {
             this,
             "iShare dev MySQL Server Firewall",
             {
-                name: process.env.MYSQL_FIREWALL_NAME!,
+                name: process.env.MYSQL_FIREWALL_NAME! + process.env.SUFFIX,
                 resourceGroupName: sql_rg.name,
                 serverName: mysql_server.name,
                 startIpAddress: process.env.MYSQL_FIREWALL_START_IP!,

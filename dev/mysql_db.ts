@@ -1,5 +1,5 @@
 import {Construct} from "constructs";
-import {ResourceGroup, MysqlDatabase, MysqlServer,} from "@cdktf/provider-azurerm";
+import {MysqlDatabase, MysqlServer, ResourceGroup,} from "@cdktf/provider-azurerm";
 import "./dev-config";
 
 interface MySQLDatabaseStackProps {

@@ -1,5 +1,5 @@
 import {Construct} from "constructs";
-import {ResourceGroup, MysqlServer} from "@cdktf/provider-azurerm";
+import {MysqlServer, ResourceGroup} from "@cdktf/provider-azurerm";
 import "./dev-config";
 
 interface MySQLServerStackProps {
@@ -17,7 +17,7 @@ export class MySQLServerStack extends Construct {
         // create MySQL Server
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mysql_server
         this.server = new MysqlServer(this, "iShare dev MySQL Server", {
-            name: process.env.MYSQL_SERVER_NAME!,
+            name: process.env.MYSQL_SERVER_NAME! + process.env.SUFFIX,
             version: process.env.MYSQL_SERVER_VERSION!,
             skuName: process.env.MYSQL_SERVER_SKU_NAME!,
             storageMb: <number>(<unknown>process.env.MYSQL_SERVER_SKU_STORAGE_SIZE!),

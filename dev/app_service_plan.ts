@@ -20,7 +20,7 @@ export class AppServicePlanConstruct extends Construct {
             reserved: true,
             resourceGroupName: app_plan_rg.name,
             location: app_plan_rg.location,
-            name: process.env.APP_SERVICE_PLAN_NAME!+ process.env.SUFFIX,
+            name: process.env.APP_SERVICE_PLAN_NAME! + process.env.SUFFIX,
             sku: [
                 {
                     size: process.env.APP_SERVICE_PLAN_SIZE!,
