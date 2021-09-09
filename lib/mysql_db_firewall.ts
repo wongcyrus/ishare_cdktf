@@ -1,6 +1,6 @@
 import {Construct} from "constructs";
 import {MysqlFirewallRule, MysqlServer, ResourceGroup,} from "@cdktf/provider-azurerm";
-import "./dev-config";
+import "./config";
 
 interface MySQLFirewallStackProps {
     sql_rg: ResourceGroup;
@@ -19,7 +19,7 @@ export class MySQLFirewallConstruct extends Construct {
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_insights#attributes-reference
         this.my_sql_firewall = new MysqlFirewallRule(
             this,
-            "iShare dev MySQL Server Firewall",
+            "iShare lib MySQL Server Firewall",
             {
                 name: process.env.MYSQL_FIREWALL_NAME! + process.env.SUFFIX,
                 resourceGroupName: sql_rg.name,

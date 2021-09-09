@@ -1,6 +1,6 @@
 import {Construct} from "constructs";
 import {AppServicePlan, ResourceGroup,} from "@cdktf/provider-azurerm";
-import "./dev-config";
+import "./config";
 
 interface AppServicePlanStackProps {
     app_plan_rg: ResourceGroup;
@@ -15,7 +15,7 @@ export class AppServicePlanConstruct extends Construct {
         const {app_plan_rg} = props;
 
         // create app service plan
-        this.app_service_plan = new AppServicePlan(this, "iShare dev app plan", {
+        this.app_service_plan = new AppServicePlan(this, "iShare lib app plan", {
             kind: process.env.APP_SERVICE_PLAN_KIND,
             reserved: true,
             resourceGroupName: app_plan_rg.name,

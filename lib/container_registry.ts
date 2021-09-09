@@ -1,6 +1,6 @@
 import {Construct} from "constructs";
 import {ContainerRegistry, ResourceGroup,} from "@cdktf/provider-azurerm";
-import "./dev-config";
+import "./config";
 
 interface ContainerRegistryStackProps {
     cr_rg: ResourceGroup;
@@ -21,7 +21,7 @@ export class ContainerRegistrySConstruct extends Construct {
         // create container registry
         this.container_registry = new ContainerRegistry(
             this,
-            "iShare dev container registry",
+            "iShare lib container registry",
             {
                 name: process.env.CONTAINER_REGISTRY! + process.env.SUFFIX,
                 sku: process.env.CONTAINER_REGISTRY_SKU!,

@@ -6,6 +6,7 @@
   ],
   "terraformModules": [],
   "context": {
+    "env": "dev",
     "excludeStackIdFromLogicalIds": "true",
     "allowSepCharsInLogicalIds": "true"
   }

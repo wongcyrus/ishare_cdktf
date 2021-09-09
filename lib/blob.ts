@@ -1,6 +1,6 @@
 import {Construct} from "constructs";
 import {ResourceGroup, StorageAccount, StorageContainer,} from "@cdktf/provider-azurerm";
-import "./dev-config";
+import "./config";
 
 interface BlobStorageStackProps {
     bs_rg: ResourceGroup;
@@ -20,7 +20,7 @@ export class BlobStorageConstruct extends Construct {
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account
         this.storage_account = new StorageAccount(
             this,
-            "iShare dev storage account",
+            "iShare lib storage account",
             {
                 name: process.env.STORAGE_ACCOUNT_NAME! + process.env.SUFFIX,
                 resourceGroupName: bs_rg.name,
@@ -34,7 +34,7 @@ export class BlobStorageConstruct extends Construct {
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_blob
         this.temp_container = new StorageContainer(
             this,
-            "iShare dev temp container",
+            "iShare lib temp container",
             {
                 name: process.env.STORAGE_CONTAINER_TEMP_NAME!,
                 containerAccessType: process.env.STORAGE_CONTAINER_ACCESS_TYPE!,
@@ -44,7 +44,7 @@ export class BlobStorageConstruct extends Construct {
 
         this.picture_container = new StorageContainer(
             this,
-            "iShare dev picture container",
+            "iShare lib picture container",
             {
                 name: process.env.STORAGE_CONTAINER_PERMANENT_NAME!,
                 containerAccessType: process.env.STORAGE_CONTAINER_ACCESS_TYPE!,

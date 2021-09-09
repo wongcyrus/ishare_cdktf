@@ -1,6 +1,6 @@
 import {Construct} from "constructs";
 import {ApplicationInsights, ResourceGroup,} from "@cdktf/provider-azurerm";
-import "./dev-config";
+import "./config";
 
 interface ApplicationInsightsStackProps {
     ai_rg: ResourceGroup;
@@ -22,7 +22,7 @@ export class ApplicationInsightsConstruct extends Construct {
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_insights#attributes-reference
         this.application_insights = new ApplicationInsights(
             this,
-            "iShare dev application_insights",
+            "iShare lib application_insights",
             {
                 name: process.env.APPLICATION_INSIGHTS_NAME! + process.env.SUFFIX,
                 applicationType: process.env.APPLICATION_INSIGHTS_TYPE!,

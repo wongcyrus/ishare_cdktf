@@ -1,6 +1,6 @@
 import {Construct} from "constructs";
 import {MysqlDatabase, MysqlServer, ResourceGroup,} from "@cdktf/provider-azurerm";
-import "./dev-config";
+import "./config";
 
 interface MySQLDatabaseStackProps {
     sql_rg: ResourceGroup;
@@ -19,7 +19,7 @@ export class MySQLDatabaseConstruct extends Construct {
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mysql_database
         this.my_sql_firewall = new MysqlDatabase(
             this,
-            "iShare dev MySQL Server Firewall",
+            "iShare lib MySQL Server Firewall",
             {
                 name: process.env.MYSQL_DATABASE_NAME! + process.env.SUFFIX,
                 resourceGroupName: sql_rg.name,

@@ -1,7 +1,7 @@
 import {Construct} from "constructs";
 import {TerraformOutput} from "cdktf";
 import {ApplicationInsights, AppServicePlan, ContainerRegistry, MysqlServer,} from "@cdktf/provider-azurerm";
-import "./dev-config";
+import "./config";
 
 interface OutputStackProps {
     mysql_server: MysqlServer;

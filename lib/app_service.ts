@@ -1,6 +1,6 @@
 import {Construct} from "constructs";
 import {AppService, AppServicePlan, MysqlServer, ResourceGroup,} from "@cdktf/provider-azurerm";
-import "./dev-config";
+import "./config";
 
 interface AppServiceStackProps {
     app_rg: ResourceGroup;
