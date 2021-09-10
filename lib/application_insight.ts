@@ -23,7 +23,7 @@ export class ApplicationInsightsConstruct extends Construct {
             this,
             "iShare lib application_insights",
             {
-                name: process.env.APPLICATION_INSIGHTS_NAME! + process.env.ENV,
+                name: process.env.PROJECT_NAME! + process.env.ENV,
                 applicationType: process.env.APPLICATION_INSIGHTS_TYPE!,
                 resourceGroupName: resourceGroup.name,
                 location: resourceGroup.location,

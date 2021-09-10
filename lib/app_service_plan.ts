@@ -15,11 +15,11 @@ export class AppServicePlanConstruct extends Construct {
 
         // create app service plan
         this.appServicePlan = new AppServicePlan(this, "iShare lib app plan", {
+            name: process.env.PROJECT_NAME! + process.env.ENV,
             kind: process.env.APP_SERVICE_PLAN_KIND,
             reserved: true,
             resourceGroupName: resourceGroup.name,
             location: resourceGroup.location,
-            name: process.env.APP_SERVICE_PLAN_NAME! + process.env.ENV,
             sku: [
                 {
                     size: process.env.APP_SERVICE_PLAN_SIZE!,
@@ -28,8 +28,6 @@ export class AppServicePlanConstruct extends Construct {
             ],
             dependsOn: [resourceGroup],
             tags: JSON.parse(process.env.TAG!),
-            // tags: <{ [key: string]: string }>(<unknown>process.env.TAG!),
-            // tags: <{ [key: string]: string }>process.env.TAG!,
         });
     }
 }
