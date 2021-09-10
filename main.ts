@@ -12,6 +12,7 @@ import {AppServiceConstruct} from "./lib/app_service";
 import {resolve} from "path";
 import {config} from "dotenv";
 import {KeyVaultConstruct} from "./lib/key_vault";
+import {AzureAdConstruct} from "./lib/azure_ad";
 
 interface MainStackProps {
     env: string;
@@ -35,6 +36,8 @@ export class MainStack extends TerraformStack {
             name: process.env.RESOURCE_GROUP_NAME!,
             location: process.env.LOCATION!,
         });
+
+        const azureAdConstruct = new AzureAdConstruct(this,"Azure AD",{resourceGroup: resourceGroup});
 
         const blobStorageConstruct = new BlobStorageConstruct(this, "Blob", {resourceGroup: resourceGroup});
 
@@ -75,7 +78,8 @@ export class MainStack extends TerraformStack {
 
         const keyVaultConstruct = new KeyVaultConstruct(this, "KeyVault", {
             resourceGroup,
-            storageAccount: blobStorageConstruct.storageAccount
+            storageAccount: blobStorageConstruct.storageAccount,
+            servicePrincipalObjectId:azureAdConstruct.servicePrincipalObjectId
         });
         new TerraformOutput(
             this,

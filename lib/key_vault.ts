@@ -10,6 +10,7 @@ import {
 interface KeyVaultConstructProps {
     resourceGroup: ResourceGroup;
     storageAccount: StorageAccount;
+    servicePrincipalObjectId: string;
 }
 
 export class KeyVaultConstruct extends Construct {
@@ -19,7 +20,7 @@ export class KeyVaultConstruct extends Construct {
     constructor(scope: Construct, name: string, props: KeyVaultConstructProps) {
         super(scope, name);
         const dataAzureRmClientConfig = new DataAzurermClientConfig(this, "Client Config");
-        const {resourceGroup, storageAccount} = props;
+        const {resourceGroup, storageAccount, servicePrincipalObjectId} = props;
 
         //TODO: objectId should be from service principal for accessPolicy,
         this.keyVault = new KeyVault(this, "iShare Key Vault", {
@@ -32,7 +33,12 @@ export class KeyVaultConstruct extends Construct {
                 tenantId: dataAzureRmClientConfig.tenantId,
                 objectId: dataAzureRmClientConfig.objectId, //the current user running deployment.
                 secretPermissions: ["set", "get", "delete", "purge", "recover", "list"]
-            }],
+            }, {
+                tenantId: dataAzureRmClientConfig.tenantId,
+                objectId: servicePrincipalObjectId, //the current user running deployment.
+                secretPermissions: ["set", "get", "delete", "purge", "recover", "list"]
+            }
+            ],
         });
         new KeyVaultSecret(this, "Storage Account Name", {
             keyVaultId: this.keyVault.id, name: "StorageAccountName", value: storageAccount.name
