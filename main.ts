@@ -1,5 +1,5 @@
 import {Construct} from "constructs";
-import {App, TerraformStack} from "cdktf";
+import {App, TerraformOutput, TerraformStack} from "cdktf";
 import {AzurermProvider, ResourceGroup} from "@cdktf/provider-azurerm";
 import {BlobStorageConstruct} from "./lib/blob";
 import {MySQLServerStack} from "./lib/mysql_server";
@@ -9,7 +9,6 @@ import {ApplicationInsightsConstruct} from "./lib/application_insight";
 import {ContainerRegistrySConstruct} from "./lib/container_registry";
 import {AppServicePlanConstruct} from "./lib/app_service_plan";
 import {AppServiceConstruct} from "./lib/app_service";
-import {OutputConstruct} from "./lib/output";
 import {resolve} from "path";
 import {config} from "dotenv";
 
@@ -71,12 +70,54 @@ export class MainStack extends TerraformStack {
             mysql_server: mysqlServer.server,
         });
 
-        new OutputConstruct(this, "output value", {
-            mysql_server: mysqlServer.server,
-            application_insights: log.application_insights,
-            docker_registry: containerRegistry.container_registry,
-            app_plan: appPlan.app_service_plan,
-        });
+        new TerraformOutput(
+            this,
+            "MySQL server hostname",
+            {value: mysqlServer.server.fqdn}
+        );
+        new TerraformOutput(
+            this,
+            "MySQL server identity",
+            {value: mysqlServer.server.identity}
+        );
+
+        new TerraformOutput(
+            this,
+            "application insights key",
+            {value: log.application_insights.instrumentationKey, sensitive: true}
+        );
+
+        new TerraformOutput(
+            this,
+            "application insights connection string",
+            {value: log.application_insights.connectionString, sensitive: true}
+        );
+
+        new TerraformOutput(
+            this,
+            "container registry adminUsername",
+            {value: containerRegistry.container_registry.adminUsername}
+        );
+
+        new TerraformOutput(
+            this,
+            "container registry adminPassword",
+            {value: containerRegistry.container_registry.adminPassword, sensitive: true}
+        );
+
+        new TerraformOutput(
+            this,
+            "container registry identity",
+            {value: containerRegistry.container_registry.identity}
+        );
+
+        new TerraformOutput(
+            this,
+            "app service plan name",
+            {
+                value: appPlan.app_service_plan.name,
+            }
+        );
 
         // TODO: find a way for other stack read the principal_id it
         console.log(mysqlServer.server.identity);
