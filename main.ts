@@ -35,7 +35,8 @@ export class MainStack extends TerraformStack {
             location: process.env.LOCATION!,
         });
 
-        new BlobStorageConstruct(this, "Blob", {resourceGroup: resourceGroup});
+        const blobStorageConstruct = new BlobStorageConstruct(this, "Blob", {resourceGroup: resourceGroup});
+
 
         const mySQLServerConstruct = new MySQLServerConstruct(this, "MySQL server", {
             resourceGroup: resourceGroup,
@@ -71,15 +72,47 @@ export class MainStack extends TerraformStack {
             mysqlServer: mySQLServerConstruct.mysqlServer,
         });
 
+
+        new TerraformOutput(
+            this,
+            "Storage Account Name",
+            {value: blobStorageConstruct.storageAccount.name, sensitive: true}
+        );
+        new TerraformOutput(
+            this,
+            "Storage Account Key",
+            {value: blobStorageConstruct.storageAccount.primaryAccessKey, sensitive: true}
+        );
+        new TerraformOutput(
+            this,
+            "Storage Account Connection String",
+            {value: blobStorageConstruct.storageAccount.primaryConnectionString, sensitive: true}
+        );
+        new TerraformOutput(
+            this,
+            "Storage Account Temp Container Name",
+            {value: blobStorageConstruct.tempContainer.name, sensitive: true}
+        );
+        new TerraformOutput(
+            this,
+            "Storage Account Permanent Container Name",
+            {value: blobStorageConstruct.pictureContainer.name, sensitive: true}
+        );
+        new TerraformOutput(
+            this,
+            "Storage Account Domain",
+            {value: blobStorageConstruct.storageAccount.primaryBlobHost, sensitive: true}
+        );
+
         new TerraformOutput(
             this,
             "MySQL Server Hostname",
-            {value: mySQLServerConstruct.mysqlServer.fqdn}
+            {value: mySQLServerConstruct.mysqlServer.fqdn, sensitive: true}
         );
         new TerraformOutput(
             this,
             "MySQL Server Identity",
-            {value: mySQLServerConstruct.mysqlServer.identity}
+            {value: mySQLServerConstruct.mysqlServer.identity, sensitive: true}
         );
 
         new TerraformOutput(
@@ -97,7 +130,7 @@ export class MainStack extends TerraformStack {
         new TerraformOutput(
             this,
             "Container Registry Admin Username",
-            {value: containerRegistrySConstruct.containerRegistry.adminUsername}
+            {value: containerRegistrySConstruct.containerRegistry.adminUsername, sensitive: true}
         );
 
         new TerraformOutput(
@@ -109,15 +142,13 @@ export class MainStack extends TerraformStack {
         new TerraformOutput(
             this,
             "Container Registry Identity",
-            {value: containerRegistrySConstruct.containerRegistry.identity}
+            {value: containerRegistrySConstruct.containerRegistry.identity, sensitive: true}
         );
 
         new TerraformOutput(
             this,
             "App Service Plan Name",
-            {
-                value: appServicePlanConstruct.appServicePlan.name,
-            }
+            {value: appServicePlanConstruct.appServicePlan.name, sensitive: true}
         );
 
         // TODO: find a way for other stack read the principal_id it
