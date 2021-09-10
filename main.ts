@@ -24,7 +24,7 @@ export class MainStack extends TerraformStack {
         config({path: resolve(__dirname, `./${props.env}.env`)});
         process.env.ENV = props.env;
         process.env.RESOURCE_GROUP_NAME = process.env.RESOURCE_GROUP_NAME + props.env;
-        console.log(process.env.RESOURCE_GROUP_NAME);
+        console.log("Resource Group:" + process.env.RESOURCE_GROUP_NAME);
 
         new AzurermProvider(this, "Azure provider", {
             features: [{}],
@@ -73,13 +73,14 @@ export class MainStack extends TerraformStack {
             mysqlServer: mySQLServerConstruct.mysqlServer,
         });
 
-        const keyVaultConstruct = new KeyVaultConstruct(this,"KeyVault",{resourceGroup});
-
-
+        const keyVaultConstruct = new KeyVaultConstruct(this, "KeyVault", {
+            resourceGroup,
+            storageAccount: blobStorageConstruct.storageAccount
+        });
         new TerraformOutput(
             this,
             "Key Vault Uri",
-            {value: keyVaultConstruct.keyVault.vaultUri,sensitive: true}
+            {value: keyVaultConstruct.keyVault.vaultUri, sensitive: true}
         );
         new TerraformOutput(
             this,
@@ -95,21 +96,6 @@ export class MainStack extends TerraformStack {
             this,
             "Storage Account Connection String",
             {value: blobStorageConstruct.storageAccount.primaryConnectionString, sensitive: true}
-        );
-        new TerraformOutput(
-            this,
-            "Storage Account Temp Container Name",
-            {value: blobStorageConstruct.tempContainer.name, sensitive: true}
-        );
-        new TerraformOutput(
-            this,
-            "Storage Account Permanent Container Name",
-            {value: blobStorageConstruct.pictureContainer.name, sensitive: true}
-        );
-        new TerraformOutput(
-            this,
-            "Storage Account Domain",
-            {value: blobStorageConstruct.storageAccount.primaryBlobHost, sensitive: true}
         );
 
         new TerraformOutput(
