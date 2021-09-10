@@ -16,7 +16,7 @@ export class MySQLServerConstruct extends Construct {
         // create MySQL Server
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/mysql_server
         this.mysqlServer = new MysqlServer(this, "iShare lib MySQL Server", {
-            name: process.env.MYSQL_SERVER_NAME! + process.env.ENV,
+            name: process.env.PROJECT_NAME! + process.env.ENV,
             version: process.env.MYSQL_SERVER_VERSION!,
             skuName: process.env.MYSQL_SERVER_SKU_NAME!,
             storageMb: <number>(<unknown>process.env.MYSQL_SERVER_SKU_STORAGE_SIZE!),

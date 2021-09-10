@@ -22,7 +22,7 @@ export class ContainerRegistrySConstruct extends Construct {
             this,
             "iShare lib container registry",
             {
-                name: process.env.CONTAINER_REGISTRY! + process.env.ENV,
+                name: process.env.PROJECT_NAME! + process.env.ENV,
                 sku: process.env.CONTAINER_REGISTRY_SKU!,
                 resourceGroupName: resourceGroup.name,
                 location: resourceGroup.location,

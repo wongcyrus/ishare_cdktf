@@ -11,6 +11,7 @@ import {AppServicePlanConstruct} from "./lib/app_service_plan";
 import {AppServiceConstruct} from "./lib/app_service";
 import {resolve} from "path";
 import {config} from "dotenv";
+import {KeyVaultConstruct} from "./lib/key_vault";
 
 interface MainStackProps {
     env: string;
@@ -72,7 +73,14 @@ export class MainStack extends TerraformStack {
             mysqlServer: mySQLServerConstruct.mysqlServer,
         });
 
+        const keyVaultConstruct = new KeyVaultConstruct(this,"KeyVault",{resourceGroup});
 
+
+        new TerraformOutput(
+            this,
+            "Key Vault Uri",
+            {value: keyVaultConstruct.keyVault.vaultUri,sensitive: true}
+        );
         new TerraformOutput(
             this,
             "Storage Account Name",

@@ -20,7 +20,7 @@ export class MySQLDatabaseConstruct extends Construct {
             this,
             "iShare lib MySQL Server Firewall",
             {
-                name: process.env.MYSQL_DATABASE_NAME! + process.env.ENV,
+                name: process.env.PROJECT_NAME! + process.env.ENV,
                 resourceGroupName: resourceGroup.name,
                 serverName: mysqlServer.name,
                 charset: process.env.MYSQL_DATABASE_CHARSET!,
