@@ -1,7 +1,7 @@
 import {Construct} from "constructs";
 import {ApplicationInsights, ResourceGroup} from "@cdktf/provider-azurerm";
 
-interface ApplicationInsightsStackProps {
+interface ApplicationInsightsConstructProps {
     ai_rg: ResourceGroup;
 }
 
@@ -11,7 +11,7 @@ export class ApplicationInsightsConstruct extends Construct {
     constructor(
         scope: Construct,
         name: string,
-        props: ApplicationInsightsStackProps
+        props: ApplicationInsightsConstructProps
     ) {
         super(scope, name);
 

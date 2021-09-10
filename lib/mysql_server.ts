@@ -1,14 +1,14 @@
 import {Construct} from "constructs";
 import {MysqlServer, ResourceGroup} from "@cdktf/provider-azurerm";
 
-interface MySQLServerStackProps {
+interface MySQLServerConstructProps {
     sql_rg: ResourceGroup;
 }
 
 export class MySQLServerStack extends Construct {
     public readonly server: MysqlServer;
 
-    constructor(scope: Construct, name: string, props: MySQLServerStackProps) {
+    constructor(scope: Construct, name: string, props: MySQLServerConstructProps) {
         super(scope, name);
 
         const {sql_rg} = props;

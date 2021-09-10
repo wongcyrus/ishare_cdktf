@@ -1,7 +1,7 @@
 import {Construct} from "constructs";
 import {MysqlDatabase, MysqlServer, ResourceGroup,} from "@cdktf/provider-azurerm";
 
-interface MySQLDatabaseStackProps {
+interface MySQLDatabaseConstructProps {
     sql_rg: ResourceGroup;
     mysql_server: MysqlServer;
 }
@@ -9,7 +9,7 @@ interface MySQLDatabaseStackProps {
 export class MySQLDatabaseConstruct extends Construct {
     public readonly my_sql_firewall: MysqlDatabase;
 
-    constructor(scope: Construct, name: string, props: MySQLDatabaseStackProps) {
+    constructor(scope: Construct, name: string, props: MySQLDatabaseConstructProps) {
         super(scope, name);
 
         const {sql_rg, mysql_server} = props;

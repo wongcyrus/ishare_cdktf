@@ -2,7 +2,7 @@ import {Construct} from "constructs";
 import {TerraformOutput} from "cdktf";
 import {ApplicationInsights, AppServicePlan, ContainerRegistry, MysqlServer,} from "@cdktf/provider-azurerm";
 
-interface OutputStackProps {
+interface OutputConstructProps {
     mysql_server: MysqlServer;
     application_insights: ApplicationInsights;
     docker_registry: ContainerRegistry;
@@ -19,7 +19,7 @@ export class OutputConstruct extends Construct {
     public readonly docker_registry_identity_output: TerraformOutput;
     public readonly app_plan_name_output: TerraformOutput;
 
-    constructor(scope: Construct, name: string, props: OutputStackProps) {
+    constructor(scope: Construct, name: string, props: OutputConstructProps) {
         super(scope, name);
 
         const {mysql_server, application_insights, docker_registry, app_plan} =

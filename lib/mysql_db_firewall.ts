@@ -1,7 +1,7 @@
 import {Construct} from "constructs";
 import {MysqlFirewallRule, MysqlServer, ResourceGroup,} from "@cdktf/provider-azurerm";
 
-interface MySQLFirewallStackProps {
+interface MySQLFirewallConstructProps {
     sql_rg: ResourceGroup;
     mysql_server: MysqlServer;
 }
@@ -9,7 +9,7 @@ interface MySQLFirewallStackProps {
 export class MySQLFirewallConstruct extends Construct {
     public readonly my_sql_firewall: MysqlFirewallRule;
 
-    constructor(scope: Construct, name: string, props: MySQLFirewallStackProps) {
+    constructor(scope: Construct, name: string, props: MySQLFirewallConstructProps) {
         super(scope, name);
 
         const {sql_rg, mysql_server} = props;

@@ -1,14 +1,14 @@
 import {Construct} from "constructs";
 import {AppServicePlan, ResourceGroup} from "@cdktf/provider-azurerm";
 
-interface AppServicePlanStackProps {
+interface AppServicePlanConstructProps {
     app_plan_rg: ResourceGroup;
 }
 
 export class AppServicePlanConstruct extends Construct {
     public readonly app_service_plan: AppServicePlan;
 
-    constructor(scope: Construct, name: string, props: AppServicePlanStackProps) {
+    constructor(scope: Construct, name: string, props: AppServicePlanConstructProps) {
         super(scope, name);
 
         const {app_plan_rg} = props;

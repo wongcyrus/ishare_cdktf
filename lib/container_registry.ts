@@ -1,7 +1,7 @@
 import {Construct} from "constructs";
 import {ContainerRegistry, ResourceGroup} from "@cdktf/provider-azurerm";
 
-interface ContainerRegistryStackProps {
+interface ContainerRegistryConstructProps {
     cr_rg: ResourceGroup;
 }
 
@@ -11,7 +11,7 @@ export class ContainerRegistrySConstruct extends Construct {
     constructor(
         scope: Construct,
         name: string,
-        props: ContainerRegistryStackProps
+        props: ContainerRegistryConstructProps
     ) {
         super(scope, name);
 

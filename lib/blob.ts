@@ -1,7 +1,7 @@
 import {Construct} from "constructs";
 import {ResourceGroup, StorageAccount, StorageContainer,} from "@cdktf/provider-azurerm";
 
-interface BlobStorageStackProps {
+interface BlobStorageConstructProps {
     bs_rg: ResourceGroup;
 }
 
@@ -10,7 +10,7 @@ export class BlobStorageConstruct extends Construct {
     public readonly temp_container: StorageContainer;
     public readonly picture_container: StorageContainer;
 
-    constructor(scope: Construct, name: string, props: BlobStorageStackProps) {
+    constructor(scope: Construct, name: string, props: BlobStorageConstructProps) {
         super(scope, name);
 
         const {bs_rg} = props;

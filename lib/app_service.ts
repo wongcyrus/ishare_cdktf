@@ -1,7 +1,7 @@
 import {Construct} from "constructs";
 import {AppService, AppServicePlan, MysqlServer, ResourceGroup,} from "@cdktf/provider-azurerm";
 
-interface AppServiceStackProps {
+interface AppServiceConstructProps {
     app_rg: ResourceGroup;
     app_service_plan: AppServicePlan;
     mysql_server: MysqlServer;
@@ -10,7 +10,7 @@ interface AppServiceStackProps {
 export class AppServiceConstruct extends Construct {
     public readonly app_service: AppService;
 
-    constructor(scope: Construct, name: string, props: AppServiceStackProps) {
+    constructor(scope: Construct, name: string, props: AppServiceConstructProps) {
         super(scope, name);
 
         const {app_rg, app_service_plan} = props;
