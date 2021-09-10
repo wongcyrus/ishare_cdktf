@@ -2,28 +2,28 @@ import {Construct} from "constructs";
 import {ResourceGroup, StorageAccount, StorageContainer,} from "@cdktf/provider-azurerm";
 
 interface BlobStorageConstructProps {
-    bs_rg: ResourceGroup;
+    resourceGroup: ResourceGroup;
 }
 
 export class BlobStorageConstruct extends Construct {
-    public readonly storage_account: StorageAccount;
-    public readonly temp_container: StorageContainer;
-    public readonly picture_container: StorageContainer;
+    public readonly storageAccount: StorageAccount;
+    public readonly tempContainer: StorageContainer;
+    public readonly pictureContainer: StorageContainer;
 
     constructor(scope: Construct, name: string, props: BlobStorageConstructProps) {
         super(scope, name);
 
-        const {bs_rg} = props;
+        const {resourceGroup} = props;
 
         // create storage account
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account
-        this.storage_account = new StorageAccount(
+        this.storageAccount = new StorageAccount(
             this,
             "iShare lib storage account",
             {
-                name: process.env.STORAGE_ACCOUNT_NAME! + process.env.SUFFIX,
-                resourceGroupName: bs_rg.name,
-                location: bs_rg.location,
+                name: process.env.STORAGE_ACCOUNT_NAME! + process.env.ENV,
+                resourceGroupName: resourceGroup.name,
+                location: resourceGroup.location,
                 accountTier: process.env.STORAGE_ACCOUNT_TIER!,
                 accountReplicationType: process.env.STORAGE_ACCOUNT_REPLICATION_TYPE!,
             }
@@ -31,23 +31,23 @@ export class BlobStorageConstruct extends Construct {
 
         // create container
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_blob
-        this.temp_container = new StorageContainer(
+        this.tempContainer = new StorageContainer(
             this,
             "iShare lib temp container",
             {
                 name: process.env.STORAGE_CONTAINER_TEMP_NAME!,
                 containerAccessType: process.env.STORAGE_CONTAINER_ACCESS_TYPE!,
-                storageAccountName: this.storage_account.name,
+                storageAccountName: this.storageAccount.name,
             }
         );
 
-        this.picture_container = new StorageContainer(
+        this.pictureContainer = new StorageContainer(
             this,
             "iShare lib picture container",
             {
                 name: process.env.STORAGE_CONTAINER_PERMANENT_NAME!,
                 containerAccessType: process.env.STORAGE_CONTAINER_ACCESS_TYPE!,
-                storageAccountName: this.storage_account.name,
+                storageAccountName: this.storageAccount.name,
             }
         );
 

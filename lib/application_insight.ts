@@ -2,11 +2,11 @@ import {Construct} from "constructs";
 import {ApplicationInsights, ResourceGroup} from "@cdktf/provider-azurerm";
 
 interface ApplicationInsightsConstructProps {
-    ai_rg: ResourceGroup;
+    resourceGroup: ResourceGroup;
 }
 
 export class ApplicationInsightsConstruct extends Construct {
-    public readonly application_insights: ApplicationInsights;
+    public readonly applicationInsights: ApplicationInsights;
 
     constructor(
         scope: Construct,
@@ -15,19 +15,19 @@ export class ApplicationInsightsConstruct extends Construct {
     ) {
         super(scope, name);
 
-        const {ai_rg} = props;
+        const {resourceGroup} = props;
 
         // create application insights
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_insights#attributes-reference
-        this.application_insights = new ApplicationInsights(
+        this.applicationInsights = new ApplicationInsights(
             this,
             "iShare lib application_insights",
             {
-                name: process.env.APPLICATION_INSIGHTS_NAME! + process.env.SUFFIX,
+                name: process.env.APPLICATION_INSIGHTS_NAME! + process.env.ENV,
                 applicationType: process.env.APPLICATION_INSIGHTS_TYPE!,
-                resourceGroupName: ai_rg.name,
-                location: ai_rg.location,
-                dependsOn: [ai_rg],
+                resourceGroupName: resourceGroup.name,
+                location: resourceGroup.location,
+                dependsOn: [resourceGroup],
                 tags: JSON.parse(process.env.TAG!),
             }
         );

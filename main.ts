@@ -2,7 +2,7 @@ import {Construct} from "constructs";
 import {App, TerraformOutput, TerraformStack} from "cdktf";
 import {AzurermProvider, ResourceGroup} from "@cdktf/provider-azurerm";
 import {BlobStorageConstruct} from "./lib/blob";
-import {MySQLServerStack} from "./lib/mysql_server";
+import {MySQLServerConstruct} from "./lib/mysql_server";
 import {MySQLDatabaseConstruct} from "./lib/mysql_db";
 import {MySQLFirewallConstruct} from "./lib/mysql_db_firewall";
 import {ApplicationInsightsConstruct} from "./lib/application_insight";
@@ -21,106 +21,107 @@ export class MainStack extends TerraformStack {
         super(scope, name);
 
         config({path: resolve(__dirname, `./${props.env}.env`)});
-
+        process.env.ENV = props.env;
+        process.env.RESOURCE_GROUP_NAME = process.env.RESOURCE_GROUP_NAME + props.env;
         console.log(process.env.RESOURCE_GROUP_NAME);
 
-        new AzurermProvider(this, "azure_feature", {
+        new AzurermProvider(this, "Azure provider", {
             features: [{}],
             skipProviderRegistration: true,
         });
 
-        const resourceGroup = new ResourceGroup(this, "rg", {
+        const resourceGroup = new ResourceGroup(this, "Resource group", {
             name: process.env.RESOURCE_GROUP_NAME!,
             location: process.env.LOCATION!,
         });
 
-        new BlobStorageConstruct(this, "Blob", {bs_rg: resourceGroup});
+        new BlobStorageConstruct(this, "Blob", {resourceGroup: resourceGroup});
 
-        const mysqlServer = new MySQLServerStack(this, "MySQL server", {
-            sql_rg: resourceGroup,
+        const mySQLServerConstruct = new MySQLServerConstruct(this, "MySQL server", {
+            resourceGroup: resourceGroup,
         });
 
-        new MySQLDatabaseConstruct(this, "MySQL Database", {
-            sql_rg: resourceGroup,
-            mysql_server: mysqlServer.server,
+        new MySQLDatabaseConstruct(this, "MySQL database", {
+            resourceGroup: resourceGroup,
+            mysqlServer: mySQLServerConstruct.mysqlServer,
         });
 
         new MySQLFirewallConstruct(this, "MySQL firewall", {
-            sql_rg: resourceGroup,
-            mysql_server: mysqlServer.server,
+            resourceGroup: resourceGroup,
+            mysqlServer: mySQLServerConstruct.mysqlServer,
         });
 
-        const log = new ApplicationInsightsConstruct(this, "application insights", {
-            ai_rg: resourceGroup,
+        const applicationInsightsConstruct = new ApplicationInsightsConstruct(this, "Application insights", {
+            resourceGroup: resourceGroup,
         });
 
-        const containerRegistry = new ContainerRegistrySConstruct(
+        const containerRegistrySConstruct = new ContainerRegistrySConstruct(
             this,
             "container registry",
-            {cr_rg: resourceGroup}
+            {resourceGroup: resourceGroup}
         );
 
-        const appPlan = new AppServicePlanConstruct(this, "app service plan", {
-            app_plan_rg: resourceGroup,
+        const appServicePlanConstruct = new AppServicePlanConstruct(this, "App Service Plan", {
+            resourceGroup: resourceGroup,
         });
 
-        new AppServiceConstruct(this, "app service", {
-            app_rg: resourceGroup,
-            app_service_plan: appPlan.app_service_plan,
-            mysql_server: mysqlServer.server,
+        new AppServiceConstruct(this, "App Service", {
+            resourceGroup: resourceGroup,
+            appServicePlan: appServicePlanConstruct.appServicePlan,
+            mysqlServer: mySQLServerConstruct.mysqlServer,
         });
 
         new TerraformOutput(
             this,
-            "MySQL server hostname",
-            {value: mysqlServer.server.fqdn}
+            "MySQL Server Hostname",
+            {value: mySQLServerConstruct.mysqlServer.fqdn}
         );
         new TerraformOutput(
             this,
-            "MySQL server identity",
-            {value: mysqlServer.server.identity}
-        );
-
-        new TerraformOutput(
-            this,
-            "application insights key",
-            {value: log.application_insights.instrumentationKey, sensitive: true}
+            "MySQL Server Identity",
+            {value: mySQLServerConstruct.mysqlServer.identity}
         );
 
         new TerraformOutput(
             this,
-            "application insights connection string",
-            {value: log.application_insights.connectionString, sensitive: true}
+            "Application Insights Key",
+            {value: applicationInsightsConstruct.applicationInsights.instrumentationKey, sensitive: true}
         );
 
         new TerraformOutput(
             this,
-            "container registry adminUsername",
-            {value: containerRegistry.container_registry.adminUsername}
+            "Application Insights Connection String",
+            {value: applicationInsightsConstruct.applicationInsights.connectionString, sensitive: true}
         );
 
         new TerraformOutput(
             this,
-            "container registry adminPassword",
-            {value: containerRegistry.container_registry.adminPassword, sensitive: true}
+            "Container Registry Admin Username",
+            {value: containerRegistrySConstruct.containerRegistry.adminUsername}
         );
 
         new TerraformOutput(
             this,
-            "container registry identity",
-            {value: containerRegistry.container_registry.identity}
+            "Container Registry Admin Password",
+            {value: containerRegistrySConstruct.containerRegistry.adminPassword, sensitive: true}
         );
 
         new TerraformOutput(
             this,
-            "app service plan name",
+            "Container Registry Identity",
+            {value: containerRegistrySConstruct.containerRegistry.identity}
+        );
+
+        new TerraformOutput(
+            this,
+            "App Service Plan Name",
             {
-                value: appPlan.app_service_plan.name,
+                value: appServicePlanConstruct.appServicePlan.name,
             }
         );
 
         // TODO: find a way for other stack read the principal_id it
-        console.log(mysqlServer.server.identity);
+        console.log(mySQLServerConstruct.mysqlServer.identity);
     }
 }
 

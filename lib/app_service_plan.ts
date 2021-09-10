@@ -2,31 +2,31 @@ import {Construct} from "constructs";
 import {AppServicePlan, ResourceGroup} from "@cdktf/provider-azurerm";
 
 interface AppServicePlanConstructProps {
-    app_plan_rg: ResourceGroup;
+    resourceGroup: ResourceGroup;
 }
 
 export class AppServicePlanConstruct extends Construct {
-    public readonly app_service_plan: AppServicePlan;
+    public readonly appServicePlan: AppServicePlan;
 
     constructor(scope: Construct, name: string, props: AppServicePlanConstructProps) {
         super(scope, name);
 
-        const {app_plan_rg} = props;
+        const {resourceGroup} = props;
 
         // create app service plan
-        this.app_service_plan = new AppServicePlan(this, "iShare lib app plan", {
+        this.appServicePlan = new AppServicePlan(this, "iShare lib app plan", {
             kind: process.env.APP_SERVICE_PLAN_KIND,
             reserved: true,
-            resourceGroupName: app_plan_rg.name,
-            location: app_plan_rg.location,
-            name: process.env.APP_SERVICE_PLAN_NAME! + process.env.SUFFIX,
+            resourceGroupName: resourceGroup.name,
+            location: resourceGroup.location,
+            name: process.env.APP_SERVICE_PLAN_NAME! + process.env.ENV,
             sku: [
                 {
                     size: process.env.APP_SERVICE_PLAN_SIZE!,
                     tier: process.env.APP_SERVICE_PLAN_TIER!,
                 },
             ],
-            dependsOn: [app_plan_rg],
+            dependsOn: [resourceGroup],
             tags: JSON.parse(process.env.TAG!),
             // tags: <{ [key: string]: string }>(<unknown>process.env.TAG!),
             // tags: <{ [key: string]: string }>process.env.TAG!,

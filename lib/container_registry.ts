@@ -2,11 +2,11 @@ import {Construct} from "constructs";
 import {ContainerRegistry, ResourceGroup} from "@cdktf/provider-azurerm";
 
 interface ContainerRegistryConstructProps {
-    cr_rg: ResourceGroup;
+    resourceGroup: ResourceGroup;
 }
 
 export class ContainerRegistrySConstruct extends Construct {
-    public readonly container_registry: ContainerRegistry;
+    public readonly containerRegistry: ContainerRegistry;
 
     constructor(
         scope: Construct,
@@ -15,19 +15,19 @@ export class ContainerRegistrySConstruct extends Construct {
     ) {
         super(scope, name);
 
-        const {cr_rg} = props;
+        const {resourceGroup} = props;
 
         // create container registry
-        this.container_registry = new ContainerRegistry(
+        this.containerRegistry = new ContainerRegistry(
             this,
             "iShare lib container registry",
             {
-                name: process.env.CONTAINER_REGISTRY! + process.env.SUFFIX,
+                name: process.env.CONTAINER_REGISTRY! + process.env.ENV,
                 sku: process.env.CONTAINER_REGISTRY_SKU!,
-                resourceGroupName: cr_rg.name,
-                location: cr_rg.location,
+                resourceGroupName: resourceGroup.name,
+                location: resourceGroup.location,
                 adminEnabled: true,
-                dependsOn: [cr_rg],
+                dependsOn: [resourceGroup],
                 tags: JSON.parse(process.env.TAG!),
             }
         );

@@ -2,18 +2,18 @@ import {Construct} from "constructs";
 import {AppService, AppServicePlan, MysqlServer, ResourceGroup,} from "@cdktf/provider-azurerm";
 
 interface AppServiceConstructProps {
-    app_rg: ResourceGroup;
-    app_service_plan: AppServicePlan;
-    mysql_server: MysqlServer;
+    resourceGroup: ResourceGroup;
+    appServicePlan: AppServicePlan;
+    mysqlServer: MysqlServer;
 }
 
 export class AppServiceConstruct extends Construct {
-    public readonly app_service: AppService;
+    public readonly appService: AppService;
 
     constructor(scope: Construct, name: string, props: AppServiceConstructProps) {
         super(scope, name);
 
-        const {app_rg, app_service_plan} = props;
+        const {resourceGroup, appServicePlan} = props;
 
         // TODO: Cannot get principalId using DataAzurermMysqlServer
         /*const test = new DataAzurermMysqlServer(this, "test", {
@@ -26,17 +26,17 @@ export class AppServiceConstruct extends Construct {
 
         // create MySQL Database
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service
-        this.app_service = new AppService(this, "iShare App", {
-            name: process.env.APP_SERVICE_NAME! + process.env.SUFFIX,
-            resourceGroupName: app_rg.name,
-            location: app_rg.location,
-            appServicePlanId: app_service_plan.id,
+        this.appService = new AppService(this, "iShare App", {
+            name: process.env.APP_SERVICE_NAME! + process.env.ENV,
+            resourceGroupName: resourceGroup.name,
+            location: resourceGroup.location,
+            appServicePlanId: appServicePlan.id,
             // identity: [
             //   {
             //     type: process.env.APP_SERVICE_IDENTITY_TYPE!,
             //   },
             // ],
-            dependsOn: [app_service_plan],
+            dependsOn: [appServicePlan],
         });
     }
 }
