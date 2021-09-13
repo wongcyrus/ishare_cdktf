@@ -22,7 +22,6 @@ export class KeyVaultConstruct extends Construct {
         const dataAzureRmClientConfig = new DataAzurermClientConfig(this, "Client Config");
         const {resourceGroup, storageAccount, servicePrincipalObjectId} = props;
 
-        //TODO: objectId should be from service principal for accessPolicy,
         this.keyVault = new KeyVault(this, "iShare Key Vault", {
             name: process.env.PROJECT_NAME! + process.env.ENV,
             location: resourceGroup.location,

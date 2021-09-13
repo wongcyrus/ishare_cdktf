@@ -47,7 +47,7 @@ export class MainStack extends TerraformStack {
             location: process.env.LOCATION!,
         });
 
-        const azureAdConstruct = new AzureAdConstruct(this,"Azure AD",{resourceGroup: resourceGroup});
+        const azureAdConstruct = new AzureAdConstruct(this,"Azure AD");
 
         const blobStorageConstruct = new BlobStorageConstruct(this, "Blob", {resourceGroup: resourceGroup});
 
@@ -161,8 +161,19 @@ export class MainStack extends TerraformStack {
 
         new TerraformOutput(
             this,
+            "Service Principal App Id",
+            {value: azureAdConstruct.servicePrincipalAppId, sensitive: true}
+        );
+
+        new TerraformOutput(
+            this,
             "Service Principal Password",
             {value: azureAdConstruct.servicePrincipalPassword, sensitive: true}
+        );
+        new TerraformOutput(
+            this,
+            "Service Principal Tenant Id",
+            {value: azureAdConstruct.servicePrincipalTenantId, sensitive: true}
         );
 
     }
