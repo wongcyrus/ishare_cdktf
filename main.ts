@@ -14,6 +14,7 @@ import {config, parse} from "dotenv";
 import {KeyVaultConstruct} from "./lib/key_vault";
 import {AzureAdConstruct} from "./lib/azure_ad";
 import * as fs from "fs";
+import {CognitiveServiceConstruct} from "./lib/cognitive_service";
 
 
 interface MainStackProps {
@@ -86,31 +87,21 @@ export class MainStack extends TerraformStack {
             mysqlServer: mySQLServerConstruct.mysqlServer,
         });
 
+        const cognitiveServiceConstruct = new CognitiveServiceConstruct(this, "Cognitive Service",{
+            resourceGroup: resourceGroup
+        });
+
         const keyVaultConstruct = new KeyVaultConstruct(this, "KeyVault", {
             resourceGroup,
             storageAccount: blobStorageConstruct.storageAccount,
             servicePrincipalObjectId: azureAdConstruct.servicePrincipalObjectId,
-            applicationInsightsKey: applicationInsightsConstruct.applicationInsights.instrumentationKey
+            applicationInsightsKey: applicationInsightsConstruct.applicationInsights.instrumentationKey,
+            cognitiveServiceConstruct
         });
         new TerraformOutput(
             this,
             "Key Vault Uri",
             {value: keyVaultConstruct.keyVault.vaultUri, sensitive: true}
-        );
-        new TerraformOutput(
-            this,
-            "Storage Account Name",
-            {value: blobStorageConstruct.storageAccount.name, sensitive: true}
-        );
-        new TerraformOutput(
-            this,
-            "Storage Account Key",
-            {value: blobStorageConstruct.storageAccount.primaryAccessKey, sensitive: true}
-        );
-        new TerraformOutput(
-            this,
-            "Storage Account Connection String",
-            {value: blobStorageConstruct.storageAccount.primaryConnectionString, sensitive: true}
         );
 
         new TerraformOutput(
@@ -122,18 +113,6 @@ export class MainStack extends TerraformStack {
             this,
             "MySQL Server Identity",
             {value: mySQLServerConstruct.mysqlServer.identity, sensitive: true}
-        );
-
-        new TerraformOutput(
-            this,
-            "Application Insights Key",
-            {value: applicationInsightsConstruct.applicationInsights.instrumentationKey, sensitive: true}
-        );
-
-        new TerraformOutput(
-            this,
-            "Application Insights Connection String",
-            {value: applicationInsightsConstruct.applicationInsights.connectionString, sensitive: true}
         );
 
         new TerraformOutput(
