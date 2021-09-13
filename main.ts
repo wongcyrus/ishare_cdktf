@@ -10,9 +10,11 @@ import {ContainerRegistrySConstruct} from "./lib/container_registry";
 import {AppServicePlanConstruct} from "./lib/app_service_plan";
 import {AppServiceConstruct} from "./lib/app_service";
 import {resolve} from "path";
-import {config} from "dotenv";
+import {config,parse} from "dotenv";
 import {KeyVaultConstruct} from "./lib/key_vault";
 import {AzureAdConstruct} from "./lib/azure_ad";
+import * as fs from "fs";
+
 
 interface MainStackProps {
     env: string;
@@ -26,6 +28,14 @@ export class MainStack extends TerraformStack {
         process.env.ENV = props.env;
         process.env.RESOURCE_GROUP_NAME = process.env.RESOURCE_GROUP_NAME + props.env;
         console.log("Resource Group:" + process.env.RESOURCE_GROUP_NAME);
+
+        if (fs.existsSync(resolve(__dirname, `./secrets.env`))) {
+            console.log("Overrides with secrets.env");
+            const envConfig = parse(fs.readFileSync(resolve(__dirname, `./secrets.env`)))
+            for (const k in envConfig) {
+                process.env[k] = envConfig[k]
+            }
+        }
 
         new AzurermProvider(this, "Azure provider", {
             features: [{}],
@@ -149,8 +159,12 @@ export class MainStack extends TerraformStack {
             {value: appServicePlanConstruct.appServicePlan.name, sensitive: true}
         );
 
-        // TODO: find a way for other stack read the principal_id it
-        console.log(mySQLServerConstruct.mysqlServer.identity);
+        new TerraformOutput(
+            this,
+            "Service Principal Password",
+            {value: azureAdConstruct.servicePrincipalPassword, sensitive: true}
+        );
+
     }
 }
 
