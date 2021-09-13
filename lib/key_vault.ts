@@ -11,6 +11,7 @@ interface KeyVaultConstructProps {
     resourceGroup: ResourceGroup;
     storageAccount: StorageAccount;
     servicePrincipalObjectId: string;
+    applicationInsightsKey: string;
 }
 
 export class KeyVaultConstruct extends Construct {
@@ -49,6 +50,22 @@ export class KeyVaultConstruct extends Construct {
         })
         new KeyVaultSecret(this, "Storage Account Key", {
             keyVaultId: this.keyVault.id, name: "StorageAccountKey", value: storageAccount.primaryAccessKey
+        })
+
+        new KeyVaultSecret(this, "Application Insights Key", {
+            keyVaultId: this.keyVault.id, name: "ApplicationInsightsKey", value: props.applicationInsightsKey
+        })
+
+        new KeyVaultSecret(this, "Google Map Key", {
+            keyVaultId: this.keyVault.id, name: "GoogleMapKey", value: process.env.GOOGLE_MAP_KEY!
+        })
+
+        new KeyVaultSecret(this, "Recaptcha Secret Key", {
+            keyVaultId: this.keyVault.id, name: "RECAPTCHA_SECRET_KEY", value: process.env.RECAPTCHA_SECRET_KEY!
+        })
+
+        new KeyVaultSecret(this, "Recaptcha Site Key", {
+            keyVaultId: this.keyVault.id, name: "RECAPTCHA_SITE_KEY", value: process.env.RECAPTCHA_SITE_KEY!
         })
 
     }
