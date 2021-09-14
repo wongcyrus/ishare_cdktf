@@ -1,3 +1,11 @@
+How to deploy?
+
+cdktf get
+npm i
+tsc
+./deploy.sh
+
+
 ========================================================================================================
 
   Your cdktf typescript project is ready!
