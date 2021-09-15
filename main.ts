@@ -42,7 +42,7 @@ export class MainStack extends TerraformStack {
         new AzureadProvider(this, "Azure AD Provider");
         new AzurermProvider(this, "Azure provider", {
             features: [{}],
-            skipProviderRegistration: true,
+            skipProviderRegistration: false,
         });
 
         const resourceGroup = new ResourceGroup(this, "Resource group", {
