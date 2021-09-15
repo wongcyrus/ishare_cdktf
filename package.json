@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@cdktf/provider-azurerm": "^0.2.8",
+    "@cdktf/provider-null": "^0.2.6",
     "cdktf": "^0.5.0",
     "constructs": "^3.3.147",
     "dotenv": "^10.0.0"
