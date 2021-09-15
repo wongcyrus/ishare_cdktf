@@ -57,7 +57,7 @@ export class ChatBotConstruct extends Construct {
         });
         webchatSecretsNullResource.addOverride(
             "provisioner.local-exec.command", `az bot webchat show --name ${botName} --resource-group ${resourceGroupName} --with-secrets \
-            | jq '.resource.properties.sites | map({siteName:.siteName, key:.key})' \
+            | jq '.resource.properties.sites| map({(.siteName) : .key}) | add' \
             > ../../../webchat_secrets.json`
         );
 
