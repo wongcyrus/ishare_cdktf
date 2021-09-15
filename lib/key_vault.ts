@@ -13,6 +13,7 @@ interface KeyVaultConstructProps {
     storageAccount: StorageAccount;
     servicePrincipalObjectId: string;
     applicationInsightsKey: string;
+    webChatBotSecret: string;
     cognitiveServiceConstruct: CognitiveServiceConstruct;
 }
 
@@ -137,6 +138,11 @@ export class KeyVaultConstruct extends Construct {
             keyVaultId: this.keyVault.id,
             name: "CognitiveAccountFormRecognizerEndpoint",
             value: props.cognitiveServiceConstruct.cognitiveAccountFormRecognizerEndpoint
+        });
+        new KeyVaultSecret(this, "Web Chat Bot Secret", {
+            keyVaultId: this.keyVault.id,
+            name: "WebChatBotSecret",
+            value: props.webChatBotSecret
         });
 
     }

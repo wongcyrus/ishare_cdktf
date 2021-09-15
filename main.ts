@@ -89,7 +89,7 @@ export class MainStack extends TerraformStack {
             resourceGroup
         });
 
-        new ChatBotConstruct(this, "Chat Bot", {
+        const chatBotConstruct = new ChatBotConstruct(this, "Chat Bot", {
             resourceGroup
         });
 
@@ -98,6 +98,7 @@ export class MainStack extends TerraformStack {
             storageAccount: blobStorageConstruct.storageAccount,
             servicePrincipalObjectId: azureAdConstruct.servicePrincipalObjectId,
             applicationInsightsKey: applicationInsightsConstruct.applicationInsights.instrumentationKey,
+            webChatBotSecret: chatBotConstruct.webChatBotSecret,
             cognitiveServiceConstruct
         });
         new TerraformOutput(

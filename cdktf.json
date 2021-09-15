@@ -4,7 +4,8 @@
   "terraformProviders": [
     "azurerm@~> 2.70.0",
     "azuread@~> 2.2.1",
-    "null@~> 3.1.0"
+    "null@~> 3.1.0",
+    "local@~> 2.1.0"
   ],
   "terraformModules": [],
   "context": {

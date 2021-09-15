@@ -7,6 +7,7 @@ import {
 } from "@cdktf/provider-azurerm";
 import {Application} from "../.gen/providers/azuread/application";
 import {Resource} from "@cdktf/provider-null";
+import {DataLocalFile} from "../.gen/providers/local/data-local-file";
 
 
 interface ChatBotConstructConstructProps {
@@ -14,6 +15,8 @@ interface ChatBotConstructConstructProps {
 }
 
 export class ChatBotConstruct extends Construct {
+    public readonly webChatBotSecret: string;
+
     constructor(
         scope: Construct,
         name: string,
@@ -46,18 +49,22 @@ export class ChatBotConstruct extends Construct {
             siteNames: ["donor", "volunteer", "student", "teacher", "anonymous"]
         });
 
-        const nullResource = new Resource(this, "Bot Channel WebChat Keys", {
+        const webchatSecretsNullResource = new Resource(this, "Bot Channel WebChat Keys", {
             triggers: {
                 dummy: new Date().getMilliseconds().toString()
             },
             dependsOn: [botChannelWebChat],
         });
-        nullResource.addOverride(
+        webchatSecretsNullResource.addOverride(
             "provisioner.local-exec.command", `az bot webchat show --name ${botName} --resource-group ${resourceGroupName} --with-secrets \
             | jq '.resource.properties.sites | map({siteName:.siteName, key:.key})' \
             > ../../../webchat_secrets.json`
         );
 
-
+        const webChatBotSecretLocalFile = new DataLocalFile(this, "Webchat Secrets DataLocalFile", {
+            filename: "../../../webchat_secrets.json",
+            dependsOn: [webchatSecretsNullResource]
+        });
+        this.webChatBotSecret = webChatBotSecretLocalFile.content;
     }
 }
