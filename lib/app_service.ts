@@ -27,7 +27,7 @@ export class AppServiceConstruct extends Construct {
         // create MySQL Database
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service
         this.appService = new AppService(this, "iShare App", {
-            name: process.env.APP_SERVICE_NAME! + process.env.ENV,
+            name: process.env.PROJECT_NAME! + process.env.ENV,
             resourceGroupName: resourceGroup.name,
             location: resourceGroup.location,
             appServicePlanId: appServicePlan.id,
