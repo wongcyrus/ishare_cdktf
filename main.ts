@@ -32,7 +32,7 @@ export class MainStack extends TerraformStack {
         console.log("Resource Group:" + process.env.RESOURCE_GROUP_NAME);
 
         if (fs.existsSync(resolve(__dirname, `./secrets.env`))) {
-            console.log("Overrides with secrets.env");
+            console.log("Overrides with secrets.env.template");
             const envConfig = parse(fs.readFileSync(resolve(__dirname, `./secrets.env`)))
             for (const k in envConfig) {
                 process.env[k] = envConfig[k]
