@@ -1,6 +1,6 @@
 import {Construct} from "constructs";
 import {Application} from "../.gen/providers/azuread/application";
-import {AzureadProvider} from "../.gen/providers/azuread/azuread-provider";
+
 import {ServicePrincipal} from "../.gen/providers/azuread/service-principal";
 import {ServicePrincipalPassword} from "../.gen/providers/azuread/service-principal-password";
 
@@ -17,7 +17,6 @@ export class AzureAdConstruct extends Construct {
     constructor(scope: Construct, name: string,) {
         super(scope, name);
         const dataAzureRmClientConfig = new DataAzurermClientConfig(this, "Client Config");
-        new AzureadProvider(this, "Azure AD Provider");
 
         const application = new Application(this, "iShare Application", {
             displayName: process.env.PROJECT_NAME! + process.env.ENV,

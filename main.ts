@@ -15,7 +15,8 @@ import {KeyVaultConstruct} from "./lib/key_vault";
 import {AzureAdConstruct} from "./lib/azure_ad";
 import * as fs from "fs";
 import {CognitiveServiceConstruct} from "./lib/cognitive_service";
-
+import {AzureadProvider} from "./.gen/providers/azuread/azuread-provider";
+import {ChatBotConstruct} from "./lib/chatbot";
 
 interface MainStackProps {
     env: string;
@@ -38,6 +39,7 @@ export class MainStack extends TerraformStack {
             }
         }
 
+        new AzureadProvider(this, "Azure AD Provider");
         new AzurermProvider(this, "Azure provider", {
             features: [{}],
             skipProviderRegistration: true,
@@ -50,45 +52,45 @@ export class MainStack extends TerraformStack {
 
         const azureAdConstruct = new AzureAdConstruct(this, "Azure AD");
 
-        const blobStorageConstruct = new BlobStorageConstruct(this, "Blob", {resourceGroup: resourceGroup});
+        const blobStorageConstruct = new BlobStorageConstruct(this, "Blob", {resourceGroup});
 
 
-        const mySQLServerConstruct = new MySQLServerConstruct(this, "MySQL server", {
-            resourceGroup: resourceGroup,
-        });
+        const mySQLServerConstruct = new MySQLServerConstruct(this, "MySQL server", {resourceGroup});
 
         new MySQLDatabaseConstruct(this, "MySQL database", {
-            resourceGroup: resourceGroup,
+            resourceGroup,
             mysqlServer: mySQLServerConstruct.mysqlServer,
         });
 
         new MySQLFirewallConstruct(this, "MySQL firewall", {
-            resourceGroup: resourceGroup,
+            resourceGroup,
             mysqlServer: mySQLServerConstruct.mysqlServer,
         });
 
         const applicationInsightsConstruct = new ApplicationInsightsConstruct(this, "Application insights", {
-            resourceGroup: resourceGroup,
+            resourceGroup,
         });
 
-        const containerRegistrySConstruct = new ContainerRegistrySConstruct(
-            this,
-            "container registry",
-            {resourceGroup: resourceGroup}
-        );
+        const containerRegistrySConstruct = new ContainerRegistrySConstruct(this, "container registry", {
+            resourceGroup
+        });
 
         const appServicePlanConstruct = new AppServicePlanConstruct(this, "App Service Plan", {
-            resourceGroup: resourceGroup,
+            resourceGroup,
         });
 
         new AppServiceConstruct(this, "App Service", {
-            resourceGroup: resourceGroup,
+            resourceGroup,
             appServicePlan: appServicePlanConstruct.appServicePlan,
             mysqlServer: mySQLServerConstruct.mysqlServer,
         });
 
-        const cognitiveServiceConstruct = new CognitiveServiceConstruct(this, "Cognitive Service",{
-            resourceGroup: resourceGroup
+        const cognitiveServiceConstruct = new CognitiveServiceConstruct(this, "Cognitive Service", {
+            resourceGroup
+        });
+
+        new ChatBotConstruct(this, "Chat Bot", {
+            resourceGroup
         });
 
         const keyVaultConstruct = new KeyVaultConstruct(this, "KeyVault", {
