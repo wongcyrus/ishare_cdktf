@@ -7,5 +7,5 @@ cdktf.log
 .gen
 .terraform
 stack_output.json
-secrets.env.template
+secrets.env
 webchat_secrets.json
