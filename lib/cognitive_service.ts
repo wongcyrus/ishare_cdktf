@@ -32,7 +32,8 @@ export class CognitiveServiceConstruct extends Construct {
             name: process.env.STORAGE_ACCOUNT_NAME! + process.env.ENV + "ComputerVision",
             resourceGroupName: resourceGroup.name,
             location: resourceGroup.location,
-            kind: "ComputerVision", skuName: process.env.COGNITIVE_ACCOUNT_SKU_NAME_COMPUTER_VISION!
+            kind: "ComputerVision", skuName: process.env.COGNITIVE_ACCOUNT_SKU_NAME_COMPUTER_VISION!,
+            tags: {"environment": process.env.ENV!, "created_by": process.env.CREATED_BY!},
         });
         this.cognitiveAccountComputerVisionKey = cognitiveAccountComputerVision.primaryAccessKey;
         this.cognitiveAccountComputerVisionEndpoint = cognitiveAccountComputerVision.endpoint;
@@ -41,7 +42,8 @@ export class CognitiveServiceConstruct extends Construct {
             name: process.env.STORAGE_ACCOUNT_NAME! + process.env.ENV + "ContentModerator",
             resourceGroupName: resourceGroup.name,
             location: resourceGroup.location,
-            kind: "ContentModerator", skuName: process.env.COGNITIVE_ACCOUNT_SKU_NAME!
+            kind: "ContentModerator", skuName: process.env.COGNITIVE_ACCOUNT_SKU_NAME!,
+            tags: {"environment": process.env.ENV!, "created_by": process.env.CREATED_BY!},
         });
         this.cognitiveAccountContentModeratorKey = cognitiveAccountContentModerator.primaryAccessKey;
         this.cognitiveAccountContentModeratorEndpoint = cognitiveAccountContentModerator.endpoint;
@@ -50,7 +52,8 @@ export class CognitiveServiceConstruct extends Construct {
             name: process.env.STORAGE_ACCOUNT_NAME! + process.env.ENV + "TextAnalytics",
             resourceGroupName: resourceGroup.name,
             location: resourceGroup.location,
-            kind: "TextAnalytics", skuName: process.env.COGNITIVE_ACCOUNT_SKU_NAME_TEXTANALYTICS!
+            kind: "TextAnalytics", skuName: process.env.COGNITIVE_ACCOUNT_SKU_NAME_TEXTANALYTICS!,
+            tags: {"environment": process.env.ENV!, "created_by": process.env.CREATED_BY!},
         });
         this.cognitiveAccountTextAnalyticsKey = cognitiveAccountTextAnalytics.primaryAccessKey;
         this.cognitiveAccountTextAnalyticsEndpoint = cognitiveAccountTextAnalytics.endpoint;
@@ -59,7 +62,8 @@ export class CognitiveServiceConstruct extends Construct {
             name: process.env.STORAGE_ACCOUNT_NAME! + process.env.ENV + "TextTranslation",
             resourceGroupName: resourceGroup.name,
             location: resourceGroup.location,
-            kind: "TextTranslation", skuName: process.env.COGNITIVE_ACCOUNT_SKU_NAME_TEXTTRANSLATION!
+            kind: "TextTranslation", skuName: process.env.COGNITIVE_ACCOUNT_SKU_NAME_TEXTTRANSLATION!,
+            tags: {"environment": process.env.ENV!, "created_by": process.env.CREATED_BY!},
         });
         this.cognitiveAccountTextTranslationKey = cognitiveAccountTextTranslation.primaryAccessKey;
         this.cognitiveAccountTextTranslationEndpoint = cognitiveAccountTextTranslation.endpoint;
@@ -68,7 +72,8 @@ export class CognitiveServiceConstruct extends Construct {
             name: process.env.STORAGE_ACCOUNT_NAME! + process.env.ENV + "Face",
             resourceGroupName: resourceGroup.name,
             location: resourceGroup.location,
-            kind: "Face", skuName: process.env.COGNITIVE_ACCOUNT_SKU_NAME!
+            kind: "Face", skuName: process.env.COGNITIVE_ACCOUNT_SKU_NAME!,
+            tags: {"environment": process.env.ENV!, "created_by": process.env.CREATED_BY!},
         });
         this.cognitiveAccountFaceKey = cognitiveAccountFace.primaryAccessKey;
         this.cognitiveAccountFaceEndpoint = cognitiveAccountFace.endpoint;
@@ -77,7 +82,8 @@ export class CognitiveServiceConstruct extends Construct {
             name: process.env.STORAGE_ACCOUNT_NAME! + process.env.ENV + "FormRecognizer",
             resourceGroupName: resourceGroup.name,
             location: resourceGroup.location,
-            kind: "FormRecognizer", skuName: process.env.COGNITIVE_ACCOUNT_SKU_NAME!
+            kind: "FormRecognizer", skuName: process.env.COGNITIVE_ACCOUNT_SKU_NAME!,
+            tags: {"environment": process.env.ENV!, "created_by": process.env.CREATED_BY!},
         });
         this.cognitiveAccountFormRecognizerKey = cognitiveAccountFormRecognizer.primaryAccessKey;
         this.cognitiveAccountFormRecognizerEndpoint = cognitiveAccountFormRecognizer.endpoint;

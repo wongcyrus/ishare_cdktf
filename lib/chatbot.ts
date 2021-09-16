@@ -38,7 +38,8 @@ export class ChatBotConstruct extends Construct {
             name: process.env.STORAGE_ACCOUNT_NAME! + process.env.ENV + "BotWebApp",
             resourceGroupName,
             location: "global",
-            sku: process.env.BOTWEBAPP_SKU!
+            sku: process.env.BOTWEBAPP_SKU!,
+            tags: {"environment": process.env.ENV!, "created_by": process.env.CREATED_BY!},
         });
 
         const botName = botChannelsRegistration.name;

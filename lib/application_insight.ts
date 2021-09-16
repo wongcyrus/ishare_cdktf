@@ -28,7 +28,7 @@ export class ApplicationInsightsConstruct extends Construct {
                 resourceGroupName: resourceGroup.name,
                 location: resourceGroup.location,
                 dependsOn: [resourceGroup],
-                tags: JSON.parse(process.env.TAG!),
+                tags: {"environment": process.env.ENV!, "created_by": process.env.CREATED_BY!},
             }
         );
     }

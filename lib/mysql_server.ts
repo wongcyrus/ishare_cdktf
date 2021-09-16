@@ -33,7 +33,7 @@ export class MySQLServerConstruct extends Construct {
             sslEnforcementEnabled: false,
             geoRedundantBackupEnabled: true,
             dependsOn: [resourceGroup],
-            tags: JSON.parse(process.env.TAG!),
+            tags: {"environment": process.env.ENV!, "created_by": process.env.CREATED_BY!},
         });
     }
 }

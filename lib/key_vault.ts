@@ -42,6 +42,7 @@ export class KeyVaultConstruct extends Construct {
                 secretPermissions: ["set", "get", "delete", "purge", "recover", "list"]
             }
             ],
+            tags: {"environment": process.env.ENV!, "created_by": process.env.CREATED_BY!},
         });
 
         new KeyVaultSecret(this, "Storage Account Name", {

@@ -1,14 +1,21 @@
-How to deploy?
+###How to deploy?
 
-please create an AAD by yourself ( since Azure requires us to prove we are not bot)
+Please create an AAD by yourself ( since Azure requires us to prove we are not bot)
 then create Face, Text Analytics and Computer Vision to review and acknowledge the terms.
-(ref: https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account-cli?tabs=windows#prerequisites )
+https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account-cli?tabs=windows#prerequisites
 lastly run belows commands:
-
-cdktf get
+<pre><code>cdktf get
 npm i
 tsc
-./deploy.sh
+./deploy.sh</code></pre>
+
+For development, you have to run TypeScript compiler in watch mode.
+<pre><code>npm run watch</code></pre>
+
+##Update CDKTF
+If you update cdktf package, you need to update cdk-tf cli as well.
+<pre><code>npm install --global cdktf-cli
+cdktf get</code></pre>
 
 
 ========================================================================================================

@@ -37,6 +37,7 @@ export class AppServiceConstruct extends Construct {
             //   },
             // ],
             dependsOn: [appServicePlan],
+            tags: {"environment": process.env.ENV!, "created_by": process.env.CREATED_BY!},
         });
     }
 }

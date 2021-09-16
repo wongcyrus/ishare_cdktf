@@ -26,6 +26,7 @@ export class BlobStorageConstruct extends Construct {
                 location: resourceGroup.location,
                 accountTier: process.env.STORAGE_ACCOUNT_TIER!,
                 accountReplicationType: process.env.STORAGE_ACCOUNT_REPLICATION_TYPE!,
+                tags: {"environment": process.env.ENV!, "created_by": process.env.CREATED_BY!},
             }
         );
 

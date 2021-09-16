@@ -12,5 +12,6 @@
     "env": "dev",
     "excludeStackIdFromLogicalIds": "true",
     "allowSepCharsInLogicalIds": "true"
-  }
+  },
+  "projectId": "af4e1abf-c1b5-4c21-803f-8f30d32ef0f6"
 }

@@ -26,6 +26,11 @@ export class MainStack extends TerraformStack {
     constructor(scope: Construct, name: string, props: MainStackProps) {
         super(scope, name);
 
+        if (process.env.CREATED_BY === undefined) {
+            console.log("You must define environment variable CREATED_BY, and it should be your git username.");
+            return;
+        }
+
         config({path: resolve(__dirname, `./${props.env}.env`)});
         process.env.ENV = props.env;
         process.env.RESOURCE_GROUP_NAME = process.env.RESOURCE_GROUP_NAME + props.env;
@@ -162,6 +167,6 @@ export class MainStack extends TerraformStack {
     }
 }
 
-const app = new App();
+const app = new App({skipValidation: true});
 new MainStack(app, "iShare_stack", {env: "dev"});
 app.synth();
