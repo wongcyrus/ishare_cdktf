@@ -10,9 +10,15 @@ npm i
 tsc
 ./deploy.sh
 
-
 ========================================================================================================
 
+If your system is linux and fail to deploy due to docker got permission denied, please run below commands and reboot your system:
+
+sudo groupadd docker
+sudo usermod -aG docker $(your_username)
+newgrp docker
+
+========================================================================================================
   Your cdktf typescript project is ready!
 
   cat help                Print this message
