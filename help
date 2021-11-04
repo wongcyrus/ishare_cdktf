@@ -1,9 +1,12 @@
 How to deploy?
 
-please create an AAD by yourself ( since Azure requires us to prove we are not bot)
+Please make sure your system have installed az cli.
+(ref : https://docs.microsoft.com/en-us/cli/azure/install-azure-cli )
+Please login to az cli and choose the subscription you want to deploy this project.
+Please create an AAD by yourself ( since Azure requires us to prove we are not bot),
 then create Face, Text Analytics and Computer Vision to review and acknowledge the terms.
 (ref: https://docs.microsoft.com/en-us/azure/cognitive-services/cognitive-services-apis-create-account-cli?tabs=windows#prerequisites )
-lastly run belows commands:
+Lastly run belows commands:
 
 cdktf get
 npm i
