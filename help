@@ -15,6 +15,11 @@ tsc
 
 ========================================================================================================
 
+In this project, we will use github branch name and its hash to name the Docker image,
+so due the Docker policy, your github repository and its branch name must be in lowercase letters.
+
+========================================================================================================
+
 If your system is linux and fail to deploy due to docker got permission denied, please run below commands and reboot your system:
 
 sudo groupadd docker
