@@ -42,24 +42,16 @@ export class ContainerRegistrySConstruct extends Construct {
             },
             dependsOn: [dockerloginNullResource],
         });
-        const dockerpushNullResource = new Resource(this, "push to azurecr", {
-            triggers: {
-                dummy: new Date().getMilliseconds().toString()
-            },
-            dependsOn: [dockerbuilddockerNullResource, dockerloginNullResource],
-        });
         const serverentry = this.containerRegistry.loginServer;
         const username = this.containerRegistry.adminUsername;
         const password = this.containerRegistry.adminPassword;
         const dockerlocation = process.env.DOCKERFILESLOCATION!;
+        const imgname = process.env.PROJECT_NAME
         dockerloginNullResource.addOverride(
-            "provisioner.local-exec.command",`docker login ${serverentry} -u ${username} -p ${password}`
+            "provisioner.local-exec.command",`sleep 30 && docker login ${serverentry} -u ${username} -p ${password}`
         );
         dockerbuilddockerNullResource.addOverride(
-            "provisioner.local-exec.command", `docker build -t ${serverentry}/pc_donation:v0.0.0 ${dockerlocation}`
-        );
-        dockerpushNullResource.addOverride(
-            "provisioner.local-exec.command", `docker push ${serverentry}/pc_donation:v0.0.0`
+            "provisioner.local-exec.command", `branch=$(git symbolic-ref --short HEAD) && hash=$(git rev-parse --short HEAD) && docker build -t ${serverentry}/${imgname}-$branch:$hash ${dockerlocation} && docker push ${serverentry}/${imgname}-$branch:$hash`
         );
     }
 }
