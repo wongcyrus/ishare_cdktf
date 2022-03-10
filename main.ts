@@ -72,7 +72,8 @@ export class MainStack extends TerraformStack {
         });
 
         const containerRegistrySConstruct = new ContainerRegistrySConstruct(this, "container registry", {
-            resourceGroup
+            resourceGroup,
+            azureadConstruct: azureAdConstruct
         });
 
         const appServicePlanConstruct = new AppServicePlanConstruct(this, "App Service Plan", {

@@ -1,8 +1,10 @@
 import {Construct} from "constructs";
+import {AzureAdConstruct} from "./azure_ad";
 import {ContainerRegistry, ResourceGroup} from "@cdktf/provider-azurerm";
 import {Resource} from "@cdktf/provider-null";
 interface ContainerRegistryConstructProps {
     resourceGroup: ResourceGroup;
+    azureadConstruct: AzureAdConstruct;
 }
 
 export class ContainerRegistrySConstruct extends Construct {
@@ -46,12 +48,17 @@ export class ContainerRegistrySConstruct extends Construct {
         const username = this.containerRegistry.adminUsername;
         const password = this.containerRegistry.adminPassword;
         const dockerlocation = process.env.DOCKERFILESLOCATION!;
-        const imgname = process.env.PROJECT_NAME
+        const imgname = process.env.PROJECT_NAME;
+        const VAULT_URL = "https://" + process.env.PROJECT_NAME! + process.env.ENV + ".vault.azure.net/"
+        const AZURE_CLIENT_ID = props.azureadConstruct.servicePrincipalAppId;
+        const AZURE_TENANT_ID = props.azureadConstruct.servicePrincipalTenantId;
+        const AZURE_CLIENT_SECRET = props.azureadConstruct.servicePrincipalPassword;
+
         dockerloginNullResource.addOverride(
             "provisioner.local-exec.command",`sleep 30 && docker login ${serverentry} -u ${username} -p ${password}`
         );
         dockerbuilddockerNullResource.addOverride(
-            "provisioner.local-exec.command", `branch=$(git symbolic-ref --short HEAD) && hash=$(git rev-parse --short HEAD) && docker build -t ${serverentry}/${imgname}-$branch:$hash ${dockerlocation} && docker push ${serverentry}/${imgname}-$branch:$hash`
+            "provisioner.local-exec.command", `branch=$(git symbolic-ref --short HEAD) && hash=$(git rev-parse --short HEAD) && chmod -R +rxw ${dockerlocation}/dev &&  docker build -t ${serverentry}/${imgname}-$branch:$hash --build-arg VAULT_URL=${VAULT_URL} --build-arg AZURE_CLIENT_ID=${AZURE_CLIENT_ID} --build-arg AZURE_TENANT_ID=${AZURE_TENANT_ID} --build-arg AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET} ${dockerlocation} && docker push ${serverentry}/${imgname}-$branch:$hash`
         );
     }
 }
