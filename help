@@ -1,6 +1,6 @@
 How to deploy?
 
-Please make sure your system have installed az cli.
+Please make sure your system have installed az cli, docker and mysql client (v5.7 recommended).
 (ref : https://docs.microsoft.com/en-us/cli/azure/install-azure-cli )
 Please login to az cli and choose the subscription you want to deploy this project.
 Please create an AAD by yourself ( since Azure requires us to prove we are not bot),
