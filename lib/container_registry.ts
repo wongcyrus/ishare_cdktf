@@ -9,7 +9,7 @@ interface ContainerRegistryConstructProps {
 
 export class ContainerRegistrySConstruct extends Construct {
     public readonly containerRegistry: ContainerRegistry;
-
+    public readonly dockerbuild: Resource;
     constructor(
         scope: Construct,
         name: string,
@@ -33,16 +33,11 @@ export class ContainerRegistrySConstruct extends Construct {
                 tags: JSON.parse(process.env.TAG!),
             }
         );
-        const dockerloginNullResource = new Resource(this, "login to azurecr",{
-            triggers: {
-                dummy: new Date().getMilliseconds().toString()
-            }
-        });
-        const dockerbuilddockerNullResource = new Resource(this, "build docker image", {
+        this.dockerbuild = new Resource(this, "build docker image", {
             triggers: {
                 dummy: new Date().getMilliseconds().toString()
             },
-            dependsOn: [dockerloginNullResource],
+            dependsOn: [this.containerRegistry]
         });
         const serverentry = this.containerRegistry.loginServer;
         const username = this.containerRegistry.adminUsername;
@@ -54,11 +49,11 @@ export class ContainerRegistrySConstruct extends Construct {
         const AZURE_TENANT_ID = props.azureadConstruct.servicePrincipalTenantId;
         const AZURE_CLIENT_SECRET = props.azureadConstruct.servicePrincipalPassword;
 
-        dockerloginNullResource.addOverride(
-            "provisioner.local-exec.command",`sleep 30 && docker login ${serverentry} -u ${username} -p ${password}`
-        );
-        dockerbuilddockerNullResource.addOverride(
-            "provisioner.local-exec.command", `branch=$(git symbolic-ref --short HEAD) && hash=$(git rev-parse --short HEAD) && chmod -R +rxw ${dockerlocation}/dev &&  docker build -t ${serverentry}/${imgname}-$branch:$hash --build-arg VAULT_URL=${VAULT_URL} --build-arg AZURE_CLIENT_ID=${AZURE_CLIENT_ID} --build-arg AZURE_TENANT_ID=${AZURE_TENANT_ID} --build-arg AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET} ${dockerlocation} && docker push ${serverentry}/${imgname}-$branch:$hash`
+        this.dockerbuild.addOverride(
+            "provisioner.local-exec.command", `sleep 30 && docker login ${serverentry} -u ${username} -p ${password} && \ 
+            branch=$(git symbolic-ref --short HEAD) && hash=$(git rev-parse --short HEAD) && chmod -R +rxw ${dockerlocation}/dev && \
+            docker build -t ${serverentry}/${imgname}-$branch:$hash --build-arg VAULT_URL=${VAULT_URL} --build-arg AZURE_CLIENT_ID=${AZURE_CLIENT_ID} --build-arg AZURE_TENANT_ID=${AZURE_TENANT_ID} --build-arg AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET} ${dockerlocation} && \
+            docker push ${serverentry}/${imgname}-$branch:$hash`
         );
     }
 }
