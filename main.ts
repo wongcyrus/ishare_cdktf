@@ -73,7 +73,8 @@ export class MainStack extends TerraformStack {
 
         const containerRegistrySConstruct = new ContainerRegistrySConstruct(this, "container registry", {
             resourceGroup,
-            azureadConstruct: azureAdConstruct
+            azureadConstruct: azureAdConstruct,
+            mysqlServer: mySQLServerConstruct.mysqlServer,
         });
 
         const appServicePlanConstruct = new AppServicePlanConstruct(this, "App Service Plan", {
@@ -83,7 +84,7 @@ export class MainStack extends TerraformStack {
         new AppServiceConstruct(this, "App Service", {
             resourceGroup,
             appServicePlan: appServicePlanConstruct.appServicePlan,
-            mysqlServer: mySQLServerConstruct.mysqlServer,
+            //mysqlServer: mySQLServerConstruct.mysqlServer,
             containerregistry: containerRegistrySConstruct
         });
 
