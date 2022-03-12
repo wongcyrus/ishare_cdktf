@@ -84,6 +84,7 @@ export class MainStack extends TerraformStack {
             resourceGroup,
             appServicePlan: appServicePlanConstruct.appServicePlan,
             mysqlServer: mySQLServerConstruct.mysqlServer,
+            containerregistry: containerRegistrySConstruct
         });
 
         const cognitiveServiceConstruct = new CognitiveServiceConstruct(this, "Cognitive Service", {
