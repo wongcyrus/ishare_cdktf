@@ -37,10 +37,10 @@ export class MySQLDatabaseConstruct extends Construct {
         const serverentry = this.mysqlDatabase.serverName + ".mysql.database.azure.com"
         const username = process.env.MYSQL_SERVER_ADMIN_USERNAME + "@" + this.mysqlDatabase.serverName
         const password = process.env.MYSQL_SERVER_ADMIN_PASSWORD;
-        const table = process.env.MYSQL_SQL_TABLE_LOCATION;
         const database = process.env.MYSQL_SCHEMA_NAME;
+        const absolute_path = process.env.PROJECT_PATH!;
         sqluploadtableNullResource.addOverride(
-            "provisioner.local-exec.command", `sleep 30 && mysql -h ${serverentry} -u ${username} --password=${password} --skip-ssl -e "CREATE DATABASE ${database}" && mysql -h ${serverentry} -u ${username} --password=${password} --skip-ssl ${database} < ${table}`
+            "provisioner.local-exec.command", `sleep 30 && mysql -h ${serverentry} -u ${username} --password=${password} --skip-ssl -e "CREATE DATABASE ${database}" && mysql -h ${serverentry} -u ${username} --password=${password} --skip-ssl ${database} < ${absolute_path}/pc_donation/mysql.sql`
         );
     }
 }

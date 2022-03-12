@@ -34,14 +34,15 @@ export class ContainerRegistrySConstruct extends Construct {
                 tags: JSON.parse(process.env.TAG!),
             }
         );
+        const absolute_path = process.env.PROJECT_PATH!;
         const get_principalId = new Resource(this, "get mysql principal id",{
             triggers: {
                 dummy: new Date().getMilliseconds().toString()
             },
             dependsOn: [mysqlServer]
         });
-        get_principalId.addOverride('provisioner.local-exec.command', 'az mysql server list | jq .[].identity.principalId > ~/WebstormProjects/ishare_cdktf/principalId.txt && sleep 10')
-
+        get_principalId.addOverride(
+            "provisioner.local-exec.command", `az mysql server list | jq .[].identity.principalId > ${absolute_path}/principalId.txt && sleep 10  ` )
         this.dockerbuild = new Resource(this, "build docker image", {
             triggers: {
                 dummy: new Date().getMilliseconds().toString()
@@ -51,7 +52,6 @@ export class ContainerRegistrySConstruct extends Construct {
         const serverentry = this.containerRegistry.loginServer;
         const username = this.containerRegistry.adminUsername;
         const password = this.containerRegistry.adminPassword;
-        const dockerlocation = process.env.DOCKERFILESLOCATION!;
         const imgname = process.env.PROJECT_NAME;
         const VAULT_URL = "https://" + process.env.PROJECT_NAME! + process.env.ENV + ".vault.azure.net/"
         const AZURE_CLIENT_ID = props.azureadConstruct.servicePrincipalAppId;
@@ -60,8 +60,8 @@ export class ContainerRegistrySConstruct extends Construct {
 
         this.dockerbuild.addOverride(
             "provisioner.local-exec.command", `sleep 30 && docker login ${serverentry} -u ${username} -p ${password} && \ 
-            branch=$(git symbolic-ref --short HEAD) && hash=$(git rev-parse --short HEAD) && chmod -R +rxw ${dockerlocation}/dev && \
-            docker build -t ${serverentry}/${imgname}-$branch:$hash --build-arg VAULT_URL=${VAULT_URL} --build-arg AZURE_CLIENT_ID=${AZURE_CLIENT_ID} --build-arg AZURE_TENANT_ID=${AZURE_TENANT_ID} --build-arg AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET} ${dockerlocation} && \
+            branch=$(git symbolic-ref --short HEAD) && hash=$(git rev-parse --short HEAD) && chmod -R +rxw ${absolute_path}/pc_donation/dev && \
+            docker build -t ${serverentry}/${imgname}-$branch:$hash --build-arg VAULT_URL=${VAULT_URL} --build-arg AZURE_CLIENT_ID=${AZURE_CLIENT_ID} --build-arg AZURE_TENANT_ID=${AZURE_TENANT_ID} --build-arg AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET} ${absolute_path}/pc_donation && \
             docker push ${serverentry}/${imgname}-$branch:$hash`
         );
     }
