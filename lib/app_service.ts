@@ -3,7 +3,6 @@ import {
     //AppService,
     AppServicePlan,
     //AppServiceSiteCredential,
-    MysqlServer,
     ResourceGroup,
 } from "@cdktf/provider-azurerm";
 import {ContainerRegistrySConstruct} from "./container_registry";
@@ -11,16 +10,13 @@ import {Resource} from "@cdktf/provider-null";
 interface AppServiceConstructProps {
     resourceGroup: ResourceGroup;
     appServicePlan: AppServicePlan;
-    mysqlServer: MysqlServer;
     containerregistry: ContainerRegistrySConstruct;
 }
 
 export class AppServiceConstruct extends Construct {
     //public readonly appService: AppService;
-
     constructor(scope: Construct, name: string, props: AppServiceConstructProps) {
         super(scope, name);
-
         const {resourceGroup, appServicePlan, containerregistry} = props;
         const App_Service_Creation = new Resource(this, "create app service",{
             triggers: {
@@ -40,16 +36,6 @@ export class AppServiceConstruct extends Construct {
             az webapp create --resource-group ${resourcegroup} --plan ${appServicePlanId} --name ${appname} --deployment-container-image-name ${imagename}-$branch:$hash --docker-registry-server-user ${acr_user} && \ 
             az webapp config appsettings set --resource-group ${resourcegroup} --name ${appname} --settings WEBSITES_PORT=5000 DOCKER_REGISTRY_SERVER_PASSWORD="${acr_pass}"`
         );
-
-        // TODO: Cannot get principalId using DataAzurermMysqlServer
-        /*const test = new DataAzurermMysqlServer(this, "test", {
-        /*const test = new DataAzurermMysqlServer(this, "test", {
-              name: mysql_server.name,
-              resourceGroupName: app_rg.name,
-              dependsOn: [mysql_server],
-            });
-
-            console.log(test.identity("principalId"));*/
 
         // create MySQL Database
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service
