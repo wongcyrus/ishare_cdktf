@@ -1,10 +1,11 @@
 import {Construct} from "constructs";
 import {AzureAdConstruct} from "./azure_ad";
-import {ContainerRegistry, ResourceGroup} from "@cdktf/provider-azurerm";
+import {ContainerRegistry, MysqlServer, ResourceGroup} from "@cdktf/provider-azurerm";
 import {Resource} from "@cdktf/provider-null";
 interface ContainerRegistryConstructProps {
     resourceGroup: ResourceGroup;
     azureadConstruct: AzureAdConstruct;
+    mysqlServer: MysqlServer;
 }
 
 export class ContainerRegistrySConstruct extends Construct {
@@ -17,7 +18,7 @@ export class ContainerRegistrySConstruct extends Construct {
     ) {
         super(scope, name);
 
-        const {resourceGroup} = props;
+        const {resourceGroup, mysqlServer} = props;
 
         // create container registry
         this.containerRegistry = new ContainerRegistry(
@@ -33,11 +34,19 @@ export class ContainerRegistrySConstruct extends Construct {
                 tags: JSON.parse(process.env.TAG!),
             }
         );
+        const get_principalId = new Resource(this, "get mysql principal id",{
+            triggers: {
+                dummy: new Date().getMilliseconds().toString()
+            },
+            dependsOn: [mysqlServer]
+        });
+        get_principalId.addOverride('provisioner.local-exec.command', 'az mysql server list | jq .[].identity.principalId > ~/WebstormProjects/ishare_cdktf/principalId.txt && sleep 10')
+
         this.dockerbuild = new Resource(this, "build docker image", {
             triggers: {
                 dummy: new Date().getMilliseconds().toString()
             },
-            dependsOn: [this.containerRegistry]
+            dependsOn: [this.containerRegistry, get_principalId]
         });
         const serverentry = this.containerRegistry.loginServer;
         const username = this.containerRegistry.adminUsername;
