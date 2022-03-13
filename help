@@ -1,8 +1,5 @@
 Before deploy
 
-Please edit PROJECT_PATH in dev.env with absolute path of this project in order to makes relative path in the codes work properly.
-example: ~/Downloads/ishare_cdktf
-
 Please edit PROJECT_NAME, MYSQL_SERVER_ADMIN_USERNAME and STORAGE_ACCOUNT_NAME with global unique name.
 Please edit MYSQL_SERVER_ADMIN_PASSWORD, SERVICE_PRINCIPAL_PASSWORD with a safe password.
 
