@@ -23,8 +23,9 @@ tsc
 ========================================================================================================
 How to destroy?
 
-If you want to delete the resources on Azure that created by this project,
-please run ./destroy.sh
+run this commands:
+
+cdktf destroy
 
 ========================================================================================================
 
