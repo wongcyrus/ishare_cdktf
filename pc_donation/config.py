@@ -23,11 +23,11 @@ class DatabaseConfig(object):
     # db_port = '3306'
     # db_name = 'pc_donation'
     # web_port = 80
-    db_user = 'iShare@isharedemotest4dev'
-    db_pass = 'P@ssw0rd'
-    db_host = 'iShare@isharedemotest4dev.mysql.database.azure.com'
+    db_user = os.environ["DB_USER"]
+    db_pass = os.environ["DB_PASS"]
+    db_host = os.environ["DB_HOST"]
     db_port = '3306'
-    db_name = 'default_schema'
+    db_name = os.environ["DB_NAME"]
     web_port = 80
 
 
@@ -110,10 +110,7 @@ class Config(object):
         'RECAPTCHA_PUBLIC_KEY') or RecaptchaConfig.RECAPTCHA_SITE_KEY
     RECAPTCHA_PRIVATE_KEY = os.environ.get(
         'RECAPTCHA_PRIVATE_KEY') or RecaptchaConfig.SECRET_KEY
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-                              "mysql+pymysql://" + DatabaseConfig.db_user + ':' + DatabaseConfig.db_pass + '@' + \
-                              (os.environ.get(
-                                  'DATABASE_HOST') or DatabaseConfig.db_host) + '/' + DatabaseConfig.db_name + "?charset=utf8mb4"
+    SQLALCHEMY_DATABASE_URI = f"mysql+pymysql://{DatabaseConfig.db_user}:{DatabaseConfig.db_pass}@{DatabaseConfig.db_host}:{DatabaseConfig.db_port}/{DatabaseConfig.db_name}?charset=utf8"
 
     # for local
     # SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db') + "?charset=utf8mb4"
