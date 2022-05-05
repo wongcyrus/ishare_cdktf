@@ -1,7 +1,7 @@
 import {Construct} from "constructs";
-import {AzureAdConstruct} from "./azure_ad";
 import {ContainerRegistry, MysqlServer, ResourceGroup} from "@cdktf/provider-azurerm";
 import {Resource} from "@cdktf/provider-null";
+import {AzureAdConstruct} from "./azure_ad";
 interface ContainerRegistryConstructProps {
     resourceGroup: ResourceGroup;
     azureadConstruct: AzureAdConstruct;
@@ -55,9 +55,10 @@ export class ContainerRegistrySConstruct extends Construct {
         const AZURE_TENANT_ID = props.azureadConstruct.servicePrincipalTenantId;
         const AZURE_CLIENT_SECRET = props.azureadConstruct.servicePrincipalPassword;
 
+
         this.dockerbuild.addOverride(
             "provisioner.local-exec.command", `sleep 30 && docker login ${serverentry} -u ${username} -p ${password} && \ 
-            branch=$(git symbolic-ref --short HEAD) && hash=$(git rev-parse --short HEAD) && chmod -R +rxw ../../../pc_donation/dev && \
+            branch=$(git symbolic-ref --short HEAD) && hash=$(git rev-parse --short HEAD) && pybabel compile -d ../../../pc_donation/app/translations && \
             docker build -t ${serverentry}/${imgname}-$branch:$hash --build-arg VAULT_URL=${VAULT_URL} --build-arg AZURE_CLIENT_ID=${AZURE_CLIENT_ID} --build-arg AZURE_TENANT_ID=${AZURE_TENANT_ID} --build-arg AZURE_CLIENT_SECRET=${AZURE_CLIENT_SECRET} ../../../pc_donation && \
             docker push ${serverentry}/${imgname}-$branch:$hash`
         );
