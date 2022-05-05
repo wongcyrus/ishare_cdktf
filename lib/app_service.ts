@@ -35,11 +35,16 @@ export class AppServiceConstruct extends Construct {
         const db_pass = process.env.MYSQL_SERVER_ADMIN_PASSWORD;
         const db_host = mysqlDatabase.mysqlDatabase.serverName + ".mysql.database.azure.com";
         const db_name = process.env.MYSQL_SCHEMA_NAME;
+        const MAIL_SERVER = process.env.MAIL_SERVER;
+        const MAIL_USERNAME = process.env.MAIL_USERNAME;
+        const MAIL_PASSWORD = process.env.MAIL_PASSWORD;
+        const MAIL_USE_TLS = process.env.MAIL_USE_TLS;
+        const MAIL_PORT = process.env.MAIL_PORT;
 
         App_Service_Creation.addOverride(
             "provisioner.local-exec.command",` sleep 30 && branch=$(git symbolic-ref --short HEAD) && hash=$(git rev-parse --short HEAD) &&  \ 
-            az webapp create --resource-group ${resourcegroup} --plan ${appServicePlanId} --name ${appname} --deployment-container-image-name ${imagename}-$branch:$hash --docker-registry-server-user ${acr_user} && \ 
-            az webapp config appsettings set --resource-group ${resourcegroup} --name ${appname} --settings WEBSITES_PORT=5000 DB_USER=${db_user} DB_PASS=${db_pass} DB_HOST=${db_host} DB_NAME=${db_name} DOCKER_REGISTRY_SERVER_PASSWORD="${acr_pass}"`)
+            az webapp create --resource-group ${resourcegroup} --plan ${appServicePlanId} --name ${appname} --deployment-container-image-name ${imagename}-$branch:$hash --docker-registry-server-user ${acr_user} --docker-registry-server-password ${acr_pass} && \ 
+            az webapp config appsettings set --resource-group ${resourcegroup} --name ${appname} --settings WEBSITES_PORT=5000 DB_USER=${db_user} DB_PASS=${db_pass} DB_HOST=${db_host} DB_NAME=${db_name} DOCKER_REGISTRY_SERVER_PASSWORD=${acr_pass} MAIL_SERVER=${MAIL_SERVER} MAIL_USERNAME=${MAIL_USERNAME} MAIL_PASSWORD=${MAIL_PASSWORD} MAIL_USE_TLS=${MAIL_USE_TLS} MAIL_PORT=${MAIL_PORT} `)
 
         // create MySQL Database
         // https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/app_service
