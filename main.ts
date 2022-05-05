@@ -57,7 +57,7 @@ export class MainStack extends TerraformStack {
 
         const mySQLServerConstruct = new MySQLServerConstruct(this, "MySQL server", {resourceGroup});
 
-        new MySQLDatabaseConstruct(this, "MySQL database", {
+        const mySQLDatabaseConstruct = new MySQLDatabaseConstruct(this, "MySQL database", {
             resourceGroup,
             mysqlServer: mySQLServerConstruct.mysqlServer,
         });
@@ -85,7 +85,8 @@ export class MainStack extends TerraformStack {
             resourceGroup,
             appServicePlan: appServicePlanConstruct.appServicePlan,
             //mysqlServer: mySQLServerConstruct.mysqlServer,
-            containerregistry: containerRegistrySConstruct
+            containerregistry: containerRegistrySConstruct,
+            mysqlDatabase: mySQLDatabaseConstruct,
         });
 
         const cognitiveServiceConstruct = new CognitiveServiceConstruct(this, "Cognitive Service", {
@@ -160,6 +161,12 @@ export class MainStack extends TerraformStack {
             this,
             "Service Principal Tenant Id",
             {value: azureAdConstruct.servicePrincipalTenantId, sensitive: true}
+        );
+        const AppServiceURL = "https://" + appServicePlanConstruct.appServicePlan.name + ".azurewebsites.net";
+        new TerraformOutput(
+            this,
+            "App Service URL",
+            {value: AppServiceURL, sensitive: true}
         );
 
     }
