@@ -39,11 +39,11 @@ class SmtpConfig(object):
     # key = "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"
     # sender = "no-reply@em7761.ishare.support"
     sender = "no-reply@em7761.ishare.support"
-    server = "0.0.0.0"
-    port = 25
-    TLS = False
-    user = ""
-    key = ""
+    server = os.environ["MAIL_SERVER"]
+    port = os.environ["MAIL_PORT"]
+    TLS = os.environ["MAIL_USE_TLS"]
+    user = os.environ["MAIL_USERNAME"]
+    key = os.environ["MAIL_PASSWORD"]
 
 
 class ApplicationInsightConfig(object):

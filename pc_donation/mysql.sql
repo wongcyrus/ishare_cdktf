@@ -284,8 +284,6 @@ CREATE TABLE `user` (
   `username` varchar(20) COLLATE dec8_bin NOT NULL,
   `first_name` varchar(50) COLLATE dec8_bin NOT NULL,
   `last_name` varchar(50) COLLATE dec8_bin NOT NULL,
-  `first_name_zh_hant` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `last_name_zh_hant` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `_email` varchar(50) COLLATE dec8_bin NOT NULL,
   `gender` enum('MALE','FEMALE') COLLATE dec8_bin DEFAULT NULL,
   `dateOfBirth` date NOT NULL,
@@ -424,9 +422,7 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `ix_user_username` (`username`),
   ADD KEY `region_id` (`region_id`),
   ADD KEY `ix_user_first_name` (`first_name`),
-  ADD KEY `ix_user_first_name_zh_hant` (`first_name_zh_hant`),
   ADD KEY `ix_user_last_name` (`last_name`),
-  ADD KEY `ix_user_last_name_zh_hant` (`last_name_zh_hant`),
   ADD KEY `ix_user_phone_number` (`phone_number`);
 
 --

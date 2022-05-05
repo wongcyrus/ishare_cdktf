@@ -118,10 +118,8 @@ class MainView(BaseFlaskView):
                                form=form,
                                username=current_user.username)
 
-    def language(self, language="zh"):
-
+    def language(self):
         language = request.args.get('language')
-
         if language == "zh":
             language = "zh_Hant"
         session["language"] = language

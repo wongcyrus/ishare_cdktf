@@ -1,0 +1,1395 @@
+
+msgid ""
+msgstr ""
+"Project-Id-Version:  idonation\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2022-03-16 07:58-0400\n"
+"PO-Revision-Date: 2022-03-29 14:51+0000\n"
+"Last-Translator: \n"
+"Language: zh_HK\n"
+"Language-Team: Chinese Traditional\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: app/__init__.py:37
+msgid "Please log in to access this page."
+msgstr "請登錄以造訪此頁面。"
+
+#: app/admin/forms.py:11 app/auth/forms.py:90
+msgid "Office Phone Number"
+msgstr "辦公電話號碼"
+
+#: app/admin/forms.py:13
+msgid "Approve this teacher?"
+msgstr "允許這位老師嗎？"
+
+#: app/admin/forms.py:14 app/admin/forms.py:24
+msgid "Save"
+msgstr "保存"
+
+#: app/admin/forms.py:18 app/templates/admin/donation_list.html:23
+msgid "Date"
+msgstr "日期"
+
+#: app/admin/forms.py:19
+msgid "Total"
+msgstr "總共"
+
+#: app/admin/forms.py:20
+msgid "Merchant Name"
+msgstr "品牌名稱"
+
+#: app/admin/forms.py:21
+msgid "Reject Reason"
+msgstr "拒絕原因"
+
+#: app/admin/forms.py:22
+msgid "Verify this Donation Receipt?"
+msgstr "確認此捐贈收據嗎？"
+
+#: app/admin/forms.py:23
+msgid "Reject this Donation Receipt?"
+msgstr "拒絕此捐贈收據嗎？"
+
+#: app/admin/routes.py:31
+msgid "Admin View"
+msgstr "管理員界面"
+
+#: app/admin/routes.py:40
+msgid "Teacher List"
+msgstr "老師名單"
+
+#: app/admin/routes.py:58 app/auth/routes.py:159 app/auth/routes.py:173
+#: app/teacher/routes.py:42 app/teacher/routes.py:71
+msgid "The confirmation link is invalid or has expired."
+msgstr "此驗證連結無效或已過期。"
+
+#: app/admin/routes.py:70
+msgid "You have activated this teacher account."
+msgstr "你已激活此老師賬戶。"
+
+#: app/admin/routes.py:72
+msgid "Emailed the teacher to confirm account."
+msgstr "已郵件至老師的郵件信箱以驗證賬戶。"
+
+#: app/admin/routes.py:78
+msgid "You have activated a teacher account - "
+msgstr "你已激活此老師賬戶 -"
+
+#: app/admin/routes.py:82
+msgid "You have rejected this teacher account."
+msgstr "你已拒絕此老師賬戶。"
+
+#: app/admin/routes.py:84
+msgid "confirm form"
+msgstr "驗證老師詳細資料版面"
+
+#: app/admin/routes.py:96
+msgid "Admin Approved Teacher record"
+msgstr "管理員允許老師記錄"
+
+#: app/admin/routes.py:123
+msgid "Reject message sent to "
+msgstr "拒絕信息已發送 "
+
+#: app/admin/routes.py:130
+msgid "Receipts sent to "
+msgstr "收據已發送至 "
+
+#: app/admin/routes.py:134
+msgid "Admin Verify Donation Receipt"
+msgstr "管理員確認捐贈收據"
+
+#: app/auth/forms.py:13
+msgid "Username or email"
+msgstr "用戶名或電子郵件"
+
+#: app/auth/forms.py:14 app/auth/forms.py:41 app/auth/forms.py:120
+msgid "Password"
+msgstr "密碼"
+
+#: app/auth/forms.py:15
+msgid "Remember Me"
+msgstr "記住我"
+
+#: app/auth/forms.py:18 app/auth/routes.py:150 app/templates/auth/login.html:12
+msgid "Sign In"
+msgstr "登入"
+
+#: app/auth/forms.py:24
+msgid "Resend Email Conformation Email."
+msgstr "重新發送確認電子郵件"
+
+#: app/auth/forms.py:28 app/common/form.py:423
+msgid "Username"
+msgstr "用戶名"
+
+#: app/auth/forms.py:30
+msgid "First Name (ENG)"
+msgstr "名字（英文）"
+
+#: app/auth/forms.py:32
+msgid "Last Name (ENG)"
+msgstr "姓氏（英文）"
+
+#: app/auth/forms.py:34
+msgid "First Name (Chinese)"
+msgstr "名字（中文）"
+
+#: app/auth/forms.py:36
+msgid "Last Name (Chinese)"
+msgstr "姓氏"
+
+#: app/auth/forms.py:39 app/main/forms.py:13 app/templates/user.html:15
+msgid "Region"
+msgstr "地區"
+
+#: app/auth/forms.py:43 app/auth/forms.py:122
+msgid "Repeat Password"
+msgstr "重複密碼"
+
+#: app/auth/forms.py:45 app/common/form.py:429 app/main/forms.py:14
+#: app/templates/user.html:17
+msgid "Phone Number"
+msgstr "電話號碼"
+
+#: app/auth/forms.py:47 app/main/forms.py:15
+msgid "phone_require"
+msgstr "需要電話號碼"
+
+#: app/auth/forms.py:48
+msgid "Your Photo"
+msgstr "您的照片"
+
+#: app/auth/forms.py:53
+msgid "Gender"
+msgstr "性別"
+
+#: app/auth/forms.py:59
+msgid "Birth (yyyy-mm-dd)"
+msgstr "出生日期 (yyyy-mm-dd)"
+
+#: app/auth/forms.py:65 app/auth/forms.py:87 app/auth/forms.py:113
+#: app/common/form.py:428 app/templates/admin/donation_list.html:22
+#: app/templates/admin/teacher_list.html:23 app/templates/user.html:16
+msgid "Email"
+msgstr "電子郵件"
+
+#: app/auth/forms.py:75 app/auth/forms.py:82 app/auth/forms.py:103
+msgid "Next"
+msgstr "下一頁"
+
+#: app/auth/forms.py:79
+msgid "Staff Card"
+msgstr "職員卡"
+
+#: app/auth/forms.py:96 app/auth/forms.py:142 app/auth/forms.py:150
+#: app/main/forms.py:16 app/student/forms.py:18 app/student/forms.py:38
+#: app/student/forms.py:46 app/student/forms.py:54 app/student/forms.py:68
+#: app/teacher/forms.py:9
+#: app/templates/auth/register_student_second_page.html:48
+#: app/templates/auth/register_teacher_second_page.html:33
+#: app/templates/auth/register_volunteer_second_page.html:13
+#: app/templates/student/edit_repair_application.html:24
+#: app/templates/student/equipment_application_map.html:26
+#: app/volunteer/forms.py:23 app/volunteer/forms.py:33
+msgid "Submit"
+msgstr "提交"
+
+#: app/auth/forms.py:100
+msgid "Student Card"
+msgstr "學生證"
+
+#: app/auth/forms.py:109 app/templates/auth/register_first_page.html:8
+#: app/templates/auth/register_first_page_with_auto_fill_in.html:17
+msgid "Register"
+msgstr "註冊"
+
+#: app/auth/forms.py:116 app/auth/forms.py:126
+msgid "Request Password Reset"
+msgstr "重設密碼"
+
+#: app/auth/forms.py:130
+msgid "Hong Kong Identity Card Number"
+msgstr "香港身份證號碼"
+
+#: app/auth/forms.py:132
+msgid "Home Address"
+msgstr "住家地址"
+
+#: app/auth/forms.py:134
+msgid "Your School Email"
+msgstr "學校電子郵件"
+
+#: app/auth/forms.py:135
+msgid "Your Teacher email"
+msgstr "您的老師電子郵件"
+
+#: app/auth/routes.py:41
+msgid "Your email confirmation email resend already."
+msgstr "您的驗證郵件已重新發送。"
+
+#: app/auth/routes.py:78 app/donor/routes.py:161 app/volunteer/routes.py:78
+msgid "More than 500 records found, and please zoom in!"
+msgstr "找到多於500個資料，請放大！"
+
+#: app/auth/routes.py:90 app/auth/routes.py:98 app/auth/routes.py:103
+#: app/auth/routes.py:112
+msgid "You account has already activated."
+msgstr "您的賬號已成功激活。"
+
+#: app/auth/routes.py:93
+msgid "student_activated_wait_for_teacher_approval"
+msgstr "學生賬號正等待老師審核"
+
+#: app/auth/routes.py:106
+msgid "teacher_activated_wait_for_admin_approval"
+msgstr "老師賬號正等待管理員審核"
+
+#: app/auth/routes.py:123
+msgid "Invalid username or password"
+msgstr "不正確的使用者名稱或密碼"
+
+#: app/auth/routes.py:167
+msgid "Account already confirmed. Please login."
+msgstr "賬號已激活。請登入。"
+
+#: app/auth/routes.py:171
+msgid "You have confirmed your account. Thanks!"
+msgstr "您已成功激活賬號，謝謝！"
+
+#: app/auth/routes.py:180
+msgid "Invalid token and please reset again."
+msgstr "Token失效，請重試"
+
+#: app/auth/routes.py:186
+msgid "Your password has been reset."
+msgstr "您的密碼已被重設。"
+
+#: app/auth/routes.py:197
+msgid "Check your email for the instructions to reset your password"
+msgstr "請檢查電子郵件並查看有關重設密碼的說明。"
+
+#: app/auth/routes.py:200 app/templates/auth/reset_password.html:5
+msgid "Reset Password"
+msgstr "重設密碼"
+
+#: app/auth/routes.py:211 app/auth/routes.py:246 app/auth/routes.py:278
+msgid "You already successful to register!"
+msgstr "您已成功註冊！"
+
+#: app/auth/routes.py:216
+msgid "Register Donor"
+msgstr "捐贈者註冊"
+
+#: app/auth/routes.py:229
+msgid "Register Student"
+msgstr "學生註冊"
+
+#: app/auth/routes.py:252
+msgid "Register Student Second Page"
+msgstr "學生註冊第二頁"
+
+#: app/auth/routes.py:268
+msgid "Register Volunteer"
+msgstr "志願者註冊"
+
+#: app/auth/routes.py:284
+msgid "Register Volunteer Second Page"
+msgstr "志願者註冊第二頁"
+
+#: app/auth/routes.py:300
+msgid "Register Teacher"
+msgstr "老師註冊"
+
+#: app/auth/routes.py:316
+msgid ""
+"Our admin will review your account application and approve your "
+"application as soon as possible."
+msgstr "我們的管理員會盡快審核您的申請。"
+
+#: app/auth/routes.py:324
+msgid "Register Teacher Second Page"
+msgstr "老師註冊第二頁"
+
+#: app/azure_ai/vision.py:34
+msgid "Invalid Photo: Unable to recognize any faces!"
+msgstr "照片偵測不到任何人臉！"
+
+#: app/azure_ai/vision.py:37
+msgid "Invalid Photo: Adult Content!"
+msgstr "照片內容不恰當！"
+
+#: app/azure_ai/vision.py:40
+msgid "Invalid Photo: Gory Content!"
+msgstr "照片內容不恰當！"
+
+#: app/azure_ai/vision.py:43
+msgid "Invalid Photo: Racy Content!"
+msgstr "照片內容不恰當！"
+
+#: app/azure_ai/vision.py:47
+msgid "Invalid Photo: our AI infers you are under age 6 or over 30!"
+msgstr "我們偵測到您的人臉歲數低於6歲或高於30歲！"
+
+#: app/common/decorator.py:83
+msgid "Please share your story!"
+msgstr "請分享您的故事！"
+
+#: app/common/email.py:15
+msgid "account verification"
+msgstr "帳號驗證"
+
+#: app/common/email.py:16
+msgid "repair notification"
+msgstr "維修通知"
+
+#: app/common/email.py:73
+msgid "You have a new message / 你有一條新消息"
+msgstr ""
+
+#: app/common/email.py:77
+msgid "Thank you for your donation! / 感謝您的捐贈！"
+msgstr ""
+
+#: app/common/email.py:81
+msgid "Thank you for your technical support! / 感謝您的技術支持！"
+msgstr ""
+
+#: app/common/email.py:103
+msgid "Reset Your Password / 重置你的密碼"
+msgstr ""
+
+#: app/common/email.py:113
+msgid "Confirm your email address 請確認您的電郵地址"
+msgstr ""
+
+#: app/common/email.py:124
+msgid "Your student hopes you to confirm his student status / 你的學生希望你確認他的學生身份"
+msgstr ""
+
+#: app/common/email.py:131
+msgid "A new teacher application / 新教師申請"
+msgstr ""
+
+#: app/common/email.py:142
+msgid "Can you join us and help your student? / 你可以加入我們，幫助你的學生嗎？"
+msgstr ""
+
+#: app/common/email.py:151
+msgid "You account has activated. / 您的帳戶已啟動."
+msgstr ""
+
+#: app/common/email.py:156
+msgid "Cancellation of the repair support from volunteer."
+msgstr "志願者已取消此維修。"
+
+#: app/common/email.py:157
+msgid "Your repair case has been cancelled and please wait for another volunteer."
+msgstr "您的維修申請已被取消，請等待其他志願者。"
+
+#: app/common/email.py:167
+msgid ""
+"Your student hopes you to endorse an equipment application. / "
+"您的學生希望您認可物品申請."
+msgstr ""
+
+#: app/common/email.py:177
+msgid "Your equipment application has been approved / 您的設備申請已被批准."
+msgstr ""
+
+#: app/common/email.py:187
+msgid "Your equipment application has been rejected / 您的設備申請已被拒絕."
+msgstr ""
+
+#: app/common/email.py:197
+msgid "Your equipment receipts application has been rejected / 您的設備收據申請已被拒絕."
+msgstr ""
+
+#: app/common/email.py:207
+msgid "Your equipment receipts application has been approved / 您的設備收據申請已被批准."
+msgstr ""
+
+#: app/common/form.py:29
+msgid "Please make sure your full name does not contain special character in it"
+msgstr "請確認你的名字沒有特殊符號"
+
+#: app/common/form.py:34
+msgid "Please use a different username."
+msgstr "請使用其他使用者名。"
+
+#: app/common/form.py:41
+msgid "Please make sure your password at least one number in it"
+msgstr "請確認你的密碼含有至少一個數字"
+
+#: app/common/form.py:45
+msgid "Please make sure your password at least one capital letter in it"
+msgstr "請確認你的密碼含有至少一個大寫英文字母"
+
+#: app/common/form.py:49
+msgid "Please make sure your password at least one lowercase letter in it"
+msgstr "請確認你的密碼含有至少一個小寫英文字母"
+
+#: app/common/form.py:53
+msgid "Please make sure your password at least one special character in it"
+msgstr "請確認你的密碼含有至少一個特殊符號"
+
+#: app/common/form.py:61 app/common/form.py:75 app/common/form.py:96
+msgid "No special character or space"
+msgstr "不需要特別字符或空格"
+
+#: app/common/form.py:68
+msgid "Wrong Date Format"
+msgstr "日期格式錯誤"
+
+#: app/common/form.py:82
+msgid "Wrong ID Card Format"
+msgstr "錯誤的證據格式"
+
+#: app/common/form.py:89
+msgid "Wrong Gender Format"
+msgstr "錯誤的性別格式"
+
+#: app/common/form.py:102
+msgid "Please use digits."
+msgstr "請輸入正確電話號碼"
+
+#: app/common/form.py:111
+msgid "Please use a different email address."
+msgstr "請使用其他電子郵件地址。"
+
+#: app/common/form.py:117
+msgid "The email must be school email"
+msgstr "電子郵件必須是學校電子郵件"
+
+#: app/common/form.py:124
+msgid "Please make sure your school name does not contain special character in it"
+msgstr "請確認你的學校名稱沒有特殊符號"
+
+#: app/common/form.py:128
+msgid "Please make sure your school name does not contain digit in it"
+msgstr "請確認你的學校名稱沒有任何數字"
+
+#: app/common/form.py:138
+msgid "Please use a different office phone number."
+msgstr "請使用不同的辦公電話"
+
+#: app/common/form.py:151
+msgid "Must contain "
+msgstr "必須包含"
+
+#: app/common/form.py:182
+msgid "File size should be bigger than "
+msgstr "文件大小應該大於 "
+
+#: app/common/form.py:184
+msgid "File size should be smaller than "
+msgstr "檔案大小不應該超過 "
+
+#: app/common/form.py:205
+msgid "Face is not the same!"
+msgstr "人臉識別不一致"
+
+#: app/common/form.py:216
+msgid ""
+"Found offensive content, sexually explicit or suggestive content, "
+"profanity, and personal data."
+msgstr "偵測到不合適的內容"
+
+#: app/common/form.py:220
+msgid ""
+"Found offensive content, sexually explicit or suggestive content, and "
+"profanity"
+msgstr "偵測到不合適的內容"
+
+#: app/common/form.py:235
+msgid "At least wait for {x} days"
+msgstr "請最少等待 {x} 日"
+
+#: app/common/form.py:242
+msgid "School ID does not exist."
+msgstr "學校ID不存在"
+
+#: app/common/form.py:253
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr "'%s' 欄位名稱無效。"
+
+#: app/common/form.py:260
+msgid "Email must be end with "
+msgstr "電子郵件結尾必須為 "
+
+#: app/common/form.py:325
+msgid "pass_error"
+msgstr "通過錯誤"
+
+#: app/common/form.py:406
+msgid "Please select option."
+msgstr "請選擇一個選項。"
+
+#: app/common/form.py:424 app/main/forms.py:11
+#: app/templates/admin/teacher_list.html:21
+#: app/templates/teacher/equipment_application_list.html:13
+#: app/templates/teacher/teacher_approved_student_record.html:13
+#: app/templates/user.html:13 app/volunteer/forms.py:14
+msgid "First Name"
+msgstr "名"
+
+#: app/common/form.py:426 app/main/forms.py:12
+#: app/templates/admin/teacher_list.html:22
+#: app/templates/teacher/equipment_application_list.html:14
+#: app/templates/teacher/teacher_approved_student_record.html:14
+#: app/templates/user.html:14 app/volunteer/forms.py:16
+msgid "Last Name"
+msgstr "姓"
+
+#: app/common/form.py:431
+msgid "School Name"
+msgstr "學校名稱"
+
+#: app/common/form.py:433
+msgid "School Website"
+msgstr "學校網站"
+
+#: app/common/form.py:439
+msgid "Send Message"
+msgstr "發送訊息"
+
+#: app/donor/forms.py:10
+msgid "Please enter your equipment type"
+msgstr "請輸入您的裝置類別"
+
+#: app/donor/forms.py:12
+msgid "Please enter your description"
+msgstr "請輸入描述內容。"
+
+#: app/donor/forms.py:13
+msgid "Please upload your equipment photo"
+msgstr "請上載您的裝置相片"
+
+#: app/donor/forms.py:15
+msgid "If possible, please upload your receipt photo for our record."
+msgstr "如有的話，請上載裝置的收據已作記錄。"
+
+#: app/donor/forms.py:17
+msgid "Add"
+msgstr "新增"
+
+#: app/donor/forms.py:21
+msgid "Please enter your Item Object"
+msgstr "請輸入物品。"
+
+#: app/donor/forms.py:25
+msgid "Meetup time"
+msgstr "相約時間"
+
+#: app/donor/forms.py:26
+msgid "Confirm Your Donation."
+msgstr "確認您的捐贈。"
+
+#: app/donor/routes.py:43
+msgid "Donor View"
+msgstr "捐贈者界面"
+
+#: app/donor/routes.py:69
+msgid "Your equipment has added for donation."
+msgstr "您的設備已增加至捐贈行列。"
+
+#: app/donor/routes.py:114
+msgid "Pick A Student"
+msgstr "選擇一個學生"
+
+#: app/donor/routes.py:180
+msgid "This equipment has been donated to another student."
+msgstr "這個設備已捐贈給其他學生。"
+
+#: app/donor/routes.py:191
+msgid "Hello, I decide to donate my equipment to you. It is "
+msgstr ""
+
+#: app/donor/routes.py:203
+msgid "Thank you!"
+msgstr ""
+
+#: app/donor/routes.py:217
+msgid "Donation Appointment has made!"
+msgstr "此捐贈的預約已創建完成！"
+
+#: app/donor/routes.py:272 app/main/routes.py:34 app/student/routes.py:330
+#: app/templates/admin/donation_list.html:21
+msgid "Donor"
+msgstr "捐款者"
+
+#: app/main/routes.py:35
+msgid "index_page_donate_info"
+msgstr "捐贈者可以捐贈物品，例如台式電腦、路由器，等等。捐贈者可以自己決定捐贈物品給哪位學生。"
+
+#: app/main/routes.py:39 app/templates/auth/register_student_second_page.html:6
+#: app/volunteer/routes.py:228
+msgid "Student"
+msgstr "學生"
+
+#: app/main/routes.py:40
+msgid "index_page_student_info"
+msgstr "學生可以在這個網站上請求需要的物品。 學生可以提交一份文章以說服捐贈者捐贈物品給你。 此外，學生可以向網站提交的維修請求。"
+
+#: app/main/routes.py:44 app/main/routes.py:84 app/student/routes.py:374
+#: app/templates/auth/register_volunteer_second_page.html:3
+msgid "Volunteer"
+msgstr "志願者"
+
+#: app/main/routes.py:45
+msgid "index_page_volunteer_info"
+msgstr "志願者分為輔助志願者和學校教師兩類。 按立即加入以查看詳細信息。"
+
+#: app/main/routes.py:64 app/main/routes.py:70
+msgid "Home"
+msgstr "主頁"
+
+#: app/main/routes.py:79
+msgid "Teacher"
+msgstr "老師"
+
+#: app/main/routes.py:80
+msgid "volunteer_page_teacher_info"
+msgstr "教師可以審核學生申請並邀請其他教師。"
+
+#: app/main/routes.py:85
+msgid "volunteer_page_volunteer_info"
+msgstr "志願者負責解決學生提出的維修申請。"
+
+#: app/main/routes.py:90
+msgid "Supporters"
+msgstr "志願者"
+
+#: app/main/routes.py:98 app/templates/user.html:12
+msgid "User"
+msgstr "用户"
+
+#: app/main/routes.py:113
+msgid "Your changes have been saved."
+msgstr "已儲存您的更改。"
+
+#: app/main/routes.py:117 app/templates/edit_profile.html:5
+msgid "Edit Profile"
+msgstr "編輯個人資料"
+
+#: app/main/routes.py:129 app/templates/base.html:149
+msgid "Terms"
+msgstr "使用條款"
+
+#: app/main/routes.py:132
+msgid "About US"
+msgstr "關於我們"
+
+#: app/student/forms.py:12 app/student/forms.py:23
+msgid "Please enter your title of your story to donor"
+msgstr "請輸入您的故事標題"
+
+#: app/student/forms.py:14 app/student/forms.py:26
+msgid ""
+"Please elaborate your story about your life to make the donor willing to "
+"donate equipment to you"
+msgstr "請描敘您的故事給捐贈者"
+
+#: app/student/forms.py:16
+msgid "Please Upload a photo about your life the photo will show to the donor"
+msgstr "請上載一張您的生活照片"
+
+#: app/student/forms.py:31
+msgid "Please choose your equipment type"
+msgstr "請選擇您的裝置類別"
+
+#: app/student/forms.py:32 app/templates/student/story.html:28
+#: app/templates/student/story.html:44
+msgid "Apply Equipment"
+msgstr "申請裝置"
+
+#: app/student/forms.py:42
+msgid "Thanks Message To Your Donor"
+msgstr "給捐贈者的感謝信息"
+
+#: app/student/forms.py:44
+msgid "Please upload a photo with your donor"
+msgstr "請上載一張與捐贈者的合照"
+
+#: app/student/forms.py:50
+msgid "Thanks Message To Your Volunteer"
+msgstr "給志願者的感謝信息"
+
+#: app/student/forms.py:52
+msgid "Please upload a photo with your volunteer"
+msgstr "請上載一張與志願者的合照"
+
+#: app/student/forms.py:59 app/templates/student/repair_application.html:6
+#: app/templates/student/repair_application_list.html:12
+#: app/volunteer/forms.py:29
+msgid "Title"
+msgstr "標題"
+
+#: app/student/forms.py:61
+msgid "Describe your technical problem."
+msgstr "請描敘您遭遇到的技術問題。"
+
+#: app/student/forms.py:63
+msgid "Upload the device photo."
+msgstr "上載您的裝置相片。"
+
+#: app/student/forms.py:65
+msgid "Detail Address"
+msgstr "詳細地址"
+
+#: app/student/routes.py:42
+msgid "Student View"
+msgstr "學生界面"
+
+#: app/student/routes.py:49 app/student/routes.py:61 app/volunteer/forms.py:30
+msgid "Story"
+msgstr "故事"
+
+#: app/student/routes.py:59
+msgid "Your story has submitted!"
+msgstr "您的故事已提交！"
+
+#: app/student/routes.py:94 app/templates/student/story.html:39
+msgid "Edit Story"
+msgstr "編輯故事"
+
+#: app/student/routes.py:143
+msgid "Your request add successfully"
+msgstr "您的申請已成功提交"
+
+#: app/student/routes.py:145
+msgid "Equipment Application"
+msgstr "申請器材"
+
+#: app/student/routes.py:174
+msgid "Equipment Application Map"
+msgstr "裝置申請"
+
+#: app/student/routes.py:188 app/student/routes.py:264
+msgid "Application History"
+msgstr "申請歷史"
+
+#: app/student/routes.py:201
+msgid ""
+"Write a thank you letter to your donor, else you cannot apply any new "
+"equipment or support!"
+msgstr "請寫一封感謝信給捐贈者，如拒絕的話你不能再申請任何設備！"
+
+#: app/student/routes.py:218
+msgid "Your repair application has submitted!"
+msgstr "您的維修申請已提交！"
+
+#: app/student/routes.py:220
+msgid "New Repair Application"
+msgstr "新維修申請"
+
+#: app/student/routes.py:235 app/volunteer/routes.py:137
+msgid "Updated"
+msgstr "更新"
+
+#: app/student/routes.py:238 app/volunteer/routes.py:149
+msgid "Edit Repair Application"
+msgstr "修改您的維修申請"
+
+#: app/student/routes.py:252
+msgid "Repair History"
+msgstr "維修記錄"
+
+#: app/student/routes.py:288
+msgid ""
+"Write a thank you letter to your volunteer, else you cannot apply any new"
+" equipment or support!"
+msgstr "請寫一封感謝信給捐贈者，如拒絕的話你不能再申請任何維修！"
+
+#: app/student/routes.py:391
+msgid "Emailed the thanks message to your donor."
+msgstr "已郵件感謝信至捐贈者。"
+
+#: app/student/routes.py:394
+msgid "Thank Letter to your donor"
+msgstr "感謝信給捐贈者"
+
+#: app/student/routes.py:411
+msgid "send the thanks email to volunteer"
+msgstr "發送感謝信給志願者"
+
+#: app/student/routes.py:414
+msgid "Student Thanks Volunteer to complete repair case "
+msgstr ""
+
+#: app/teacher/forms.py:8
+msgid "Approve this student?"
+msgstr "批准此學生？"
+
+#: app/teacher/routes.py:30
+msgid "Teacher View"
+msgstr "老師界面"
+
+#: app/teacher/routes.py:61
+#: app/templates/teacher/teacher_approved_student_record.html:28
+msgid "Approved"
+msgstr "批准"
+
+#: app/teacher/routes.py:64
+msgid "student_not_activated_and_teacher_approved"
+msgstr "學生未激活，老師已批准"
+
+#: app/teacher/routes.py:67
+msgid "Student activated"
+msgstr "學生賬號已激活"
+
+#: app/teacher/routes.py:73
+msgid "Approve Student Form"
+msgstr "審核學生表格"
+
+#: app/teacher/routes.py:84
+msgid "Teacher Approved Student Record"
+msgstr "學生批准學生記錄"
+
+#: app/teacher/routes.py:93
+msgid "Teacher approved Student's Equipment Application Record"
+msgstr "老師批准學生申請設備記錄"
+
+#: app/templates/_post.html:14
+#, python-format
+msgid "%(username)s said %(when)s"
+msgstr ""
+
+#: app/templates/about_us.html:8 app/templates/base.html:135
+msgid "About Us"
+msgstr "關於我們"
+
+#: app/templates/about_us.html:9
+msgid "about_us_desc"
+msgstr "關於我們"
+
+#: app/templates/base.html:4 app/templates/base.html:22
+msgid "Donation System"
+msgstr "捐贈系統"
+
+#: app/templates/base.html:83
+msgid "Login"
+msgstr "登錄"
+
+#: app/templates/base.html:89 app/templates/base.html:91
+#, python-format
+msgid "Hi, %(username)s"
+msgstr "你好， %(username)s"
+
+#: app/templates/base.html:94
+msgid "Profile"
+msgstr "個人檔案"
+
+#: app/templates/base.html:98
+msgid "Logout"
+msgstr "登出"
+
+#: app/templates/base.html:128
+msgid "Please contact (support email) for any technical issues."
+msgstr "如有任何問題，請聯絡（支援電郵）"
+
+#: app/templates/base.html:139
+msgid "Language"
+msgstr "語言"
+
+#: app/templates/base.html:141
+msgid "Chinese"
+msgstr "中文"
+
+#: app/templates/base.html:144
+msgid "English"
+msgstr "英語"
+
+#: app/templates/admin/donation_list.html:45
+#: app/templates/admin/teacher_list.html:85
+#: app/templates/donor/donate_equipment.html:103
+#: app/templates/donor/equipment_applications_map.html:32
+#: app/templates/donor/equipment_list.html:108
+#: app/templates/edit_profile.html:14 app/templates/errors/status_404.html:5
+#: app/templates/errors/status_500.html:6 app/templates/message.html:51
+#: app/templates/message.html:55 app/templates/message.html:59
+#: app/templates/student/edit_repair_application.html:22
+#: app/templates/student/equipment_application_history.html:100
+#: app/templates/student/equipment_application_map.html:20
+#: app/templates/student/repair_application.html:18
+#: app/templates/student/repair_application_list.html:95
+#: app/templates/student/story.html:23 app/templates/student/story.html:34
+#: app/templates/student/story.html:50
+#: app/templates/teacher/equipment_application_list.html:51
+#: app/templates/teacher/teacher_approved_student_record.html:79
+#: app/templates/volunteer/volunteer_choose_repair_equipment_case.html:20
+#: app/templates/volunteer/volunteer_record.html:75
+msgid "Back"
+msgstr "返回"
+
+#: app/templates/index.html:13
+msgid "iShare Donation System"
+msgstr ""
+
+#: app/templates/index.html:16
+msgid "A system for donating item to student who need."
+msgstr "這是一個捐贈設備給有需要學生的平台"
+
+#: app/templates/index.html:29 app/templates/index.html:43
+#: app/templates/supporters.html:18 app/templates/supporters.html:34
+msgid "Join Now"
+msgstr "立即加入"
+
+#: app/templates/index.html:50
+msgid "Need Help?"
+msgstr "需要幫助？"
+
+#: app/templates/index.html:51
+msgid "Use below Q&A Chatbot"
+msgstr ""
+
+#: app/templates/message.html:15
+msgid "Remember don't share your personal informaton!"
+msgstr "請不要分享個人信息！"
+
+#: app/templates/message.html:18
+msgid "Message History"
+msgstr "訊息紀錄"
+
+#: app/templates/donor/equipment_list.html:45 app/templates/message.html:25
+#: app/templates/student/equipment_application_history.html:31
+#: app/templates/student/repair_application_list.html:30
+#: app/templates/volunteer/volunteer_record.html:17
+msgid "Message"
+msgstr "訊息:"
+
+#: app/templates/message.html:26
+msgid "You"
+msgstr "你"
+
+#: app/templates/terms.html:8
+msgid "terms_content"
+msgstr "條款內容"
+
+#: app/templates/terms.html:9
+msgid "terms_intro"
+msgstr ""
+
+#: app/templates/terms.html:10
+msgid "terms_title_1"
+msgstr ""
+
+#: app/templates/terms.html:11
+msgid "terms_content_1"
+msgstr ""
+
+#: app/templates/terms.html:12
+msgid "terms_title_2"
+msgstr ""
+
+#: app/templates/terms.html:13
+msgid "terms_content_2"
+msgstr ""
+
+#: app/templates/terms.html:14
+msgid "terms_title_3"
+msgstr ""
+
+#: app/templates/terms.html:15
+msgid "terms_content_3"
+msgstr ""
+
+#: app/templates/terms.html:16
+msgid "terms_title_4"
+msgstr ""
+
+#: app/templates/terms.html:17
+msgid "terms_content_4"
+msgstr ""
+
+#: app/templates/terms.html:18
+msgid "terms_title_5"
+msgstr ""
+
+#: app/templates/terms.html:19
+msgid "terms_content_5"
+msgstr ""
+
+#: app/templates/terms.html:20
+msgid "terms_title_6"
+msgstr ""
+
+#: app/templates/terms.html:21
+msgid "terms_content_6"
+msgstr ""
+
+#: app/templates/terms.html:22
+msgid "terms_title_7"
+msgstr ""
+
+#: app/templates/terms.html:23
+msgid "terms_content_7"
+msgstr ""
+
+#: app/templates/user.html:24
+msgid "Last seen on"
+msgstr "最後上線"
+
+#: app/templates/user.html:27
+msgid "Edit your profile"
+msgstr "編輯您的個人檔案"
+
+#: app/templates/admin/donation_list.html:19
+#: app/templates/admin/teacher_list.html:19
+#: app/templates/donor/equipment_list.html:15
+#: app/templates/student/equipment_application_history.html:12
+#: app/templates/student/repair_application_list.html:10
+#: app/templates/teacher/equipment_application_list.html:11
+#: app/templates/teacher/teacher_approved_student_record.html:11
+msgid "Action"
+msgstr "操作"
+
+#: app/templates/admin/donation_list.html:20
+#: app/templates/student/equipment_application_history.html:14
+msgid "Equipment Type"
+msgstr "設備類型"
+
+#: app/templates/admin/donation_list.html:30
+msgid "Verify"
+msgstr "驗證"
+
+#: app/templates/admin/teacher_list.html:20
+#: app/templates/donor/equipment_list.html:17
+#: app/templates/student/equipment_application_history.html:13
+#: app/templates/student/repair_application_list.html:11
+#: app/templates/teacher/equipment_application_list.html:12
+#: app/templates/teacher/teacher_approved_student_record.html:12
+msgid "Status"
+msgstr "狀態"
+
+#: app/templates/admin/teacher_list.html:24
+msgid "School"
+msgstr "學校"
+
+#: app/templates/admin/teacher_list.html:25
+msgid "Office"
+msgstr "辦公室"
+
+#: app/templates/admin/teacher_list.html:37
+msgid "Approve"
+msgstr "批准"
+
+#: app/templates/admin/verify_receipts.html:19
+msgid "Teacher Email:"
+msgstr "老師電郵："
+
+#: app/templates/auth/login.html:13
+msgid "Sign in to your account to continue."
+msgstr "如要繼續請登入。"
+
+#: app/templates/auth/login.html:19
+#: app/templates/auth/reset_password_request.html:18
+msgid "New User?"
+msgstr "新用戶？"
+
+#: app/templates/auth/login.html:21
+#: app/templates/auth/reset_password_request.html:20
+msgid "Click to Register!"
+msgstr "點擊註冊!"
+
+#: app/templates/auth/login.html:24
+msgid "Forgot Your Password?"
+msgstr "忘記密碼？"
+
+#: app/templates/auth/login.html:27
+msgid "Click to Reset It"
+msgstr "點擊重置！"
+
+#: app/templates/auth/login.html:34
+#: app/templates/auth/reset_password_request.html:26
+msgid "We make a living by what we get. We make a life by what we give."
+msgstr ""
+
+#: app/templates/auth/login.html:35
+msgid "Winston S. Churchill"
+msgstr ""
+
+#: app/templates/auth/register_student_second_page.html:10
+msgid "Pin your home location"
+msgstr "釘籤你住家的位置"
+
+#: app/templates/auth/register_student_second_page.html:18
+#: app/templates/auth/register_teacher_second_page.html:9
+msgid "Select your school category"
+msgstr "選擇你的學校類型"
+
+#: app/templates/auth/register_student_second_page.html:26
+#: app/templates/auth/register_teacher_second_page.html:17
+msgid "Select your school"
+msgstr "選擇你的學校"
+
+#: app/templates/auth/register_student_second_page.html:92
+#: app/templates/auth/register_volunteer_second_page.html:38
+#: app/templates/student/edit_repair_application.html:50
+#: app/templates/student/equipment_application_map.html:53
+msgid "Please pin a point in the home map!"
+msgstr "選擇一個住家地點！"
+
+#: app/templates/auth/register_student_second_page.html:95
+#: app/templates/auth/register_teacher_second_page.html:71
+msgid "Please select your school in the school map!"
+msgstr "請在學校地圖中選擇你的學校！"
+
+#: app/templates/auth/register_student_second_page.html:98
+#: app/templates/auth/register_teacher_second_page.html:74
+msgid "Invalid student email address must match school domain."
+msgstr "學生電郵與學校域名不一致！"
+
+#: app/templates/auth/register_student_second_page.html:101
+msgid "Invalid teacher email address must match school domain."
+msgstr "老師電郵必須與學校域名一致。"
+
+#: app/templates/auth/register_teacher_second_page.html:55
+msgid "Your email domain needs to end with "
+msgstr "你的電郵地址域名必須為 "
+
+#: app/templates/auth/register_volunteer_second_page.html:7
+msgid "School Address"
+msgstr "學校地址"
+
+#: app/templates/auth/resend_confirmation_email.html:6
+msgid "You have not confirmed your account yet."
+msgstr "您的賬號尚未激活。"
+
+#: app/templates/auth/resend_confirmation_email.html:8
+msgid "Before you can access this site you need to confirm your account."
+msgstr "你需要驗證你的賬號以進入網站。"
+
+#: app/templates/auth/resend_confirmation_email.html:9
+msgid ""
+"Check your inbox, you should have received an email with a confirmation "
+"link."
+msgstr "請檢查你的電子郵件，你應該收到一封含有驗證連結的郵件."
+
+#: app/templates/auth/reset_password_request.html:12
+msgid "Reset Your Password"
+msgstr "重設密碼"
+
+#: app/templates/donor/donate_equipment.html:14
+#: app/templates/donor/equipment_list.html:13
+msgid "Photo"
+msgstr "相片"
+
+#: app/templates/donor/donate_equipment.html:15
+#: app/templates/teacher/equipment_application_list.html:15
+msgid "Equipment"
+msgstr "設備"
+
+#: app/templates/donor/donate_equipment.html:40
+#: app/templates/donor/equipment_list.html:42
+#: app/templates/student/repair_application_list.html:26
+msgid "Delete"
+msgstr "刪除"
+
+#: app/templates/donor/donate_equipment.html:50
+#: app/templates/student/create_equipment_application.html:38
+#: app/templates/teacher/equipment_application_list.html:45
+#: app/templates/teacher/teacher_approved_student_record.html:41
+msgid "No Record"
+msgstr "無紀錄"
+
+#: app/templates/donor/donate_equipment_to_student.html:14
+msgid "Create at:"
+msgstr "建立於："
+
+#: app/templates/donor/donate_equipment_to_student.html:20
+msgid "Prefered transfer location"
+msgstr ""
+
+#: app/templates/donor/equipment_list.html:14
+#: app/templates/student/repair_application.html:7
+msgid "Description"
+msgstr "描述"
+
+#: app/templates/donor/equipment_list.html:16
+msgid "Create Date"
+msgstr "建立日期"
+
+#: app/templates/donor/equipment_list.html:40
+msgid "Donate"
+msgstr "捐贈"
+
+#: app/templates/donor/equipment_list.html:47
+#: app/templates/student/equipment_application_history.html:27
+#: app/templates/volunteer/volunteer_record.html:23
+msgid "Cancel"
+msgstr "取消"
+
+#: app/templates/donor/equipment_list.html:53
+msgid "Download Receipts"
+msgstr "下載收據"
+
+#: app/templates/donor/equipment_list.html:117
+#: app/templates/student/equipment_application_history.html:109
+#: app/templates/student/repair_application_list.html:106
+#: app/templates/teacher/equipment_application_list.html:59
+#: app/templates/volunteer/volunteer_record.html:82
+msgid "Are you sure?"
+msgstr "確定嗎？"
+
+#: app/templates/errors/status_404.html:4
+msgid "Resource not found"
+msgstr "找不到資源"
+
+#: app/templates/errors/status_500.html:4
+msgid "An unexpected error has occurred"
+msgstr "發生了未預期的錯誤"
+
+#: app/templates/errors/status_500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr "我們已通知管理員。造成不便，敬請見諒。"
+
+#: app/templates/student/create_equipment_application.html:14
+msgid "Requested Equipment Type"
+msgstr "請求設備類型"
+
+#: app/templates/student/create_equipment_application.html:27
+msgid "Cancel Request"
+msgstr "取消請求"
+
+#: app/templates/student/create_equipment_application.html:52
+msgid "Back to Story"
+msgstr "返回故事"
+
+#: app/templates/student/create_equipment_application.html:57
+msgid "Back to Main Page"
+msgstr "返回主頁"
+
+#: app/templates/student/create_equipment_application.html:62
+msgid "Pick a location to get your equipment."
+msgstr "選擇一個你想相約的位置。"
+
+#: app/templates/student/edit_repair_application.html:15
+msgid "Pin your address"
+msgstr "釘籤你的位置"
+
+#: app/templates/student/equipment_application_history.html:15
+msgid "Meet up time"
+msgstr "相約時間"
+
+#: app/templates/student/equipment_application_history.html:34
+#: app/templates/student/repair_application_list.html:33
+msgid "Complete"
+msgstr "完成"
+
+#: app/templates/student/equipment_application_history.html:38
+#: app/templates/student/repair_application_list.html:37
+msgid "Thank You Letter"
+msgstr "感謝信"
+
+#: app/templates/student/equipment_application_map.html:9
+msgid "Pin your prefered location to get your equipment."
+msgstr "選擇一個你想相約的位置。"
+
+#: app/templates/student/repair_application.html:10
+msgid "Date & Time"
+msgstr "日期與時間"
+
+#: app/templates/student/repair_application.html:25
+msgid "Edit Your Repair Application"
+msgstr "編輯您的維修申請"
+
+#: app/templates/student/repair_application_list.html:13
+msgid "Repair Time"
+msgstr "維修時間"
+
+#: app/templates/student/repair_application_list.html:23
+#: app/templates/volunteer/volunteer_record.html:20
+msgid "Edit"
+msgstr "編輯"
+
+#: app/templates/student/thank_you.html:4
+msgid "Thank You Message"
+msgstr "感謝信息"
+
+#: app/templates/teacher/equipment_application_list.html:16
+#: app/templates/teacher/teacher_approved_student_record.html:15
+msgid "Student Email"
+msgstr "學生郵件"
+
+#: app/templates/teacher/index.html:52
+msgid "Enter"
+msgstr "輸入"
+
+#: app/volunteer/forms.py:13 app/volunteer/forms.py:27
+msgid "id"
+msgstr ""
+
+#: app/volunteer/forms.py:18
+msgid "Address"
+msgstr "地址"
+
+#: app/volunteer/forms.py:19
+msgid "Problem"
+msgstr "問題"
+
+#: app/volunteer/forms.py:20
+msgid "Description Problem"
+msgstr "描敘問題"
+
+#: app/volunteer/forms.py:22
+msgid "Repair time"
+msgstr "維修時間"
+
+#: app/volunteer/forms.py:28
+msgid "Student Name"
+msgstr "學生名字"
+
+#: app/volunteer/forms.py:31
+msgid "Item Name"
+msgstr "物品名稱"
+
+#: app/volunteer/forms.py:32
+msgid "Permission"
+msgstr "權限"
+
+#: app/volunteer/routes.py:36
+msgid "Volunteer View"
+msgstr "志願者界面"
+
+#: app/volunteer/routes.py:42
+msgid "Volunteer Repair"
+msgstr "志願者維修"
+
+#: app/volunteer/routes.py:89
+msgid "Appointment has already made!"
+msgstr "預約已完成"
+
+#: app/volunteer/routes.py:95
+msgid "Hello, let me help you fix your equipment and my prefer time is "
+msgstr ""
+
+#: app/volunteer/routes.py:107
+msgid "Thank you for helping me!"
+msgstr ""
+
+#: app/volunteer/routes.py:120
+msgid "Equipment Repair Appointment has made!"
+msgstr "設備維修之預約已成立"
+
+#: app/volunteer/routes.py:123
+msgid "Create Repair Application"
+msgstr "建立維修申請"
+
+#: app/volunteer/routes.py:139
+msgid "Hello, I want to change the repair time to "
+msgstr ""
+
+#: app/volunteer/routes.py:166
+msgid "Sorry, I need to cancel your support case!"
+msgstr ""
+
+#: app/volunteer/routes.py:188
+msgid "Volunteer Record"
+msgstr "志願者記錄"
+

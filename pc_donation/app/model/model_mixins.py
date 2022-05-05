@@ -38,7 +38,6 @@ class UserPhotoMixIn(object):
         user_photo_data.seek(0)  # To enable read again!
         self._user_photo = blob_name
         key = self.user_type + "@" + self.username
-        print(type(key))
         self.user_face_index = index_face(PersonGroupEnum.all, key, user_photo_data)
         self.user_type_face_index = index_face(PersonGroupEnum[self.user_type], key, user_photo_data)
 

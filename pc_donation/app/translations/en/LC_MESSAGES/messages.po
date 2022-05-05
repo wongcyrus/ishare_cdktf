@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2021-05-03 12:17+0800\n"
+"POT-Creation-Date: 2022-03-16 07:58-0400\n"
 "PO-Revision-Date: 2020-12-28 17:05+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -16,596 +16,647 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.0\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: app/__init__.py:26
+#: app/__init__.py:37
 msgid "Please log in to access this page."
 msgstr ""
 
-#: app/admin/forms.py:15 app/support/forms.py:48 app/support/forms.py:61
-#: app/teacher/forms.py:9
-msgid "id"
-msgstr ""
-
-#: app/admin/forms.py:16 app/auth/forms.py:30 app/auth/forms.py:93
-#: app/auth/forms.py:171 app/auth/forms.py:235 app/main/forms.py:11
-#: app/teacher/forms.py:10
-msgid "Username"
-msgstr ""
-
-#: app/admin/forms.py:16 app/admin/forms.py:19 app/auth/forms.py:30
-#: app/auth/forms.py:32 app/auth/forms.py:93 app/auth/forms.py:95
-#: app/auth/forms.py:171 app/auth/forms.py:173 app/auth/forms.py:237
-#: app/teacher/forms.py:10 app/teacher/forms.py:13
-msgid "leng_error"
-msgstr "The length cannot exceed 30 characters"
-
-#: app/admin/forms.py:17 app/auth/forms.py:31 app/auth/forms.py:94
-#: app/auth/forms.py:236 app/teacher/forms.py:11 app/templates/user.html:16
-msgid "Name"
-msgstr ""
-
-#: app/admin/forms.py:19 app/auth/forms.py:32 app/auth/forms.py:95
-#: app/auth/forms.py:173 app/auth/forms.py:237 app/auth/forms.py:297
-#: app/auth/forms.py:313 app/teacher/forms.py:13 app/templates/user.html:18
-msgid "Email"
-msgstr ""
-
-#: app/admin/forms.py:19 app/auth/forms.py:32 app/auth/forms.py:95
-#: app/auth/forms.py:173 app/auth/forms.py:237 app/auth/forms.py:297
-#: app/auth/forms.py:313 app/auth/forms.py:320 app/teacher/forms.py:13
-msgid "email_error_msg"
-msgstr "Invalid Email Type"
-
-#: app/admin/forms.py:20 app/auth/forms.py:33 app/auth/forms.py:96
-#: app/auth/forms.py:174 app/auth/forms.py:238 app/auth/forms.py:312
-#: app/main/forms.py:14 app/support/forms.py:51 app/teacher/forms.py:14
-#: app/templates/admin/admin_record.html:23
-#: app/templates/support/volunteer_record.html:13
-#: app/templates/teacher/teacher_permission_record.html:14
-#: app/templates/user.html:19
-msgid "Phone Number"
-msgstr ""
-
-#: app/admin/forms.py:22 app/auth/forms.py:344 app/teacher/forms.py:16
-#: app/templates/admin/admin_record.html:24
-#: app/templates/student/student.html:27 app/templates/support/teacher.html:8
-#: app/templates/teacher/teacher_permission_record.html:15
-msgid "School Name"
-msgstr ""
-
-#: app/admin/forms.py:23 app/teacher/forms.py:17
-#: app/templates/admin/admin_record.html:25
-#: app/templates/student/student.html:35
-msgid "School Address"
-msgstr ""
-
-#: app/admin/forms.py:24 app/auth/forms.py:345 app/teacher/forms.py:18
-#: app/templates/student/student.html:31 app/templates/support/teacher.html:12
-msgid "School Website"
-msgstr ""
-
-#: app/admin/forms.py:26 app/auth/forms.py:346
-#: app/templates/support/teacher.html:22
+#: app/admin/forms.py:11 app/auth/forms.py:90
 msgid "Office Phone Number"
 msgstr ""
 
-#: app/admin/forms.py:28 app/support/forms.py:66 app/teacher/forms.py:20
-msgid "Permission"
+#: app/admin/forms.py:13
+msgid "Approve this teacher?"
 msgstr ""
 
-#: app/admin/forms.py:29 app/auth/forms.py:316 app/auth/forms.py:330
-#: app/auth/forms.py:340 app/auth/forms.py:347 app/main/forms.py:16
-#: app/main/forms.py:36 app/student/forms.py:12 app/student/forms.py:20
-#: app/student/forms.py:29 app/student/forms.py:36 app/student/forms.py:43
-#: app/student/forms.py:55 app/support/forms.py:44 app/support/forms.py:57
-#: app/support/forms.py:67 app/teacher/forms.py:21
-#: app/templates/donate/donate_location.html:27
-msgid "Submit"
+#: app/admin/forms.py:14 app/admin/forms.py:24
+msgid "Save"
 msgstr ""
 
-#: app/admin/routes.py:60 app/auth/routes.py:95
-msgid "Please confirm your account!"
+#: app/admin/forms.py:18 app/templates/admin/donation_list.html:23
+msgid "Date"
 msgstr ""
 
-#: app/admin/routes.py:73 app/auth/routes.py:107 app/teacher/routes.py:33
-msgid "A new confirmation email has been sent."
+#: app/admin/forms.py:19
+msgid "Total"
 msgstr ""
 
-#: app/admin/routes.py:84 app/auth/routes.py:80 app/teacher/routes.py:45
-msgid "Account already confirmed. Please login."
+#: app/admin/forms.py:20
+msgid "Merchant Name"
 msgstr ""
 
-#: app/admin/routes.py:90 app/admin/routes.py:161 app/auth/routes.py:88
-#: app/support/routes.py:94 app/teacher/routes.py:51 app/teacher/routes.py:104
+#: app/admin/forms.py:21
+msgid "Reject Reason"
+msgstr ""
+
+#: app/admin/forms.py:22
+msgid "Verify this Donation Receipt?"
+msgstr ""
+
+#: app/admin/forms.py:23
+msgid "Reject this Donation Receipt?"
+msgstr ""
+
+#: app/admin/routes.py:31
+msgid "Admin View"
+msgstr ""
+
+#: app/admin/routes.py:40
+#, fuzzy
+msgid "Teacher List"
+msgstr "Contact teacher"
+
+#: app/admin/routes.py:58 app/auth/routes.py:159 app/auth/routes.py:173
+#: app/teacher/routes.py:42 app/teacher/routes.py:71
 msgid "The confirmation link is invalid or has expired."
 msgstr ""
 
-#: app/admin/routes.py:100
-msgid "admin View"
+#: app/admin/routes.py:70
+msgid "You have activated this teacher account."
 msgstr ""
 
-#: app/admin/routes.py:108
-msgid "Admin record"
+#: app/admin/routes.py:72
+msgid "Emailed the teacher to confirm account."
 msgstr ""
 
-#: app/admin/routes.py:150 app/teacher/routes.py:93
-msgid "You have approved your teacher's application . Thanks!"
+#: app/admin/routes.py:78
+msgid "You have activated a teacher account - "
 msgstr ""
 
-#: app/admin/routes.py:159 app/teacher/routes.py:102
-msgid "You have not approve your teacher's application . Thanks!"
+#: app/admin/routes.py:82
+msgid "You have rejected this teacher account."
 msgstr ""
 
-#: app/admin/routes.py:163 app/teacher/routes.py:106
-msgid "Admin confirm form"
+#: app/admin/routes.py:84
+msgid "confirm form"
 msgstr ""
 
-#: app/auth/email.py:14
-msgid "iShare Reset Your Password"
+#: app/admin/routes.py:96
+msgid "Admin Approved Teacher record"
 msgstr ""
 
-#: app/auth/forms.py:15
-msgid "Central and Western"
+#: app/admin/routes.py:123
+msgid "Reject message sent to "
 msgstr ""
 
-#: app/auth/forms.py:15
-msgid "Eastern"
+#: app/admin/routes.py:130
+msgid "Receipts sent to "
 msgstr ""
 
-#: app/auth/forms.py:15
-msgid "Southern"
+#: app/admin/routes.py:134
+msgid "Admin Verify Donation Receipt"
 msgstr ""
 
-#: app/auth/forms.py:15
-msgid "Wan Chai"
-msgstr ""
-
-#: app/auth/forms.py:15
-msgid "Sham Shui Po"
-msgstr ""
-
-#: app/auth/forms.py:15
-msgid "Kowloon City"
-msgstr ""
-
-#: app/auth/forms.py:15
-msgid "Kwun Tong"
-msgstr ""
-
-#: app/auth/forms.py:16
-msgid "Wong Tai Sin"
-msgstr ""
-
-#: app/auth/forms.py:17
-msgid "Yau Tsim Mong"
-msgstr ""
-
-#: app/auth/forms.py:17
-msgid "Islands"
-msgstr ""
-
-#: app/auth/forms.py:17
-msgid "Kwai Tsing"
-msgstr ""
-
-#: app/auth/forms.py:17
-msgid "North"
-msgstr ""
-
-#: app/auth/forms.py:17
-msgid "Sai Kung"
-msgstr ""
-
-#: app/auth/forms.py:17
-msgid "Sha Tin"
-msgstr ""
-
-#: app/auth/forms.py:17
-msgid "Tai Po"
-msgstr ""
-
-#: app/auth/forms.py:17
-msgid "Tsuen Wan"
-msgstr ""
-
-#: app/auth/forms.py:17
-msgid "Tuen Mun"
-msgstr ""
-
-#: app/auth/forms.py:18
-msgid "Yuen Long"
-msgstr ""
-
-#: app/auth/forms.py:22
-msgid "Username_email"
+#: app/auth/forms.py:13
+#, fuzzy
+msgid "Username or email"
 msgstr "Username / Email"
 
-#: app/auth/forms.py:23 app/auth/forms.py:36 app/auth/forms.py:99
-#: app/auth/forms.py:177 app/auth/forms.py:241 app/auth/forms.py:302
+#: app/auth/forms.py:14 app/auth/forms.py:41 app/auth/forms.py:120
 msgid "Password"
 msgstr ""
 
-#: app/auth/forms.py:24
+#: app/auth/forms.py:15
 msgid "Remember Me"
 msgstr ""
 
-#: app/auth/forms.py:25 app/auth/routes.py:70 app/templates/auth/login.html:5
-#: app/templates/auth/login.html:24
+#: app/auth/forms.py:18 app/auth/routes.py:150 app/templates/auth/login.html:12
 msgid "Sign In"
 msgstr ""
 
-#: app/auth/forms.py:29 app/auth/forms.py:92 app/auth/forms.py:167
-#: app/auth/forms.py:234
-msgid "Role"
+#: app/auth/forms.py:24
+msgid "Resend Email Conformation Email."
 msgstr ""
 
-#: app/auth/forms.py:31 app/auth/forms.py:94 app/auth/forms.py:172
-msgid "leng_error_2_30"
-msgstr "The length should include 2 to 30 characters"
+#: app/auth/forms.py:28 app/common/form.py:423
+msgid "Username"
+msgstr ""
 
-#: app/auth/forms.py:34 app/auth/forms.py:97 app/auth/forms.py:175
-#: app/auth/forms.py:239 app/main/forms.py:15
-msgid "phone_require"
-msgstr "The phone number must be 8 digits "
+#: app/auth/forms.py:30
+msgid "First Name (ENG)"
+msgstr ""
 
-#: app/auth/forms.py:35 app/auth/forms.py:98 app/auth/forms.py:176
-#: app/auth/forms.py:240 app/main/forms.py:13 app/templates/user.html:17
+#: app/auth/forms.py:32
+msgid "Last Name (ENG)"
+msgstr ""
+
+#: app/auth/forms.py:34
+msgid "First Name (Chinese)"
+msgstr ""
+
+#: app/auth/forms.py:36
+msgid "Last Name (Chinese)"
+msgstr ""
+
+#: app/auth/forms.py:39 app/main/forms.py:13 app/templates/user.html:15
 msgid "Region"
 msgstr ""
 
-#: app/auth/forms.py:38 app/auth/forms.py:101 app/auth/forms.py:178
-#: app/auth/forms.py:242 app/auth/forms.py:304
+#: app/auth/forms.py:43 app/auth/forms.py:122
 msgid "Repeat Password"
 msgstr ""
 
-#: app/auth/forms.py:39 app/auth/forms.py:102 app/auth/forms.py:178
-#: app/auth/forms.py:242 app/auth/forms.py:305
-msgid "pass_error"
-msgstr "The Repeat Password must be the same as Password"
-
-#: app/auth/forms.py:41 app/auth/forms.py:310 app/student/forms.py:28
-#: app/templates/donate/donate.html:14
-#: app/templates/donate/donate_record.html:13
-#: app/templates/student/email/thankrepair.html:5
-#: app/templates/student/email/thanks.html:5
-msgid "Photo"
+#: app/auth/forms.py:45 app/common/form.py:429 app/main/forms.py:14
+#: app/templates/user.html:17
+msgid "Phone Number"
 msgstr ""
 
-#: app/auth/forms.py:44 app/auth/forms.py:108 app/auth/forms.py:184
-#: app/templates/student/item_application.html:47
+#: app/auth/forms.py:47 app/main/forms.py:15
+msgid "phone_require"
+msgstr "The phone number must be 8 digits "
+
+#: app/auth/forms.py:48
+msgid "Your Photo"
+msgstr ""
+
+#: app/auth/forms.py:53
+msgid "Gender"
+msgstr ""
+
+#: app/auth/forms.py:59
+msgid "Birth (yyyy-mm-dd)"
+msgstr ""
+
+#: app/auth/forms.py:65 app/auth/forms.py:87 app/auth/forms.py:113
+#: app/common/form.py:428 app/templates/admin/donation_list.html:22
+#: app/templates/admin/teacher_list.html:23 app/templates/user.html:16
+msgid "Email"
+msgstr ""
+
+#: app/auth/forms.py:75 app/auth/forms.py:82 app/auth/forms.py:103
 msgid "Next"
 msgstr ""
 
-#: app/auth/forms.py:49 app/auth/forms.py:113 app/auth/forms.py:189
-#: app/auth/forms.py:252 app/main/forms.py:26
-msgid "Please use a different username."
-msgstr "Please input another username"
+#: app/auth/forms.py:79
+msgid "Staff Card"
+msgstr "Staff Card(Optional)"
 
-#: app/auth/forms.py:54 app/auth/forms.py:117 app/auth/forms.py:193
-#: app/auth/forms.py:256
-msgid "Please make sure your password do not have special character in it"
-msgstr "Please make sure your password does not have special character in it"
-
-#: app/auth/forms.py:59 app/auth/forms.py:151 app/auth/forms.py:227
-#: app/auth/forms.py:290
-msgid "Please use a different email address."
-msgstr "Please use a another email address."
-
-#: app/auth/forms.py:63 app/auth/forms.py:197 app/auth/forms.py:260
-msgid "Please make sure your full name not least than 5 letter"
+#: app/auth/forms.py:96 app/auth/forms.py:142 app/auth/forms.py:150
+#: app/main/forms.py:16 app/student/forms.py:18 app/student/forms.py:38
+#: app/student/forms.py:46 app/student/forms.py:54 app/student/forms.py:68
+#: app/teacher/forms.py:9
+#: app/templates/auth/register_student_second_page.html:48
+#: app/templates/auth/register_teacher_second_page.html:33
+#: app/templates/auth/register_volunteer_second_page.html:13
+#: app/templates/student/edit_repair_application.html:24
+#: app/templates/student/equipment_application_map.html:26
+#: app/volunteer/forms.py:23 app/volunteer/forms.py:33
+msgid "Submit"
 msgstr ""
 
-#: app/auth/forms.py:65 app/auth/forms.py:199 app/auth/forms.py:262
-msgid "Please make sure your full name do not have number in it"
+#: app/auth/forms.py:100
+msgid "Student Card"
 msgstr ""
 
-#: app/auth/forms.py:67 app/auth/forms.py:201 app/auth/forms.py:264
+#: app/auth/forms.py:109 app/templates/auth/register_first_page.html:8
+#: app/templates/auth/register_first_page_with_auto_fill_in.html:17
+msgid "Register"
+msgstr ""
+
+#: app/auth/forms.py:116 app/auth/forms.py:126
+msgid "Request Password Reset"
+msgstr ""
+
+#: app/auth/forms.py:130
+msgid "Hong Kong Identity Card Number"
+msgstr ""
+
+#: app/auth/forms.py:132
+msgid "Home Address"
+msgstr ""
+
+#: app/auth/forms.py:134
+#, fuzzy
+msgid "Your School Email"
+msgstr "The email address must be the school's email address"
+
+#: app/auth/forms.py:135
+msgid "Your Teacher email"
+msgstr ""
+
+#: app/auth/routes.py:41
+msgid "Your email confirmation email resend already."
+msgstr ""
+
+#: app/auth/routes.py:78 app/donor/routes.py:161 app/volunteer/routes.py:78
+msgid "More than 500 records found, and please zoom in!"
+msgstr ""
+
+#: app/auth/routes.py:90 app/auth/routes.py:98 app/auth/routes.py:103
+#: app/auth/routes.py:112
+msgid "You account has already activated."
+msgstr ""
+
+#: app/auth/routes.py:93
+msgid "student_activated_wait_for_teacher_approval"
+msgstr ""
+
+#: app/auth/routes.py:106
+msgid "teacher_activated_wait_for_admin_approval"
+msgstr ""
+
+#: app/auth/routes.py:123
+msgid "Invalid username or password"
+msgstr ""
+
+#: app/auth/routes.py:167
+msgid "Account already confirmed. Please login."
+msgstr ""
+
+#: app/auth/routes.py:171
+msgid "You have confirmed your account. Thanks!"
+msgstr ""
+
+#: app/auth/routes.py:180
+msgid "Invalid token and please reset again."
+msgstr ""
+
+#: app/auth/routes.py:186
+msgid "Your password has been reset."
+msgstr ""
+
+#: app/auth/routes.py:197
+msgid "Check your email for the instructions to reset your password"
+msgstr ""
+
+#: app/auth/routes.py:200 app/templates/auth/reset_password.html:5
+msgid "Reset Password"
+msgstr ""
+
+#: app/auth/routes.py:211 app/auth/routes.py:246 app/auth/routes.py:278
+msgid "You already successful to register!"
+msgstr "Your registration under review, please check your email."
+
+#: app/auth/routes.py:216
+msgid "Register Donor"
+msgstr ""
+
+#: app/auth/routes.py:229
+msgid "Register Student"
+msgstr ""
+
+#: app/auth/routes.py:252
+msgid "Register Student Second Page"
+msgstr ""
+
+#: app/auth/routes.py:268
+msgid "Register Volunteer"
+msgstr ""
+
+#: app/auth/routes.py:284
+msgid "Register Volunteer Second Page"
+msgstr ""
+
+#: app/auth/routes.py:300
+#, fuzzy
+msgid "Register Teacher"
+msgstr "Contact teacher"
+
+#: app/auth/routes.py:316
+msgid ""
+"Our admin will review your account application and approve your "
+"application as soon as possible."
+msgstr ""
+
+#: app/auth/routes.py:324
+msgid "Register Teacher Second Page"
+msgstr ""
+
+#: app/azure_ai/vision.py:34
+msgid "Invalid Photo: Unable to recognize any faces!"
+msgstr ""
+
+#: app/azure_ai/vision.py:37
+msgid "Invalid Photo: Adult Content!"
+msgstr "Invalid Photo: Pornographic"
+
+#: app/azure_ai/vision.py:40
+msgid "Invalid Photo: Gory Content!"
+msgstr "Invalid Photo: Violence or Blood Content"
+
+#: app/azure_ai/vision.py:43
+msgid "Invalid Photo: Racy Content!"
+msgstr "Invalid Photo:  Sexually suggestive Content"
+
+#: app/azure_ai/vision.py:47
+msgid "Invalid Photo: our AI infers you are under age 6 or over 30!"
+msgstr ""
+"Invalid Photo: our AI infers you are under age 6 or over 30! You should "
+"not be a student!"
+
+#: app/common/decorator.py:83
+msgid "Please share your story!"
+msgstr ""
+
+#: app/common/email.py:15
+msgid "account verification"
+msgstr ""
+
+#: app/common/email.py:16
+msgid "repair notification"
+msgstr ""
+
+#: app/common/email.py:73
+msgid "You have a new message / 你有一條新消息"
+msgstr ""
+
+#: app/common/email.py:77
+msgid "Thank you for your donation! / 感謝您的捐贈！"
+msgstr ""
+
+#: app/common/email.py:81
+msgid "Thank you for your technical support! / 感謝您的技術支持！"
+msgstr ""
+
+#: app/common/email.py:103
+msgid "Reset Your Password / 重置你的密碼"
+msgstr ""
+
+#: app/common/email.py:113
+msgid "Confirm your email address 請確認您的電郵地址"
+msgstr ""
+
+#: app/common/email.py:124
+msgid "Your student hopes you to confirm his student status / 你的學生希望你確認他的學生身份"
+msgstr ""
+
+#: app/common/email.py:131
+msgid "A new teacher application / 新教師申請"
+msgstr ""
+
+#: app/common/email.py:142
+msgid "Can you join us and help your student? / 你可以加入我們，幫助你的學生嗎？"
+msgstr ""
+
+#: app/common/email.py:151
+msgid "You account has activated. / 您的帳戶已啟動."
+msgstr ""
+
+#: app/common/email.py:156
+msgid "Cancellation of the repair support from volunteer."
+msgstr ""
+
+#: app/common/email.py:157
+msgid "Your repair case has been cancelled and please wait for another volunteer."
+msgstr ""
+
+#: app/common/email.py:167
+msgid ""
+"Your student hopes you to endorse an equipment application. / "
+"您的學生希望您認可物品申請."
+msgstr ""
+
+#: app/common/email.py:177
+msgid "Your equipment application has been approved / 您的設備申請已被批准."
+msgstr ""
+
+#: app/common/email.py:187
+msgid "Your equipment application has been rejected / 您的設備申請已被拒絕."
+msgstr ""
+
+#: app/common/email.py:197
+msgid "Your equipment receipts application has been rejected / 您的設備收據申請已被拒絕."
+msgstr ""
+
+#: app/common/email.py:207
+msgid "Your equipment receipts application has been approved / 您的設備收據申請已被批准."
+msgstr ""
+
+#: app/common/form.py:29
 msgid "Please make sure your full name does not contain special character in it"
 msgstr ""
 
-#: app/auth/forms.py:71 app/auth/forms.py:129 app/auth/forms.py:205
-#: app/auth/forms.py:268 app/auth/forms.py:352 app/main/forms.py:30
-#: app/templates/support/teacher.html:23
-msgid "Phone number must be 8 digits."
-msgstr ""
+#: app/common/form.py:34
+msgid "Please use a different username."
+msgstr "Please input another username"
 
-#: app/auth/forms.py:73 app/auth/forms.py:131 app/auth/forms.py:207
-#: app/auth/forms.py:270 app/auth/forms.py:354 app/main/forms.py:32
-msgid "Please use digits."
-msgstr ""
-
-#: app/auth/forms.py:78 app/auth/forms.py:136 app/auth/forms.py:212
-#: app/auth/forms.py:275
-msgid "Please make sure your password is at least 8 character."
-msgstr ""
-"Please make sure your password is no less than 8 letters, at least 1 "
-"digit, 1 large letter, 1 fine letter and 1 special letter"
-
-#: app/auth/forms.py:80 app/auth/forms.py:138 app/auth/forms.py:214
-#: app/auth/forms.py:277
+#: app/common/form.py:41
 msgid "Please make sure your password at least one number in it"
 msgstr ""
 "Please make sure your password is no less than 8 letters, at least 1 "
 "digit, 1 large letter, 1 fine letter and 1 special letter"
 
-#: app/auth/forms.py:82 app/auth/forms.py:140 app/auth/forms.py:216
-#: app/auth/forms.py:279
+#: app/common/form.py:45
 msgid "Please make sure your password at least one capital letter in it"
 msgstr ""
 "Please make sure your password is no less than 8 letters, at least 1 "
 "digit, 1 large letter, 1 fine letter and 1 special letter"
 
-#: app/auth/forms.py:84 app/auth/forms.py:142 app/auth/forms.py:218
-#: app/auth/forms.py:281
+#: app/common/form.py:49
 msgid "Please make sure your password at least one lowercase letter in it"
 msgstr ""
 "Please make sure your password is no less than 8 letters, at least 1 "
 "digit, 1 large letter, 1 fine letter and 1 special letter"
 
-#: app/auth/forms.py:86 app/auth/forms.py:144 app/auth/forms.py:220
-#: app/auth/forms.py:283
+#: app/common/form.py:53
 msgid "Please make sure your password at least one special character in it"
 msgstr "Please make sure your password at least one special character in it"
 
-#: app/auth/forms.py:104
-msgid "Teacher Photo"
+#: app/common/form.py:61 app/common/form.py:75 app/common/form.py:96
+msgid "No special character or space"
 msgstr ""
 
-#: app/auth/forms.py:104 app/auth/forms.py:106 app/auth/forms.py:180
-#: app/auth/forms.py:244 app/donate/forms.py:17
-msgid "Only jpg,jpeg and png"
+#: app/common/form.py:68
+msgid "Wrong Date Format"
 msgstr ""
 
-#: app/auth/forms.py:106
-msgid "Staff Card"
-msgstr "Staff Card(Optional)"
-
-#: app/auth/forms.py:153
-msgid "Please use a school email address."
+#: app/common/form.py:82
+msgid "Wrong ID Card Format"
 msgstr ""
 
-#: app/auth/forms.py:172 app/main/forms.py:12
-msgid "Full Name"
+#: app/common/form.py:89
+msgid "Wrong Gender Format"
 msgstr ""
 
-#: app/auth/forms.py:173
-msgid "school_email"
-msgstr "The email address must be the school's email address"
-
-#: app/auth/forms.py:179
-msgid "Student card"
+#: app/common/form.py:102
+msgid "Please use digits."
 msgstr ""
 
-#: app/auth/forms.py:181 app/auth/forms.py:245
-msgid "File must be uploaded"
-msgstr ""
+#: app/common/form.py:111
+msgid "Please use a different email address."
+msgstr "Please use a another email address."
 
-#: app/auth/forms.py:243
-msgid "Please upload your photo"
-msgstr ""
-
-#: app/auth/forms.py:247 app/auth/routes.py:160 app/auth/routes.py:166
-#: app/auth/routes.py:184 app/auth/routes.py:314 app/auth/routes.py:343
-#: app/auth/routes.py:350 app/auth/routes.py:375 app/auth/routes.py:479
-#: app/templates/auth/register.html:49
-#: app/templates/auth/student_register.html:45
-msgid "Register"
-msgstr ""
-
-#: app/auth/forms.py:298 app/auth/forms.py:306
-msgid "Request Password Reset"
-msgstr ""
-
-#: app/auth/forms.py:314 app/auth/forms.py:339
-msgid "Address"
-msgstr ""
-
-#: app/auth/forms.py:320 app/templates/student/student.html:14
-msgid "Please enter your teacher's email"
-msgstr ""
-
-#: app/auth/forms.py:321 app/templates/student/student.html:28
-#: app/templates/support/teacher.html:9
-msgid "Please enter your school name"
-msgstr ""
-
-#: app/auth/forms.py:322
-msgid "Please enter your school address"
-msgstr ""
-
-#: app/auth/forms.py:324 app/templates/student/student.html:32
-#: app/templates/support/teacher.html:13
-msgid "Please enter your school URL"
-msgstr ""
-
-#: app/auth/forms.py:356
-msgid "Please use a different email phone number."
-msgstr "Please use another phone number."
-
-#: app/auth/routes.py:39
-msgid "Invalid username or password"
-msgstr ""
-
-#: app/auth/routes.py:68
-msgid "Hello ! Welcome to the donor system !"
-msgstr ""
-
-#: app/auth/routes.py:86
-msgid "You have confirmed your account. Thanks!"
-msgstr ""
-
-#: app/auth/routes.py:159 app/auth/routes.py:165
-msgid "Please upload right photo"
-msgstr ""
-
-#: app/auth/routes.py:245
-msgid "Register_Teacher"
-msgstr ""
-
-#: app/auth/routes.py:313
+#: app/common/form.py:117
 msgid "The email must be school email"
 msgstr "Your email address must endwith edu.hk ."
 
-#: app/auth/routes.py:339
+#: app/common/form.py:124
+#, fuzzy
+msgid "Please make sure your school name does not contain special character in it"
+msgstr "Please make sure your password does not have special character in it"
+
+#: app/common/form.py:128
+#, fuzzy
+msgid "Please make sure your school name does not contain digit in it"
+msgstr "Please make sure your username does not have number in it"
+
+#: app/common/form.py:138
+#, fuzzy
+msgid "Please use a different office phone number."
+msgstr "Please use another phone number."
+
+#: app/common/form.py:151
+msgid "Must contain "
+msgstr ""
+
+#: app/common/form.py:182
+msgid "File size should be bigger than "
+msgstr ""
+
+#: app/common/form.py:184
+msgid "File size should be smaller than "
+msgstr ""
+
+#: app/common/form.py:205
+msgid "Face is not the same!"
+msgstr ""
+
+#: app/common/form.py:216
 msgid ""
-"Please upload right photo, since the photo have adult contect or no "
-"person in photo"
-msgstr ""
-"Please upload right photo, since the photo have adult content or no "
-"person in photo"
-
-#: app/auth/routes.py:406
-msgid "Please enter the correct school URL"
+"Found offensive content, sexually explicit or suggestive content, "
+"profanity, and personal data."
 msgstr ""
 
-#: app/auth/routes.py:407 app/auth/routes.py:448 app/main/index_data.py:11
-#: app/templates/student/student.html:4
-msgid "Student"
+#: app/common/form.py:220
+msgid ""
+"Found offensive content, sexually explicit or suggestive content, and "
+"profanity"
 msgstr ""
 
-#: app/auth/routes.py:422 app/auth/routes.py:470 app/auth/routes.py:528
-#: app/auth/routes.py:563
-msgid "You already successful to register!"
-msgstr "Your registration under review, please check your email."
-
-#: app/auth/routes.py:426 app/auth/routes.py:438 app/auth/routes.py:444
-#: app/auth/routes.py:532 app/auth/routes.py:567 app/auth/routes.py:574
-msgid "Donation System Registration Confirmation"
-msgstr "iShare.volunteer Account Verification"
-
-#: app/auth/routes.py:493
-msgid "Check your email for the instructions to reset your password"
+#: app/common/form.py:235
+msgid "At least wait for {x} days"
 msgstr ""
 
-#: app/auth/routes.py:495 app/templates/auth/reset_password.html:5
-msgid "Reset Password"
+#: app/common/form.py:242
+msgid "School ID does not exist."
 msgstr ""
 
-#: app/auth/routes.py:509
-msgid "Your password has been reset."
+#: app/common/form.py:253
+#, python-format
+msgid "Invalid field name '%s'."
 msgstr ""
 
-#: app/auth/routes.py:538 app/main/index_data.py:16
-#: app/templates/support/volunteer.html:4
-msgid "Volunteer"
+#: app/common/form.py:260
+msgid "Email must be end with "
 msgstr ""
 
-#: app/auth/routes.py:580
-msgid "teacher"
+#: app/common/form.py:325
+msgid "pass_error"
+msgstr "The Repeat Password must be the same as Password"
+
+#: app/common/form.py:406
+msgid "Please select option."
 msgstr ""
 
-#: app/donate/forms.py:15 app/donate/forms.py:25 app/donate/forms.py:31
-msgid "Please enter your Item Object"
+#: app/common/form.py:424 app/main/forms.py:11
+#: app/templates/admin/teacher_list.html:21
+#: app/templates/teacher/equipment_application_list.html:13
+#: app/templates/teacher/teacher_approved_student_record.html:13
+#: app/templates/user.html:13 app/volunteer/forms.py:14
+msgid "First Name"
 msgstr ""
 
-#: app/donate/forms.py:16
-msgid "Please enter your Item Status"
+#: app/common/form.py:426 app/main/forms.py:12
+#: app/templates/admin/teacher_list.html:22
+#: app/templates/teacher/equipment_application_list.html:14
+#: app/templates/teacher/teacher_approved_student_record.html:14
+#: app/templates/user.html:14 app/volunteer/forms.py:16
+msgid "Last Name"
 msgstr ""
 
-#: app/donate/forms.py:17
-msgid "Please upload your Item photo"
+#: app/common/form.py:431
+msgid "School Name"
 msgstr ""
 
-#: app/donate/forms.py:21 app/donate/forms.py:39
+#: app/common/form.py:433
+msgid "School Website"
+msgstr ""
+
+#: app/common/form.py:439
+msgid "Send Message"
+msgstr ""
+
+#: app/donor/forms.py:10
+#, fuzzy
+msgid "Please enter your equipment type"
+msgstr "Please use a different phone number."
+
+#: app/donor/forms.py:12
+#, fuzzy
+msgid "Please enter your description"
+msgstr "Please use a different phone number."
+
+#: app/donor/forms.py:13
+msgid "Please upload your equipment photo"
+msgstr ""
+
+#: app/donor/forms.py:15
+msgid "If possible, please upload your receipt photo for our record."
+msgstr ""
+
+#: app/donor/forms.py:17
 msgid "Add"
 msgstr ""
 
-#: app/donate/forms.py:27
-msgid "Select"
+#: app/donor/forms.py:21
+msgid "Please enter your Item Object"
 msgstr ""
 
-#: app/donate/forms.py:35 app/donate/forms.py:43
-msgid "Please enter your transaction date"
+#: app/donor/forms.py:25
+msgid "Meetup time"
 msgstr ""
 
-#: app/donate/forms.py:37 app/donate/forms.py:45
-msgid "Please enter your transaction time"
+#: app/donor/forms.py:26
+msgid "Confirm Your Donation."
 msgstr ""
 
-#: app/donate/forms.py:47 app/templates/donate/donate_item.html:39
-msgid "Cancel"
+#: app/donor/routes.py:43
+msgid "Donor View"
 msgstr ""
 
-#: app/donate/map.py:31 app/donate/map.py:53 app/donate/routes.py:169
-msgid "stu_info"
+#: app/donor/routes.py:69
+msgid "Your equipment has added for donation."
 msgstr ""
 
-#: app/donate/routes.py:55
-msgid ""
-"Please upload right photo, since the photo have adult contect or should "
-"no person in photo"
-msgstr ""
-"Please upload right photo, since the photo have adult content or should "
-"no person in photo"
-
-#: app/donate/routes.py:72 app/donate/routes.py:256 app/donate/routes.py:286
-msgid "Your information add successful"
+#: app/donor/routes.py:114
+msgid "Pick A Student"
 msgstr ""
 
-#: app/donate/routes.py:95 app/student/routes.py:280 app/student/routes.py:460
-msgid "Deleted"
+#: app/donor/routes.py:180
+msgid "This equipment has been donated to another student."
 msgstr ""
 
-#: app/donate/routes.py:117
-msgid "Donate View"
+#: app/donor/routes.py:191
+msgid "Hello, I decide to donate my equipment to you. It is "
 msgstr ""
 
-#: app/donate/routes.py:131
-msgid "Donate record"
+#: app/donor/routes.py:203
+msgid "Thank you!"
 msgstr ""
 
-#: app/donate/routes.py:147 app/donate/routes.py:188
-msgid "Student story"
+#: app/donor/routes.py:217
+msgid "Donation Appointment has made!"
 msgstr ""
 
-#: app/donate/routes.py:207 app/support/forms.py:64
-#: app/templates/student/draft.html:40
-#: app/templates/support/teacher_record.html:13
-msgid "Story"
-msgstr ""
-
-#: app/donate/routes.py:266 app/donate/routes.py:297
-msgid "Cancelled"
-msgstr ""
-
-#: app/donate/routes.py:309 app/student/routes.py:54 app/student/routes.py:69
-#: app/student/routes.py:474 app/student/routes.py:477
-#: app/student/routes.py:493
-msgid "map"
-msgstr ""
-
-#: app/donate/routes.py:363
-msgid "You are successful donor to this student"
-msgstr ""
-
-#: app/donate/routes.py:376 app/student/routes.py:646
-msgid "Message List"
-msgstr ""
-
-#: app/donate/routes.py:393 app/student/routes.py:663
-msgid "Wrong chat room!"
-msgstr ""
-
-#: app/donate/routes.py:395 app/student/routes.py:665
-msgid "Message"
-msgstr ""
-
-#: app/main/forms.py:35 app/support/forms.py:43
-msgid "Say something"
-msgstr ""
-
-#: app/main/index_data.py:6
-msgid "Donator"
+#: app/donor/routes.py:272 app/main/routes.py:34 app/student/routes.py:330
+#: app/templates/admin/donation_list.html:21
+#, fuzzy
+msgid "Donor"
 msgstr "Donor"
 
-#: app/main/index_data.py:7
+#: app/main/routes.py:35
 msgid "index_page_donate_info"
 msgstr ""
 "Donors can donor your items, such as desktop computers, routers, etc. "
 "Donors can choose students to donor items. "
 
-#: app/main/index_data.py:12
+#: app/main/routes.py:39 app/templates/auth/register_student_second_page.html:6
+#: app/volunteer/routes.py:228
+msgid "Student"
+msgstr ""
+
+#: app/main/routes.py:40
 msgid "index_page_student_info"
 msgstr ""
 "Students can get the items they need on this website. Students can submit"
@@ -613,354 +664,229 @@ msgstr ""
 "addition, students can submit a repair request to the website regarding "
 "the condition of the item. "
 
-#: app/main/index_data.py:17
+#: app/main/routes.py:44 app/main/routes.py:84 app/student/routes.py:374
+#: app/templates/auth/register_volunteer_second_page.html:3
+msgid "Volunteer"
+msgstr ""
+
+#: app/main/routes.py:45
 msgid "index_page_volunteer_info"
 msgstr ""
 "Volunteers are divided into two categories: auxiliary volunteers and "
 "school teachers. Press to join now to view details. "
 
-#: app/main/index_data.py:24
-msgid "School teacher"
+#: app/main/routes.py:64 app/main/routes.py:70
+msgid "Home"
 msgstr ""
 
-#: app/main/index_data.py:25
+#: app/main/routes.py:79
+#, fuzzy
+msgid "Teacher"
+msgstr "Contact teacher"
+
+#: app/main/routes.py:80
 msgid "volunteer_page_teacher_info"
 msgstr "Teachers can review student applications and invite other teachers. "
 
-#: app/main/index_data.py:29
-msgid "Support Volunteer"
-msgstr ""
-
-#: app/main/index_data.py:30
+#: app/main/routes.py:85
 msgid "volunteer_page_volunteer_info"
 msgstr ""
 "Volunteers can solve problems raised by students and repair students’ "
 "items. "
 
-#: app/main/routes.py:38 app/main/routes.py:74
-msgid "Your post is now live!"
+#: app/main/routes.py:90
+msgid "Supporters"
 msgstr ""
 
-#: app/main/routes.py:62 app/main/routes.py:64 app/main/routes.py:77
-#: app/templates/base.html:56 app/templates/base.html:58
-#: app/templates/base.html:60 app/templates/base.html:62
-#: app/templates/base.html:64 app/templates/base.html:67
-#: app/templates/base.html:70 app/templates/base.html:73
-#: app/templates/base.html:76 app/templates/base.html:79
-msgid "Home"
+#: app/main/routes.py:98 app/templates/user.html:12
+msgid "User"
 msgstr ""
 
-#: app/main/routes.py:131
+#: app/main/routes.py:113
 msgid "Your changes have been saved."
 msgstr ""
 
-#: app/main/routes.py:139 app/templates/edit_profile.html:5
+#: app/main/routes.py:117 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr ""
 
-#: app/main/routes.py:149 app/templates/base.html:145
+#: app/main/routes.py:129 app/templates/base.html:149
 msgid "Terms"
 msgstr "Terms of Use & Privacy"
 
-#: app/main/routes.py:153
+#: app/main/routes.py:132
 msgid "About US"
 msgstr ""
 
-#: app/student/forms.py:11
-msgid "Need"
+#: app/student/forms.py:12 app/student/forms.py:23
+msgid "Please enter your title of your story to donor"
+msgstr ""
+
+#: app/student/forms.py:14 app/student/forms.py:26
+msgid ""
+"Please elaborate your story about your life to make the donor willing to "
+"donate equipment to you"
 msgstr ""
 
 #: app/student/forms.py:16
-msgid "Please enter your title of your story to donator"
+msgid "Please Upload a photo about your life the photo will show to the donor"
 msgstr ""
 
-#: app/student/forms.py:17
-msgid ""
-"Please elaborate your story about your life to make the donor is willing "
-"to donor items to you"
+#: app/student/forms.py:31
+msgid "Please choose your equipment type"
 msgstr ""
 
-#: app/student/forms.py:18
-msgid "Please Upload a photo about your life the photo will show to the donator"
+#: app/student/forms.py:32 app/templates/student/story.html:28
+#: app/templates/student/story.html:44
+msgid "Apply Equipment"
 msgstr ""
 
-#: app/student/forms.py:24
-msgid "apply_status"
+#: app/student/forms.py:42
+msgid "Thanks Message To Your Donor"
 msgstr ""
 
-#: app/student/forms.py:25 app/student/forms.py:33
-msgid "Please Enter Message To Your Donator"
+#: app/student/forms.py:44
+msgid "Please upload a photo with your donor"
 msgstr ""
 
-#: app/student/forms.py:26
-msgid "Please Enter Message To Your teacher "
+#: app/student/forms.py:50
+msgid "Thanks Message To Your Volunteer"
 msgstr ""
 
-#: app/student/forms.py:27
-msgid "Please Enter Message To Volunteer"
+#: app/student/forms.py:52
+msgid "Please upload a photo with your volunteer"
 msgstr ""
 
-#: app/student/forms.py:34
-msgid "Please upload a photo to confirm you are obtained the item"
-msgstr ""
-
-#: app/student/forms.py:40
-msgid "Please Enter Message To Your Volunteer"
-msgstr ""
-
-#: app/student/forms.py:41
-msgid "Please upload pictures to confirm that there are volunteers to help repair"
-msgstr ""
-
-#: app/student/forms.py:47
-msgid "Please Enter Your Address"
-msgstr ""
-
-#: app/student/forms.py:48
-msgid ""
-"This is title.Please briefly describe what you need to repair let "
-"volunteer know."
-msgstr ""
-"This is title. Please briefly describe what you need to repair let "
-"volunteer know."
-
-#: app/student/forms.py:51
-msgid ""
-"This is description. Please provide detailed information about the item "
-"you need to repair."
-msgstr ""
-
-#: app/student/forms.py:53
-msgid "Please upload photo of items you need to repair"
-msgstr ""
-
-#: app/student/forms.py:59
-msgid "Please Choices Your Item"
-msgstr ""
-
-#: app/student/forms.py:60 app/student/forms.py:62 app/student/forms.py:64
-msgid "Please select your quantity"
-msgstr ""
-
-#: app/student/forms.py:67
-msgid "Add Item"
-msgstr ""
-
-#: app/student/forms.py:71
-msgid "What date would be convenient for you?)"
-msgstr ""
-
-#: app/student/forms.py:73
-msgid "What time would be convenient for you? (AM/PM:HH:MM)"
-msgstr ""
-
-#: app/student/forms.py:76
-msgid "Please tell your reason to donator."
-msgstr ""
-
-#: app/student/forms.py:77 app/templates/message.html:38
-msgid "Send"
-msgstr ""
-
-#: app/student/func.py:74
-msgid "Adult Content,Please upload right photo"
-msgstr ""
-
-#: app/student/func.py:80
-msgid "Gory Content,Please upload right photo"
-msgstr ""
-
-#: app/student/func.py:86
-msgid "Racy Content,Please upload right photo"
-msgstr ""
-
-#: app/student/routes.py:48
-msgid "Windows Apply"
-msgstr ""
-
-#: app/student/routes.py:76 app/student/routes.py:109
-msgid "Date confirm"
-msgstr ""
-
-#: app/student/routes.py:170
-msgid "Student View"
-msgstr ""
-
-#: app/student/routes.py:186
-msgid ""
-"Each time the application was rejected, Need after 30 days apart to be "
-"able to re-apply"
-msgstr ""
-
-#: app/student/routes.py:189
-msgid "Each application needs to be at least 180 days apart"
-msgstr ""
-
-#: app/student/routes.py:201
-msgid "Change Story"
-msgstr ""
-
-#: app/student/routes.py:223
-msgid "Press submit your Item application will be created"
-msgstr ""
-
-#: app/student/routes.py:234 app/student/routes.py:282
-msgid "Item Application"
-msgstr ""
-
-#: app/student/routes.py:256 app/student/routes.py:260
-#: app/student/routes.py:439 app/student/routes.py:443
-msgid "You can only select one type of computer"
-msgstr ""
-
-#: app/student/routes.py:263 app/student/routes.py:446
-msgid "Each item can only be selected once"
-msgstr ""
-
-#: app/student/routes.py:266 app/student/routes.py:435
-msgid "Only two items can be selected for each application"
-msgstr ""
-
-#: app/student/routes.py:270
-msgid "Added"
-msgstr ""
-
-#: app/student/routes.py:294 app/student/routes.py:624
-msgid "Application has been submitted to the teacher"
-msgstr ""
-
-#: app/student/routes.py:313
-msgid "Your application has been accepted !"
-msgstr ""
-
-#: app/student/routes.py:315
-msgid "Repair Application"
-msgstr ""
-
-#: app/student/routes.py:323 app/student/routes.py:378
-#: app/student/routes.py:512
-msgid "Application History"
-msgstr ""
-
-#: app/student/routes.py:344
-msgid "Draft"
-msgstr ""
-
-#: app/student/routes.py:408 app/student/routes.py:450
-#: app/student/routes.py:538
-msgid "Updated"
-msgstr ""
-
-#: app/student/routes.py:410
-msgid "Edit Title And Story"
-msgstr ""
-
-#: app/student/routes.py:501
-msgid "Repair History"
-msgstr ""
-
-#: app/student/routes.py:540 app/templates/student/repair_history.html:29
-#: app/templates/student/show_repair.html:60
-msgid "Edit Problem"
-msgstr ""
-
-#: app/student/routes.py:575 app/student/routes.py:605
-msgid "Thank You For Your Message"
-msgstr ""
-
-#: app/student/routes.py:577 app/student/routes.py:607
-msgid "Thank You"
-msgstr ""
-
-#: app/student/routes.py:634
-msgid "student  be confirm View"
-msgstr ""
-
-#: app/support/forms.py:49 app/support/forms.py:62
-#: app/templates/support/teacher_record.html:11
-#: app/templates/support/volunteer_record.html:11
-#: app/templates/teacher/teacher_permission_record.html:11
-msgid "Student Name"
-msgstr ""
-
-#: app/support/forms.py:50
-msgid "Student Address"
-msgstr ""
-
-#: app/support/forms.py:52
-msgid "Problem"
-msgstr ""
-
-#: app/support/forms.py:53
-msgid "Description Problem"
-msgstr ""
-
-#: app/support/forms.py:54
-msgid "Appointment Repair Data"
-msgstr ""
-
-#: app/support/forms.py:55
-msgid "Appointment Repair Time"
-msgstr ""
-
-#: app/support/forms.py:63 app/templates/student/application_history.html:12
-#: app/templates/student/repair_history.html:12
-#: app/templates/support/teacher_record.html:12
-#: app/templates/support/volunteer_record.html:14
+#: app/student/forms.py:59 app/templates/student/repair_application.html:6
+#: app/templates/student/repair_application_list.html:12
+#: app/volunteer/forms.py:29
 msgid "Title"
 msgstr ""
 
-#: app/support/forms.py:65
-msgid "Item Name"
+#: app/student/forms.py:61
+msgid "Describe your technical problem."
 msgstr ""
 
-#: app/support/routes.py:28
-msgid "Volunteer View"
+#: app/student/forms.py:63
+msgid "Upload the device photo."
 msgstr ""
 
-#: app/support/routes.py:42
-msgid "teacher View"
+#: app/student/forms.py:65
+msgid "Detail Address"
 msgstr ""
 
-#: app/support/routes.py:85
-msgid "You have approved your student's application . Thanks!"
+#: app/student/routes.py:42
+msgid "Student View"
 msgstr ""
 
-#: app/support/routes.py:92
-msgid "You have not approve your student's application . Thanks!"
+#: app/student/routes.py:49 app/student/routes.py:61 app/volunteer/forms.py:30
+msgid "Story"
 msgstr ""
 
-#: app/support/routes.py:96
-msgid "teacher apply"
+#: app/student/routes.py:59
+msgid "Your story has submitted!"
 msgstr ""
 
-#: app/support/routes.py:105
-msgid "teacher record"
+#: app/student/routes.py:94 app/templates/student/story.html:39
+msgid "Edit Story"
 msgstr ""
 
-#: app/support/routes.py:114
-msgid "teacher permission record"
+#: app/student/routes.py:143
+msgid "Your request add successfully"
 msgstr ""
 
-#: app/support/routes.py:145
-msgid "Volunteer Repair"
+#: app/student/routes.py:145
+msgid "Equipment Application"
 msgstr ""
 
-#: app/support/routes.py:174 app/support/routes.py:211
-#: app/support/routes.py:229
-msgid "Volunteer Record"
+#: app/student/routes.py:174
+msgid "Equipment Application Map"
 msgstr ""
 
-#: app/support/routes.py:203
-msgid "Appointment Complete"
+#: app/student/routes.py:188 app/student/routes.py:264
+msgid "Application History"
 msgstr ""
 
-#: app/support/routes.py:236
-msgid "Volunteer Rapair Case"
+#: app/student/routes.py:201
+msgid ""
+"Write a thank you letter to your donor, else you cannot apply any new "
+"equipment or support!"
 msgstr ""
 
-#: app/teacher/routes.py:17
-msgid "Please wait for your teacher to confirm your account!"
+#: app/student/routes.py:218
+msgid "Your repair application has submitted!"
+msgstr ""
+
+#: app/student/routes.py:220
+msgid "New Repair Application"
+msgstr ""
+
+#: app/student/routes.py:235 app/volunteer/routes.py:137
+msgid "Updated"
+msgstr ""
+
+#: app/student/routes.py:238 app/volunteer/routes.py:149
+msgid "Edit Repair Application"
+msgstr ""
+
+#: app/student/routes.py:252
+msgid "Repair History"
+msgstr ""
+
+#: app/student/routes.py:288
+msgid ""
+"Write a thank you letter to your volunteer, else you cannot apply any new"
+" equipment or support!"
+msgstr ""
+
+#: app/student/routes.py:391
+msgid "Emailed the thanks message to your donor."
+msgstr ""
+
+#: app/student/routes.py:394
+msgid "Thank Letter to your donor"
+msgstr ""
+
+#: app/student/routes.py:411
+msgid "send the thanks email to volunteer"
+msgstr ""
+
+#: app/student/routes.py:414
+msgid "Student Thanks Volunteer to complete repair case "
+msgstr ""
+
+#: app/teacher/forms.py:8
+msgid "Approve this student?"
+msgstr ""
+
+#: app/teacher/routes.py:30
+#, fuzzy
+msgid "Teacher View"
+msgstr "Contact teacher"
+
+#: app/teacher/routes.py:61
+#: app/templates/teacher/teacher_approved_student_record.html:28
+msgid "Approved"
+msgstr ""
+
+#: app/teacher/routes.py:64
+msgid "student_not_activated_and_teacher_approved"
+msgstr ""
+
+#: app/teacher/routes.py:67
+msgid "Student activated"
+msgstr ""
+
+#: app/teacher/routes.py:73
+msgid "Approve Student Form"
+msgstr ""
+
+#: app/teacher/routes.py:84
+msgid "Teacher Approved Student Record"
+msgstr ""
+
+#: app/teacher/routes.py:93
+msgid "Teacher approved Student's Equipment Application Record"
 msgstr ""
 
 #: app/templates/_post.html:14
@@ -968,7 +894,7 @@ msgstr ""
 msgid "%(username)s said %(when)s"
 msgstr ""
 
-#: app/templates/about_us.html:8 app/templates/base.html:137
+#: app/templates/about_us.html:8 app/templates/base.html:135
 msgid "About Us"
 msgstr ""
 
@@ -986,46 +912,37 @@ msgstr ""
 "studies. To tackle the current issue, we kicked off an initiative to "
 "minimise the gap, making a donation of computer devices to "
 "underprivileged students directly. The aims of our platform have the "
-"following: 1) encourage the donor to donor used computer devices, 2) "
-"help underprivileged students get suitable devices for their online "
-"studies, and 3) help underprivileged students fix their technical "
-"problem."
+"following: 1) encourage the donor to donor used computer devices, 2) help"
+" underprivileged students get suitable devices for their online studies, "
+"and 3) help underprivileged students fix their technical problem."
 
-#: app/templates/base.html:4 app/templates/base.html:25
-#: app/templates/base.html:27 app/templates/base.html:29
-#: app/templates/base.html:31 app/templates/base.html:33
-#: app/templates/base.html:36 app/templates/base.html:38
-#: app/templates/base.html:40 app/templates/base.html:42
-#: app/templates/base.html:44
+#: app/templates/base.html:4 app/templates/base.html:22
 msgid "Donation System"
 msgstr "iShare Donation Platform"
 
-#: app/templates/base.html:84
+#: app/templates/base.html:83
 msgid "Login"
 msgstr ""
 
-#: app/templates/base.html:88 app/templates/base.html:91
+#: app/templates/base.html:89 app/templates/base.html:91
 #, python-format
 msgid "Hi, %(username)s"
 msgstr ""
 
-#: app/templates/base.html:93
+#: app/templates/base.html:94
 msgid "Profile"
 msgstr ""
 
-#: app/templates/base.html:97
+#: app/templates/base.html:98
 msgid "Logout"
 msgstr ""
 
 #: app/templates/base.html:128
-msgid "© 2021 Vocational Training Council. All rights reserved."
-msgstr "Student Project"
-
-#: app/templates/base.html:131
-msgid "Please contact (volunteer email) for any technical issues."
+#, fuzzy
+msgid "Please contact (support email) for any technical issues."
 msgstr "Please contact (To be confirm!) for any technical issues."
 
-#: app/templates/base.html:140
+#: app/templates/base.html:139
 msgid "Language"
 msgstr ""
 
@@ -1033,12 +950,30 @@ msgstr ""
 msgid "Chinese"
 msgstr "中文"
 
-#: app/templates/base.html:142
+#: app/templates/base.html:144
 msgid "English"
 msgstr ""
 
-#: app/templates/base.html:148
-msgid "Privacy"
+#: app/templates/admin/donation_list.html:45
+#: app/templates/admin/teacher_list.html:85
+#: app/templates/donor/donate_equipment.html:103
+#: app/templates/donor/equipment_applications_map.html:32
+#: app/templates/donor/equipment_list.html:108
+#: app/templates/edit_profile.html:14 app/templates/errors/status_404.html:5
+#: app/templates/errors/status_500.html:6 app/templates/message.html:51
+#: app/templates/message.html:55 app/templates/message.html:59
+#: app/templates/student/edit_repair_application.html:22
+#: app/templates/student/equipment_application_history.html:100
+#: app/templates/student/equipment_application_map.html:20
+#: app/templates/student/repair_application.html:18
+#: app/templates/student/repair_application_list.html:95
+#: app/templates/student/story.html:23 app/templates/student/story.html:34
+#: app/templates/student/story.html:50
+#: app/templates/teacher/equipment_application_list.html:51
+#: app/templates/teacher/teacher_approved_student_record.html:79
+#: app/templates/volunteer/volunteer_choose_repair_equipment_case.html:20
+#: app/templates/volunteer/volunteer_record.html:75
+msgid "Back"
 msgstr ""
 
 #: app/templates/index.html:13
@@ -1052,7 +987,7 @@ msgstr ""
 "students."
 
 #: app/templates/index.html:29 app/templates/index.html:43
-#: app/templates/support/index.html:17 app/templates/support/index.html:32
+#: app/templates/supporters.html:18 app/templates/supporters.html:34
 msgid "Join Now"
 msgstr ""
 
@@ -1064,41 +999,23 @@ msgstr ""
 msgid "Use below Q&A Chatbot"
 msgstr "Use the Q&A Chatbot below"
 
-#: app/templates/message.html:10
-msgid "Room ID"
+#: app/templates/message.html:15
+msgid "Remember don't share your personal informaton!"
 msgstr ""
 
-#: app/templates/message.html:16
+#: app/templates/message.html:18
 msgid "Message History"
 msgstr ""
 
-#: app/templates/email/message.html:5 app/templates/message.html:17
-msgid "Timestamp"
+#: app/templates/donor/equipment_list.html:45 app/templates/message.html:25
+#: app/templates/student/equipment_application_history.html:31
+#: app/templates/student/repair_application_list.html:30
+#: app/templates/volunteer/volunteer_record.html:17
+msgid "Message"
 msgstr ""
 
-#: app/templates/message.html:34
-msgid "Insert Message"
-msgstr ""
-
-#: app/templates/message.html:35
-msgid "Type message.."
-msgstr ""
-
-#: app/templates/messageList.html:11
-msgid "Message ID"
-msgstr ""
-
-#: app/templates/messageList.html:12
-#, fuzzy
-msgid "User Name"
-msgstr "Username / Email"
-
-#: app/templates/messageList.html:13
-msgid "Latest Timestamp"
-msgstr ""
-
-#: app/templates/messageList.html:27
-msgid "No record"
+#: app/templates/message.html:26
+msgid "You"
 msgstr ""
 
 #: app/templates/terms.html:8
@@ -1235,770 +1152,1288 @@ msgstr ""
 " in response to needs, and the revised terms will be published on the "
 "website. "
 
-#: app/templates/user.html:15
-msgid "User"
-msgstr ""
-
-#: app/templates/user.html:26
+#: app/templates/user.html:24
 msgid "Last seen on"
 msgstr ""
 
-#: app/templates/user.html:29
+#: app/templates/user.html:27
 msgid "Edit your profile"
 msgstr ""
 
-#: app/templates/admin/admin_record.html:20
-msgid "Teacher Name"
+#: app/templates/admin/donation_list.html:19
+#: app/templates/admin/teacher_list.html:19
+#: app/templates/donor/equipment_list.html:15
+#: app/templates/student/equipment_application_history.html:12
+#: app/templates/student/repair_application_list.html:10
+#: app/templates/teacher/equipment_application_list.html:11
+#: app/templates/teacher/teacher_approved_student_record.html:11
+msgid "Action"
 msgstr ""
 
-#: app/templates/admin/admin_record.html:21
-#: app/templates/teacher/teacher_permission_record.html:12
-msgid "username"
+#: app/templates/admin/donation_list.html:20
+#: app/templates/student/equipment_application_history.html:14
+msgid "Equipment Type"
 msgstr ""
 
-#: app/templates/admin/admin_record.html:22
-#: app/templates/student/student.html:12
-#: app/templates/teacher/teacher_permission_record.html:13
-msgid "Teacher Email"
+#: app/templates/admin/donation_list.html:30
+msgid "Verify"
 msgstr ""
 
-#: app/templates/admin/admin_record.html:26
-msgid "School website"
+#: app/templates/admin/teacher_list.html:20
+#: app/templates/donor/equipment_list.html:17
+#: app/templates/student/equipment_application_history.html:13
+#: app/templates/student/repair_application_list.html:11
+#: app/templates/teacher/equipment_application_list.html:12
+#: app/templates/teacher/teacher_approved_student_record.html:12
+msgid "Status"
 msgstr ""
 
-#: app/templates/admin/admin_record.html:27
-msgid "Teacher Office Phone Number"
+#: app/templates/admin/teacher_list.html:24
+#, fuzzy
+msgid "School"
+msgstr "The email address must be the school's email address"
+
+#: app/templates/admin/teacher_list.html:25
+msgid "Office"
 msgstr ""
 
-#: app/templates/admin/admin_record.html:28
-#: app/templates/teacher/teacher_permission_record.html:18
-msgid "Permission State"
+#: app/templates/admin/teacher_list.html:37
+msgid "Approve"
 msgstr ""
 
-#: app/templates/admin/admin_record.html:29
-#: app/templates/teacher/teacher_permission_record.html:19
-msgid "Permission Date"
+#: app/templates/admin/verify_receipts.html:19
+msgid "Teacher Email:"
 msgstr ""
 
-#: app/templates/admin/admin_unconfirm.html:6
-msgid "Our admin have not confirmed your account yet."
-msgstr ""
-
-#: app/templates/admin/admin_unconfirm.html:8
-msgid "Before you can access this site you need to contect our admin."
-msgstr "Before you can access this site you need to contact our admin."
-
-#: app/templates/admin/admin_unconfirm.html:12
-msgid "Contect Admin"
-msgstr "Contact Admin"
-
-#: app/templates/admin/admin_unconfirm.html:13
-#: app/templates/auth/unconfirmed.html:13
-#: app/templates/support/unconfirm.html:13
-#: app/templates/teacher/teacher_unconfirm.html:13
-msgid "Click here"
-msgstr ""
-
-#: app/templates/auth/confirm.html:1
-msgid "iShare Platform Registration"
-msgstr ""
-
-#: app/templates/auth/confirm.html:2
-msgid "Congratulations! You have registered an account"
-msgstr ""
-
-#: app/templates/auth/confirm.html:3
-msgid "Please follow this link to activate your account:"
-msgstr ""
-
-#: app/templates/auth/login.html:12 app/templates/auth/login.html:31
-#: app/templates/auth/reset_password_request.html:24
-msgid "New User?"
-msgstr ""
-
-#: app/templates/auth/login.html:12 app/templates/auth/login.html:32
-#: app/templates/auth/reset_password_request.html:25
-msgid "Click to Register!"
-msgstr ""
-
-#: app/templates/auth/login.html:14 app/templates/auth/login.html:34
-msgid "Forgot Your Password?"
-msgstr ""
-
-#: app/templates/auth/login.html:15 app/templates/auth/login.html:35
-msgid "Click to Reset It"
-msgstr ""
-
-#: app/templates/auth/login.html:25
+#: app/templates/auth/login.html:13
 msgid "Sign in to your account to continue."
 msgstr ""
 
-#: app/templates/auth/login.html:41
-#: app/templates/auth/reset_password_request.html:31
+#: app/templates/auth/login.html:19
+#: app/templates/auth/reset_password_request.html:18
+msgid "New User?"
+msgstr ""
+
+#: app/templates/auth/login.html:21
+#: app/templates/auth/reset_password_request.html:20
+msgid "Click to Register!"
+msgstr ""
+
+#: app/templates/auth/login.html:24
+msgid "Forgot Your Password?"
+msgstr ""
+
+#: app/templates/auth/login.html:27
+msgid "Click to Reset It"
+msgstr ""
+
+#: app/templates/auth/login.html:34
+#: app/templates/auth/reset_password_request.html:26
 msgid "We make a living by what we get. We make a life by what we give."
 msgstr ""
 
-#: app/templates/auth/login.html:42
+#: app/templates/auth/login.html:35
 msgid "Winston S. Churchill"
 msgstr ""
 
-#: app/templates/auth/register.html:20
-#: app/templates/auth/student_register.html:19
-#: app/templates/donate/donate_view.html:16
-#: app/templates/student/application.html:15
-#: app/templates/student/student_view.html:23
-#: app/templates/support/volunteer_view.html:15
-msgid "Video demo tutorial"
+#: app/templates/auth/register_student_second_page.html:10
+msgid "Pin your home location"
 msgstr ""
 
-#: app/templates/auth/register.html:51
-msgid "student_require"
-msgstr "Note: You have to input one of your school teacher email for the verification of student status "
-
-#: app/templates/auth/reset_password_request.html:5
-#: app/templates/auth/reset_password_request.html:18
-msgid "Reset Your Password"
+#: app/templates/auth/register_student_second_page.html:18
+#: app/templates/auth/register_teacher_second_page.html:9
+msgid "Select your school category"
 msgstr ""
 
-#: app/templates/auth/unconfirmed.html:6 app/templates/support/unconfirm.html:6
+#: app/templates/auth/register_student_second_page.html:26
+#: app/templates/auth/register_teacher_second_page.html:17
+msgid "Select your school"
+msgstr ""
+
+#: app/templates/auth/register_student_second_page.html:92
+#: app/templates/auth/register_volunteer_second_page.html:38
+#: app/templates/student/edit_repair_application.html:50
+#: app/templates/student/equipment_application_map.html:53
+msgid "Please pin a point in the home map!"
+msgstr ""
+
+#: app/templates/auth/register_student_second_page.html:95
+#: app/templates/auth/register_teacher_second_page.html:71
+msgid "Please select your school in the school map!"
+msgstr ""
+
+#: app/templates/auth/register_student_second_page.html:98
+#: app/templates/auth/register_teacher_second_page.html:74
+msgid "Invalid student email address must match school domain."
+msgstr ""
+
+#: app/templates/auth/register_student_second_page.html:101
+msgid "Invalid teacher email address must match school domain."
+msgstr ""
+
+#: app/templates/auth/register_teacher_second_page.html:55
+msgid "Your email domain needs to end with "
+msgstr ""
+
+#: app/templates/auth/register_volunteer_second_page.html:7
+msgid "School Address"
+msgstr ""
+
+#: app/templates/auth/resend_confirmation_email.html:6
 msgid "You have not confirmed your account yet."
 msgstr ""
 
-#: app/templates/auth/unconfirmed.html:8 app/templates/support/unconfirm.html:8
+#: app/templates/auth/resend_confirmation_email.html:8
 msgid "Before you can access this site you need to confirm your account."
 msgstr ""
 
-#: app/templates/auth/unconfirmed.html:9 app/templates/support/unconfirm.html:9
+#: app/templates/auth/resend_confirmation_email.html:9
 msgid ""
 "Check your inbox, you should have received an email with a confirmation "
 "link."
 msgstr ""
 
-#: app/templates/auth/unconfirmed.html:12
-#: app/templates/support/unconfirm.html:12
-msgid "Need another confirmation email?"
+#: app/templates/auth/reset_password_request.html:12
+msgid "Reset Your Password"
 msgstr ""
 
-#: app/templates/donate/donate.html:15 app/templates/donate/donate_item.html:19
-#: app/templates/donate/donate_record.html:14
-#: app/templates/donate/show_story.html:34 app/templates/student/draft.html:102
-#: app/templates/student/edit_item.html:14
-#: app/templates/student/item_application.html:14
-#: app/templates/student/show_story.html:43
-msgid "Item"
+#: app/templates/donor/donate_equipment.html:14
+#: app/templates/donor/equipment_list.html:13
+msgid "Photo"
 msgstr ""
 
-#: app/templates/donate/donate.html:16
-#: app/templates/donate/donate_record.html:15
-msgid "Item Status"
+#: app/templates/donor/donate_equipment.html:15
+#: app/templates/teacher/equipment_application_list.html:15
+msgid "Equipment"
 msgstr ""
 
-#: app/templates/donate/donate.html:45 app/templates/donate/donate_date.html:14
-#: app/templates/donate/donate_location.html:16
-#: app/templates/donate/donate_record.html:74
-#: app/templates/donate/donate_story.html:58
-#: app/templates/donate/show_story.html:53 app/templates/errors/500.html:6
-#: app/templates/student/application.html:43
-#: app/templates/student/application_history.html:49
-#: app/templates/student/checkstory.html:34
-#: app/templates/student/dateconfirm.html:30
-#: app/templates/student/draft.html:137 app/templates/student/edit_item.html:41
-#: app/templates/student/edit_item.html:52
-#: app/templates/student/editapplication.html:17
-#: app/templates/student/editapplication.html:23
-#: app/templates/student/editmap.html:17 app/templates/student/editmap.html:21
-#: app/templates/student/firststory.html:19
-#: app/templates/student/item_application.html:41
-#: app/templates/student/repair_history.html:55
-#: app/templates/student/repair_time.html:29
-#: app/templates/student/show_repair.html:55
-#: app/templates/student/show_repair.html:69
-#: app/templates/student/show_story.html:129
-#: app/templates/student/windows.html:22
-msgid "Back"
+#: app/templates/donor/donate_equipment.html:40
+#: app/templates/donor/equipment_list.html:42
+#: app/templates/student/repair_application_list.html:26
+msgid "Delete"
 msgstr ""
 
-#: app/templates/donate/donate.html:50
-msgid "Donate Now"
-msgstr ""
-
-#: app/templates/donate/donate_data.html:5
-msgid "Donator Data"
-msgstr ""
-
-#: app/templates/donate/donate_date.html:5
-msgid "Donator Date"
-msgstr ""
-
-#: app/templates/donate/donate_date.html:20
-#: app/templates/donate/donate_date.html:24
-msgid "Choose your donor location"
-msgstr ""
-
-#: app/templates/donate/donate_item.html:20
-#: app/templates/donate/donate_record.html:16
-#: app/templates/donate/show_story.html:36
-#: app/templates/student/show_story.html:45
-msgid "Donate Status"
-msgstr ""
-
-#: app/templates/donate/donate_item.html:75
-msgid "Back and Cancel"
-msgstr ""
-
-#: app/templates/donate/donate_item.html:81
-#: app/templates/donate/donate_item.html:85
-msgid "Choose your donor time"
-msgstr ""
-
-#: app/templates/donate/donate_view.html:8
-#: app/templates/student/student_view.html:15
-#: app/templates/support/volunteer_view.html:7
-msgid "View the demo tutorial"
-msgstr ""
-
-#: app/templates/donate/donate_view.html:39
-#: app/templates/student/student_view.html:46
-#: app/templates/support/volunteer_view.html:38
-msgid "建議步驟一"
-msgstr "Recommended Step 1"
-
-#: app/templates/donate/donate_view.html:40
-msgid "捐贈者可以按以下「立即捐贈」按鈕捐贈物件"
-msgstr "Donors can donor items by pressing the \"Donate Now\" button below "
-
-#: app/templates/donate/donate_view.html:44
-#: app/templates/student/student_view.html:51
-#: app/templates/support/volunteer_view.html:43
-msgid "步驟二"
-msgstr "Step 2"
-
-#: app/templates/donate/donate_view.html:45
-msgid "捐贈者在學生故事中選擇心儀的學生來捐贈物件"
-msgstr ""
-"Donors choose their favorite students in the student story to donor "
-"items "
-
-#: app/templates/donate/donate_view.html:49
-msgid "步驟三（選項）"
-msgstr "Step 3 (Optional)"
-
-#: app/templates/donate/donate_view.html:50
-msgid "捐贈者可以查看已捐贈的狀態或根據步驟一重新捐贈物件"
-msgstr ""
-"Donors can check the status of donations or donor items again according "
-"to Step 1. "
-
-#: app/templates/donate/send_to_donate.html:1
-msgid "Congratulations you already have made an appointment with the student"
-msgstr ""
-
-#: app/templates/donate/send_to_donate.html:2
-#: app/templates/donate/send_to_student.html:2
-msgid "Dear"
-msgstr ""
-
-#: app/templates/donate/send_to_donate.html:3
-msgid "Your donor application has been sent to the student"
-msgstr ""
-
-#: app/templates/donate/send_to_donate.html:4
-msgid "Here is your donated item:"
-msgstr ""
-
-#: app/templates/donate/send_to_donate.html:10
-msgid "The transaction location was chosen by you:"
-msgstr ""
-
-#: app/templates/donate/send_to_donate.html:18
-msgid "The date and time picked by yourself:"
-msgstr ""
-
-#: app/templates/donate/send_to_donate.html:21
-#: app/templates/donate/send_to_student.html:23
-msgid "Cheers!"
-msgstr ""
-
-#: app/templates/donate/send_to_student.html:1
-msgid "Congratulations you already have donors donating the items you need"
-msgstr ""
-
-#: app/templates/donate/send_to_student.html:3
-msgid "Your application has been confirmed"
-msgstr ""
-
-#: app/templates/donate/send_to_student.html:4
-msgid "The donor will donor the following items to you:"
-msgstr ""
-
-#: app/templates/donate/send_to_student.html:10
-msgid "The transaction location provides by the donator shown as below:"
-msgstr ""
-
-#: app/templates/donate/send_to_student.html:18
-msgid "The available date and time for the donor:"
-msgstr ""
-
-#: app/templates/donate/send_to_student.html:20
-msgid "Here is the donor's phone number"
-msgstr ""
-
-#: app/templates/donate/show_story.html:35 app/templates/student/draft.html:103
-#: app/templates/student/edit_item.html:15
-#: app/templates/student/item_application.html:15
-#: app/templates/student/show_story.html:44
-msgid "Quantity"
-msgstr ""
-
-#: app/templates/donate/show_story.html:60
-msgid "Donate your item to this student"
-msgstr ""
-
-#: app/templates/email/message.html:1
-#, fuzzy
-msgid "Donate Item Message"
-msgstr "iShare Donation Platform"
-
-#: app/templates/email/message.html:2
-msgid "The following is a message from user"
-msgstr ""
-
-#: app/templates/errors/404.html:4
-msgid "Resource not found"
-msgstr ""
-
-#: app/templates/errors/404.html:5
-msgid "Back to Page"
-msgstr ""
-
-#: app/templates/errors/500.html:4
-msgid "An unexpected error has occurred"
-msgstr ""
-
-#: app/templates/errors/500.html:5
-msgid "The administrator has been notified. Sorry for the inconvenience!"
-msgstr ""
-
-#: app/templates/student/application_history.html:13
-#: app/templates/student/repair_history.html:13
-msgid "Data of Order"
-msgstr ""
-
-#: app/templates/student/application_history.html:14
-#: app/templates/student/repair_history.html:14
-msgid "Application Status"
-msgstr ""
-
-#: app/templates/student/application_history.html:15
-#: app/templates/student/repair_history.html:15
-msgid "Action"
-msgstr ""
-
-#: app/templates/student/application_history.html:32
-msgid "Resend"
-msgstr ""
-
-#: app/templates/student/application_history.html:36
-#: app/templates/student/repair_history.html:42
-msgid ""
-"Date\n"
-"                            Confirm"
-msgstr ""
-
-#: app/templates/student/checkstory.html:12
-msgid "Continue to use your story to apply"
-msgstr ""
-
-#: app/templates/student/checkstory.html:15
-msgid "Apply"
-msgstr ""
-
-#: app/templates/student/checkstory.html:22
-msgid "Enter the new story to apply"
-msgstr ""
-
-#: app/templates/student/checkstory.html:24
-msgid "New story"
-msgstr ""
-
-#: app/templates/student/dateconfirm.html:10
-#: app/templates/student/repair_time.html:9
-msgid "If you confirmed the date please click here"
-msgstr ""
-
-#: app/templates/student/dateconfirm.html:13
-#: app/templates/student/repair_time.html:12
-msgid "Confirmed the date"
-msgstr ""
-
-#: app/templates/student/dateconfirm.html:18
-msgid "If you need to cancel this transaction please click here"
-msgstr ""
-
-#: app/templates/student/dateconfirm.html:21
-#: app/templates/student/repair_time.html:19
-msgid "Cancel transaction"
-msgstr ""
-
-#: app/templates/student/draft.html:36
-msgid "Application Check"
-msgstr ""
-
-#: app/templates/student/draft.html:41
-msgid "Item Choice"
-msgstr ""
-
-#: app/templates/student/draft.html:42
-msgid "Location Choice"
-msgstr ""
-
-#: app/templates/student/draft.html:63
-msgid "Edit title and story"
-msgstr ""
-
-#: app/templates/student/draft.html:72
-msgid "Edit item"
-msgstr ""
-
-#: app/templates/student/draft.html:81
-msgid ""
-"Edit map and Send to\n"
-"                                        teacher"
-msgstr ""
-
-#: app/templates/student/edit_item.html:46
-#: app/templates/student/edit_item.html:57
-msgid "Save"
-msgstr ""
-
-#: app/templates/student/not_have_teacher_email.html:6
-msgid "Your Teacher have not Donation system website account yet."
-msgstr ""
-
-#: app/templates/student/not_have_teacher_email.html:8
-msgid "Before you can access this site you need to contect your Teacher."
-msgstr "Before you can access this site you need to contact your Teacher."
-
-#: app/templates/student/not_have_teacher_email.html:12
-msgid "Contect Your Teacher"
-msgstr "Contact Your Teacher"
-
-#: app/templates/student/repair_history.html:36
-#: app/templates/student/show_story.html:61
-#: app/templates/student/thankyou.html:4
-msgid "Thank You Message"
-msgstr ""
-
-#: app/templates/student/repair_time.html:16
-msgid "If you need to cancel this repair service please click here"
-msgstr ""
-
-#: app/templates/student/show_story.html:88
-msgid "Edit Title and Story"
-msgstr ""
-
-#: app/templates/student/show_story.html:93
-msgid "Edit Item"
-msgstr ""
-
-#: app/templates/student/show_story.html:98
-msgid "Edit Map"
-msgstr ""
-
-#: app/templates/student/student.html:19
-msgid "Please enter prefix domain (if exist)"
-msgstr "Please enter subdomain (if any)"
-
-#: app/templates/student/student.html:41 app/templates/support/teacher.html:26
-#: app/templates/support/volunteer.html:14
-msgid "Submit form"
-msgstr ""
-
-#: app/templates/student/student_view.html:47
-msgid "學生可以按以下申請欄中的「立即申請」按鈕申請所需的物品"
-msgstr ""
-"Students can apply for the required items by pressing the \"Apply Now\" "
-"button in the application column below "
-
-#: app/templates/student/student_view.html:52
-msgid "學生可以在申請記錄查看你的記錄，並等待捐贈者捐贈所需的物品"
-msgstr ""
-"Students can check your record in the application record and wait for the"
-" donor to donor the needed items "
-
-#: app/templates/student/student_view.html:56
-msgid "步驟三"
-msgstr "Step 3"
-
-#: app/templates/student/student_view.html:57
-msgid "若學生集齊所需的物品，可在申請記錄中按下「已擁有」按鈕及填寫感謝信息給捐贈者"
-msgstr ""
-"If the student gathers the required items, he can press the \"Owned\" "
-"button in the application record and fill in the thank you message to the"
-" donor "
-
-#: app/templates/student/student_view.html:61
-msgid "步驟四（選項）"
-msgstr "Step 4 (Optional)"
-
-#: app/templates/student/student_view.html:62
-msgid "學生如需要維修物品，可按維修中的「立即修理」按鈕申請維修物品"
-msgstr ""
-"If students need repair items, they can apply for repair items by "
-"pressing the \"repair now\" button during repair "
-
-#: app/templates/student/student_view.html:66
-msgid "步驟五（選項）"
-msgstr "Step 5 (Optional)"
-
-#: app/templates/student/student_view.html:67
-msgid "學生可以查看維修物品的狀態"
-msgstr "Students can check the status of repaired items "
-
-#: app/templates/student/windows.html:7
-msgid "If you need Window System and Window Office, please tick here"
-msgstr ""
-
-#: app/templates/student/email/oktime.html:1
-msgid "The student has confirmed the date"
-msgstr ""
-
-#: app/templates/student/email/oktime.html:3
-msgid "This is the phone number to the contact student."
-msgstr ""
-
-#: app/templates/student/email/thankrepair.html:1
-msgid "Thanks for your repair"
-msgstr ""
-
-#: app/templates/student/email/thankrepair.html:2
-msgid "Thank you for your repair"
-msgstr ""
-
-#: app/templates/student/email/thankrepair.html:3
-#: app/templates/student/email/thanks.html:3
-msgid "The following is a thank you message from students"
-msgstr ""
-
-#: app/templates/student/email/thanks.html:1
-msgid "Thanks for your donation"
-msgstr ""
-
-#: app/templates/student/email/thanks.html:2
-msgid "Thank you for donating your"
-msgstr ""
-
-#: app/templates/support/support.html:5
-msgid "Support"
-msgstr ""
-
-#: app/templates/support/teacher.html:4
-#, fuzzy
-msgid "Teacher"
-msgstr "Contact teacher"
-
-#: app/templates/support/teacher.html:16
-msgid "School Address, Please click the location on the map."
-msgstr ""
-
-#: app/templates/support/teacher.html:23
-#, fuzzy
-msgid "Please enter your Office Phone Number"
-msgstr "Please use a different phone number."
-
-#: app/templates/support/teacher_record.html:15
-msgid "Apply Data"
-msgstr ""
-
-#: app/templates/support/teacher_record.html:32
-#: app/templates/teacher/teacher_permission_record.html:42
+#: app/templates/donor/donate_equipment.html:50
+#: app/templates/student/create_equipment_application.html:38
+#: app/templates/teacher/equipment_application_list.html:45
+#: app/templates/teacher/teacher_approved_student_record.html:41
 msgid "No Record"
 msgstr ""
 
-#: app/templates/support/volunteer.html:8
-msgid "Volunteer Address, please click on the location on the map"
+#: app/templates/donor/donate_equipment_to_student.html:14
+msgid "Create at:"
 msgstr ""
 
-#: app/templates/support/volunteer_record.html:12
-msgid "Repair Address"
+#: app/templates/donor/donate_equipment_to_student.html:20
+msgid "Prefered transfer location"
 msgstr ""
 
-#: app/templates/support/volunteer_record.html:15
+#: app/templates/donor/equipment_list.html:14
+#: app/templates/student/repair_application.html:7
 msgid "Description"
 msgstr ""
 
-#: app/templates/support/volunteer_record.html:16
-msgid "Appointment Data"
+#: app/templates/donor/equipment_list.html:16
+msgid "Create Date"
 msgstr ""
 
-#: app/templates/support/volunteer_record.html:17
-msgid "Appointment Time"
-msgstr ""
-
-#: app/templates/support/volunteer_repair_case.html:27
-msgid "Submit Permission"
-msgstr ""
-
-#: app/templates/support/volunteer_view.html:39
-msgid "維修員可以在維修案例按下「新增」按鈕新增維修案例"
-msgstr ""
-"Volunteers can press the \"Add\" button to add a maintenance case in the "
-"maintenance case "
-
-#: app/templates/support/volunteer_view.html:44
-msgid "維修員可以查看維修記錄"
-msgstr "Volunteers can view maintenance records "
-
-#: app/templates/teacher/teacher_permission_record.html:16
-msgid "School Adress"
-msgstr ""
-
-#: app/templates/teacher/teacher_permission_record.html:17
-msgid "School URL"
-msgstr ""
-
-#: app/templates/teacher/teacher_unconfirm.html:6
-msgid "Your teacher have not confirmed your account yet."
-msgstr ""
-
-#: app/templates/teacher/teacher_unconfirm.html:8
-msgid "Before you can access this site you need to contect Your teacher."
-msgstr "Before you can access this site you need to content Your teacher."
-
-#: app/templates/teacher/teacher_unconfirm.html:12
-msgid "Contect teacher"
-msgstr "Contact teacher"
-
-msgid "Send to donator"
-msgstr ""
-
-msgid "Del"
-msgstr ""
-
-msgid "捐贈者選擇心儀的學生來捐贈物件"
-msgstr "Donors choose their favorite students to donor items "
-
-msgid "Demo SendGrid Test Email"
-msgstr ""
-
-msgid "Please enter your transaction date "
-msgstr ""
-
-msgid "Successful"
-msgstr ""
-
-msgid "Please enter your title to donator"
-msgstr ""
-
-msgid "Please enter your story to donator"
-msgstr ""
-
-msgid "Please upload photo show to donator"
-msgstr ""
-
-msgid "Hi, %(username)s!"
-msgstr ""
-
-msgid "Newer posts"
-msgstr ""
-
-msgid "Older posts"
-msgstr ""
-
-msgid "Date of Order"
-msgstr ""
-
-msgid "User %(username)s not found."
-msgstr ""
-
-msgid "You cannot follow yourself!"
-msgstr ""
-
-msgid "You are following %(username)s!"
-msgstr ""
-
-msgid "You cannot unfollow yourself!"
-msgstr ""
-
-msgid "You are not following %(username)s."
-msgstr ""
-
-msgid "Support teacher"
-msgstr ""
-
-msgid "First Story"
-msgstr ""
-
-msgid "Edit Story"
-msgstr ""
-
-msgid "iShare Donation Platform"
-msgstr ""
-
-msgid "Congratulations you already have make a appointment with the student"
-msgstr ""
-
-msgid "Here is your donor item:"
-msgstr ""
-
-msgid "The transaction location chosen by you:"
-msgstr ""
-
-msgid "The transaction location provide by the donator shown as below:"
-msgstr ""
-
-msgid "This is the phone number for the contact student."
-msgstr ""
-
-msgid "[pc_donation] Reset Your Password"
-msgstr ""
-
-msgid "teacher Photo"
-msgstr ""
-
-msgid "Support Teacher"
-msgstr ""
-
-msgid "staff card info"
-msgstr ""
-"If the teacher is unable to "
-"provide the staff card, the platform "
-"may call the company phone number "
-"to confirm the identity"
-
-msgid "Please make sure your username do not have number in it"
-msgstr "Please make sure your username does not have number in it"
-
+#: app/templates/donor/equipment_list.html:40
 msgid "Donate"
 msgstr ""
 
-msgid "Volunteer Address"
+#: app/templates/donor/equipment_list.html:47
+#: app/templates/student/equipment_application_history.html:27
+#: app/templates/volunteer/volunteer_record.html:23
+msgid "Cancel"
 msgstr ""
 
-msgid "你好, %(username)s"
+#: app/templates/donor/equipment_list.html:53
+msgid "Download Receipts"
 msgstr ""
 
-msgid "Not Found"
+#: app/templates/donor/equipment_list.html:117
+#: app/templates/student/equipment_application_history.html:109
+#: app/templates/student/repair_application_list.html:106
+#: app/templates/teacher/equipment_application_list.html:59
+#: app/templates/volunteer/volunteer_record.html:82
+msgid "Are you sure?"
 msgstr ""
 
-msgid "Invalid Photo: Unable to recognize any faces!"
+#: app/templates/errors/status_404.html:4
+msgid "Resource not found"
 msgstr ""
 
-msgid "Invalid Photo: Adult Content!"
-msgstr "Invalid Photo: Pornographic"
-
-msgid "Invalid Photo: Gory Content!"
-msgstr "Invalid Photo: Violence or Blood Content"
-
-msgid "Invalid Photo: Racy Content!"
-msgstr "Invalid Photo:  Sexually suggestive Content"
-
-msgid "Invalid Photo: our AI infers you are under age 6 or over 30!"
-msgstr "Invalid Photo: our AI infers you are under age 6 or over 30! You should not be a student!"
-
-msgid "Your student {STUDENTNAME} hopes to verify the student status for getting help from iShare.volunteer!"
+#: app/templates/errors/status_500.html:4
+msgid "An unexpected error has occurred"
 msgstr ""
 
-msgid "No special character or space"
+#: app/templates/errors/status_500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr ""
+
+#: app/templates/student/create_equipment_application.html:14
+msgid "Requested Equipment Type"
+msgstr ""
+
+#: app/templates/student/create_equipment_application.html:27
+msgid "Cancel Request"
+msgstr ""
+
+#: app/templates/student/create_equipment_application.html:52
+msgid "Back to Story"
+msgstr ""
+
+#: app/templates/student/create_equipment_application.html:57
+msgid "Back to Main Page"
+msgstr ""
+
+#: app/templates/student/create_equipment_application.html:62
+msgid "Pick a location to get your equipment."
+msgstr ""
+
+#: app/templates/student/edit_repair_application.html:15
+msgid "Pin your address"
+msgstr ""
+
+#: app/templates/student/equipment_application_history.html:15
+msgid "Meet up time"
+msgstr ""
+
+#: app/templates/student/equipment_application_history.html:34
+#: app/templates/student/repair_application_list.html:33
+msgid "Complete"
+msgstr ""
+
+#: app/templates/student/equipment_application_history.html:38
+#: app/templates/student/repair_application_list.html:37
+msgid "Thank You Letter"
+msgstr ""
+
+#: app/templates/student/equipment_application_map.html:9
+msgid "Pin your prefered location to get your equipment."
+msgstr ""
+
+#: app/templates/student/repair_application.html:10
+msgid "Date & Time"
+msgstr ""
+
+#: app/templates/student/repair_application.html:25
+msgid "Edit Your Repair Application"
+msgstr ""
+
+#: app/templates/student/repair_application_list.html:13
+msgid "Repair Time"
+msgstr ""
+
+#: app/templates/student/repair_application_list.html:23
+#: app/templates/volunteer/volunteer_record.html:20
+msgid "Edit"
+msgstr ""
+
+#: app/templates/student/thank_you.html:4
+msgid "Thank You Message"
+msgstr ""
+
+#: app/templates/teacher/equipment_application_list.html:16
+#: app/templates/teacher/teacher_approved_student_record.html:15
+#, fuzzy
+msgid "Student Email"
+msgstr ""
+"Note: You have to input one of your school teacher email for the "
+"verification of student status "
+
+#: app/templates/teacher/index.html:52
+msgid "Enter"
+msgstr ""
+
+#: app/volunteer/forms.py:13 app/volunteer/forms.py:27
+msgid "id"
+msgstr ""
+
+#: app/volunteer/forms.py:18
+msgid "Address"
+msgstr ""
+
+#: app/volunteer/forms.py:19
+msgid "Problem"
+msgstr ""
+
+#: app/volunteer/forms.py:20
+msgid "Description Problem"
+msgstr ""
+
+#: app/volunteer/forms.py:22
+msgid "Repair time"
+msgstr ""
+
+#: app/volunteer/forms.py:28
+msgid "Student Name"
+msgstr ""
+
+#: app/volunteer/forms.py:31
+msgid "Item Name"
+msgstr ""
+
+#: app/volunteer/forms.py:32
+msgid "Permission"
+msgstr ""
+
+#: app/volunteer/routes.py:36
+msgid "Volunteer View"
+msgstr ""
+
+#: app/volunteer/routes.py:42
+msgid "Volunteer Repair"
+msgstr ""
+
+#: app/volunteer/routes.py:89
+msgid "Appointment has already made!"
+msgstr ""
+
+#: app/volunteer/routes.py:95
+msgid "Hello, let me help you fix your equipment and my prefer time is "
+msgstr ""
+
+#: app/volunteer/routes.py:107
+msgid "Thank you for helping me!"
+msgstr ""
+
+#: app/volunteer/routes.py:120
+msgid "Equipment Repair Appointment has made!"
+msgstr ""
+
+#: app/volunteer/routes.py:123
+msgid "Create Repair Application"
+msgstr ""
+
+#: app/volunteer/routes.py:139
+msgid "Hello, I want to change the repair time to "
+msgstr ""
+
+#: app/volunteer/routes.py:166
+msgid "Sorry, I need to cancel your support case!"
+msgstr ""
+
+#: app/volunteer/routes.py:188
+msgid "Volunteer Record"
+msgstr ""
+
+#~ msgid "leng_error"
+#~ msgstr "The length cannot exceed 30 characters"
+
+#~ msgid "Name"
+#~ msgstr ""
+
+#~ msgid "email_error_msg"
+#~ msgstr "Invalid Email Type"
+
+#~ msgid "Please confirm your account!"
+#~ msgstr ""
+
+#~ msgid "A new confirmation email has been sent."
+#~ msgstr ""
+
+#~ msgid "admin View"
+#~ msgstr ""
+
+#~ msgid "Admin record"
+#~ msgstr ""
+
+#~ msgid "You have approved your teacher's application . Thanks!"
+#~ msgstr ""
+
+#~ msgid "You have not approve your teacher's application . Thanks!"
+#~ msgstr ""
+
+#~ msgid "Admin confirm form"
+#~ msgstr ""
+
+#~ msgid "iShare Reset Your Password"
+#~ msgstr ""
+
+#~ msgid "Central and Western"
+#~ msgstr ""
+
+#~ msgid "Eastern"
+#~ msgstr ""
+
+#~ msgid "Southern"
+#~ msgstr ""
+
+#~ msgid "Wan Chai"
+#~ msgstr ""
+
+#~ msgid "Sham Shui Po"
+#~ msgstr ""
+
+#~ msgid "Kowloon City"
+#~ msgstr ""
+
+#~ msgid "Kwun Tong"
+#~ msgstr ""
+
+#~ msgid "Wong Tai Sin"
+#~ msgstr ""
+
+#~ msgid "Yau Tsim Mong"
+#~ msgstr ""
+
+#~ msgid "Islands"
+#~ msgstr ""
+
+#~ msgid "Kwai Tsing"
+#~ msgstr ""
+
+#~ msgid "North"
+#~ msgstr ""
+
+#~ msgid "Sai Kung"
+#~ msgstr ""
+
+#~ msgid "Sha Tin"
+#~ msgstr ""
+
+#~ msgid "Tai Po"
+#~ msgstr ""
+
+#~ msgid "Tsuen Wan"
+#~ msgstr ""
+
+#~ msgid "Tuen Mun"
+#~ msgstr ""
+
+#~ msgid "Yuen Long"
+#~ msgstr ""
+
+#~ msgid "Role"
+#~ msgstr ""
+
+#~ msgid "leng_error_2_30"
+#~ msgstr "The length should include 2 to 30 characters"
+
+#~ msgid "Please make sure your full name not least than 5 letter"
+#~ msgstr ""
+
+#~ msgid "Please make sure your full name do not have number in it"
+#~ msgstr ""
+
+#~ msgid "Phone number must be 8 digits."
+#~ msgstr ""
+
+#~ msgid "Please make sure your password is at least 8 character."
+#~ msgstr ""
+#~ "Please make sure your password is "
+#~ "no less than 8 letters, at least"
+#~ " 1 digit, 1 large letter, 1 "
+#~ "fine letter and 1 special letter"
+
+#~ msgid "Teacher Photo"
+#~ msgstr ""
+
+#~ msgid "Only jpg,jpeg and png"
+#~ msgstr ""
+
+#~ msgid "Please use a school email address."
+#~ msgstr ""
+
+#~ msgid "Full Name"
+#~ msgstr ""
+
+#~ msgid "Student card"
+#~ msgstr ""
+
+#~ msgid "File must be uploaded"
+#~ msgstr ""
+
+#~ msgid "Please upload your photo"
+#~ msgstr ""
+
+#~ msgid "Please enter your teacher's email"
+#~ msgstr ""
+
+#~ msgid "Please enter your school name"
+#~ msgstr ""
+
+#~ msgid "Please enter your school address"
+#~ msgstr ""
+
+#~ msgid "Please enter your school URL"
+#~ msgstr ""
+
+#~ msgid "Hello ! Welcome to the donor system !"
+#~ msgstr ""
+
+#~ msgid "Please upload right photo"
+#~ msgstr ""
+
+#~ msgid "Register_Teacher"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please upload right photo, since the "
+#~ "photo have adult contect or no "
+#~ "person in photo"
+#~ msgstr ""
+#~ "Please upload right photo, since the "
+#~ "photo have adult content or no "
+#~ "person in photo"
+
+#~ msgid "Please enter the correct school URL"
+#~ msgstr ""
+
+#~ msgid "Donation System Registration Confirmation"
+#~ msgstr "iShare.volunteer Account Verification"
+
+#~ msgid "teacher"
+#~ msgstr ""
+
+#~ msgid "Please enter your Item Status"
+#~ msgstr ""
+
+#~ msgid "Please upload your Item photo"
+#~ msgstr ""
+
+#~ msgid "Select"
+#~ msgstr ""
+
+#~ msgid "Please enter your transaction date"
+#~ msgstr ""
+
+#~ msgid "Please enter your transaction time"
+#~ msgstr ""
+
+#~ msgid "stu_info"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please upload right photo, since the "
+#~ "photo have adult contect or should "
+#~ "no person in photo"
+#~ msgstr ""
+#~ "Please upload right photo, since the "
+#~ "photo have adult content or should "
+#~ "no person in photo"
+
+#~ msgid "Your information add successful"
+#~ msgstr ""
+
+#~ msgid "Deleted"
+#~ msgstr ""
+
+#~ msgid "Donate View"
+#~ msgstr ""
+
+#~ msgid "Donate record"
+#~ msgstr ""
+
+#~ msgid "Student story"
+#~ msgstr ""
+
+#~ msgid "Cancelled"
+#~ msgstr ""
+
+#~ msgid "map"
+#~ msgstr ""
+
+#~ msgid "You are successful donor to this student"
+#~ msgstr ""
+
+#~ msgid "Message List"
+#~ msgstr ""
+
+#~ msgid "Wrong chat room!"
+#~ msgstr ""
+
+#~ msgid "Say something"
+#~ msgstr ""
+
+#~ msgid "School teacher"
+#~ msgstr ""
+
+#~ msgid "Support Volunteer"
+#~ msgstr ""
+
+#~ msgid "Your post is now live!"
+#~ msgstr ""
+
+#~ msgid "Need"
+#~ msgstr ""
+
+#~ msgid "Please enter your title of your story to donator"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please elaborate your story about your"
+#~ " life to make the donor is "
+#~ "willing to donor items to you"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please Upload a photo about your "
+#~ "life the photo will show to the"
+#~ " donator"
+#~ msgstr ""
+
+#~ msgid "apply_status"
+#~ msgstr ""
+
+#~ msgid "Please Enter Message To Your Donator"
+#~ msgstr ""
+
+#~ msgid "Please Enter Message To Your teacher "
+#~ msgstr ""
+
+#~ msgid "Please Enter Message To Volunteer"
+#~ msgstr ""
+
+#~ msgid "Please upload a photo to confirm you are obtained the item"
+#~ msgstr ""
+
+#~ msgid "Please Enter Message To Your Volunteer"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please upload pictures to confirm that"
+#~ " there are volunteers to help repair"
+#~ msgstr ""
+
+#~ msgid "Please Enter Your Address"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is title.Please briefly describe "
+#~ "what you need to repair let "
+#~ "volunteer know."
+#~ msgstr ""
+#~ "This is title. Please briefly describe"
+#~ " what you need to repair let "
+#~ "volunteer know."
+
+#~ msgid ""
+#~ "This is description. Please provide "
+#~ "detailed information about the item you"
+#~ " need to repair."
+#~ msgstr ""
+
+#~ msgid "Please upload photo of items you need to repair"
+#~ msgstr ""
+
+#~ msgid "Please Choices Your Item"
+#~ msgstr ""
+
+#~ msgid "Please select your quantity"
+#~ msgstr ""
+
+#~ msgid "Add Item"
+#~ msgstr ""
+
+#~ msgid "What date would be convenient for you?)"
+#~ msgstr ""
+
+#~ msgid "What time would be convenient for you? (AM/PM:HH:MM)"
+#~ msgstr ""
+
+#~ msgid "Please tell your reason to donator."
+#~ msgstr ""
+
+#~ msgid "Send"
+#~ msgstr ""
+
+#~ msgid "Adult Content,Please upload right photo"
+#~ msgstr ""
+
+#~ msgid "Gory Content,Please upload right photo"
+#~ msgstr ""
+
+#~ msgid "Racy Content,Please upload right photo"
+#~ msgstr ""
+
+#~ msgid "Windows Apply"
+#~ msgstr ""
+
+#~ msgid "Date confirm"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Each time the application was rejected,"
+#~ " Need after 30 days apart to be"
+#~ " able to re-apply"
+#~ msgstr ""
+
+#~ msgid "Each application needs to be at least 180 days apart"
+#~ msgstr ""
+
+#~ msgid "Change Story"
+#~ msgstr ""
+
+#~ msgid "Press submit your Item application will be created"
+#~ msgstr ""
+
+#~ msgid "Item Application"
+#~ msgstr ""
+
+#~ msgid "You can only select one type of computer"
+#~ msgstr ""
+
+#~ msgid "Each item can only be selected once"
+#~ msgstr ""
+
+#~ msgid "Only two items can be selected for each application"
+#~ msgstr ""
+
+#~ msgid "Added"
+#~ msgstr ""
+
+#~ msgid "Application has been submitted to the teacher"
+#~ msgstr ""
+
+#~ msgid "Your application has been accepted !"
+#~ msgstr ""
+
+#~ msgid "Repair Application"
+#~ msgstr ""
+
+#~ msgid "Draft"
+#~ msgstr ""
+
+#~ msgid "Edit Title And Story"
+#~ msgstr ""
+
+#~ msgid "Edit Problem"
+#~ msgstr ""
+
+#~ msgid "Thank You For Your Message"
+#~ msgstr ""
+
+#~ msgid "Thank You"
+#~ msgstr ""
+
+#~ msgid "student  be confirm View"
+#~ msgstr ""
+
+#~ msgid "Student Address"
+#~ msgstr ""
+
+#~ msgid "Appointment Repair Data"
+#~ msgstr ""
+
+#~ msgid "Appointment Repair Time"
+#~ msgstr ""
+
+#~ msgid "teacher View"
+#~ msgstr ""
+
+#~ msgid "You have approved your student's application . Thanks!"
+#~ msgstr ""
+
+#~ msgid "You have not approve your student's application . Thanks!"
+#~ msgstr ""
+
+#~ msgid "teacher apply"
+#~ msgstr ""
+
+#~ msgid "teacher record"
+#~ msgstr ""
+
+#~ msgid "teacher permission record"
+#~ msgstr ""
+
+#~ msgid "Appointment Complete"
+#~ msgstr ""
+
+#~ msgid "Volunteer Rapair Case"
+#~ msgstr ""
+
+#~ msgid "Please wait for your teacher to confirm your account!"
+#~ msgstr ""
+
+#~ msgid "© 2021 Vocational Training Council. All rights reserved."
+#~ msgstr "Student Project"
+
+#~ msgid "Privacy"
+#~ msgstr ""
+
+#~ msgid "Room ID"
+#~ msgstr ""
+
+#~ msgid "Timestamp"
+#~ msgstr ""
+
+#~ msgid "Insert Message"
+#~ msgstr ""
+
+#~ msgid "Type message.."
+#~ msgstr ""
+
+#~ msgid "Message ID"
+#~ msgstr ""
+
+#~ msgid "User Name"
+#~ msgstr "Username / Email"
+
+#~ msgid "Latest Timestamp"
+#~ msgstr ""
+
+#~ msgid "No record"
+#~ msgstr ""
+
+#~ msgid "Teacher Name"
+#~ msgstr ""
+
+#~ msgid "username"
+#~ msgstr ""
+
+#~ msgid "Teacher Email"
+#~ msgstr ""
+
+#~ msgid "School website"
+#~ msgstr ""
+
+#~ msgid "Teacher Office Phone Number"
+#~ msgstr ""
+
+#~ msgid "Permission State"
+#~ msgstr ""
+
+#~ msgid "Permission Date"
+#~ msgstr ""
+
+#~ msgid "Our admin have not confirmed your account yet."
+#~ msgstr ""
+
+#~ msgid "Before you can access this site you need to contect our admin."
+#~ msgstr "Before you can access this site you need to contact our admin."
+
+#~ msgid "Contect Admin"
+#~ msgstr "Contact Admin"
+
+#~ msgid "Click here"
+#~ msgstr ""
+
+#~ msgid "iShare Platform Registration"
+#~ msgstr ""
+
+#~ msgid "Congratulations! You have registered an account"
+#~ msgstr ""
+
+#~ msgid "Please follow this link to activate your account:"
+#~ msgstr ""
+
+#~ msgid "Video demo tutorial"
+#~ msgstr ""
+
+#~ msgid "Need another confirmation email?"
+#~ msgstr ""
+
+#~ msgid "Item"
+#~ msgstr ""
+
+#~ msgid "Item Status"
+#~ msgstr ""
+
+#~ msgid "Donate Now"
+#~ msgstr ""
+
+#~ msgid "Donator Data"
+#~ msgstr ""
+
+#~ msgid "Donator Date"
+#~ msgstr ""
+
+#~ msgid "Choose your donor location"
+#~ msgstr ""
+
+#~ msgid "Donate Status"
+#~ msgstr ""
+
+#~ msgid "Back and Cancel"
+#~ msgstr ""
+
+#~ msgid "Choose your donor time"
+#~ msgstr ""
+
+#~ msgid "View the demo tutorial"
+#~ msgstr ""
+
+#~ msgid "建議步驟一"
+#~ msgstr "Recommended Step 1"
+
+#~ msgid "捐贈者可以按以下「立即捐贈」按鈕捐贈物件"
+#~ msgstr "Donors can donor items by pressing the \"Donate Now\" button below "
+
+#~ msgid "步驟二"
+#~ msgstr "Step 2"
+
+#~ msgid "捐贈者在學生故事中選擇心儀的學生來捐贈物件"
+#~ msgstr ""
+#~ "Donors choose their favorite students in"
+#~ " the student story to donor items"
+#~ " \n"
+
+#~ msgid "步驟三（選項）"
+#~ msgstr "Step 3 (Optional)"
+
+#~ msgid "捐贈者可以查看已捐贈的狀態或根據步驟一重新捐贈物件"
+#~ msgstr ""
+#~ "Donors can check the status of "
+#~ "donations or donor items again according"
+#~ " to Step 1. "
+
+#~ msgid "Congratulations you already have made an appointment with the student"
+#~ msgstr ""
+
+#~ msgid "Dear"
+#~ msgstr ""
+
+#~ msgid "Your donor application has been sent to the student"
+#~ msgstr ""
+
+#~ msgid "Here is your donated item:"
+#~ msgstr ""
+
+#~ msgid "The transaction location was chosen by you:"
+#~ msgstr ""
+
+#~ msgid "The date and time picked by yourself:"
+#~ msgstr ""
+
+#~ msgid "Cheers!"
+#~ msgstr ""
+
+#~ msgid "Congratulations you already have donors donating the items you need"
+#~ msgstr ""
+
+#~ msgid "Your application has been confirmed"
+#~ msgstr ""
+
+#~ msgid "The donor will donor the following items to you:"
+#~ msgstr ""
+
+#~ msgid "The transaction location provides by the donator shown as below:"
+#~ msgstr ""
+
+#~ msgid "The available date and time for the donor:"
+#~ msgstr ""
+
+#~ msgid "Here is the donor's phone number"
+#~ msgstr ""
+
+#~ msgid "Quantity"
+#~ msgstr ""
+
+#~ msgid "Donate your item to this student"
+#~ msgstr ""
+
+#~ msgid "Donate Item Message"
+#~ msgstr "iShare Donation Platform"
+
+#~ msgid "The following is a message from user"
+#~ msgstr ""
+
+#~ msgid "Back to Page"
+#~ msgstr ""
+
+#~ msgid "Data of Order"
+#~ msgstr ""
+
+#~ msgid "Application Status"
+#~ msgstr ""
+
+#~ msgid "Resend"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Date\n"
+#~ "                            Confirm"
+#~ msgstr ""
+
+#~ msgid "Continue to use your story to apply"
+#~ msgstr ""
+
+#~ msgid "Apply"
+#~ msgstr ""
+
+#~ msgid "Enter the new story to apply"
+#~ msgstr ""
+
+#~ msgid "New story"
+#~ msgstr ""
+
+#~ msgid "If you confirmed the date please click here"
+#~ msgstr ""
+
+#~ msgid "Confirmed the date"
+#~ msgstr ""
+
+#~ msgid "If you need to cancel this transaction please click here"
+#~ msgstr ""
+
+#~ msgid "Cancel transaction"
+#~ msgstr ""
+
+#~ msgid "Application Check"
+#~ msgstr ""
+
+#~ msgid "Item Choice"
+#~ msgstr ""
+
+#~ msgid "Location Choice"
+#~ msgstr ""
+
+#~ msgid "Edit title and story"
+#~ msgstr ""
+
+#~ msgid "Edit item"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Edit map and Send to\n"
+#~ "                                        teacher"
+#~ msgstr ""
+
+#~ msgid "Your Teacher have not Donation system website account yet."
+#~ msgstr ""
+
+#~ msgid "Before you can access this site you need to contect your Teacher."
+#~ msgstr "Before you can access this site you need to contact your Teacher."
+
+#~ msgid "Contect Your Teacher"
+#~ msgstr "Contact Your Teacher"
+
+#~ msgid "If you need to cancel this repair service please click here"
+#~ msgstr ""
+
+#~ msgid "Edit Title and Story"
+#~ msgstr ""
+
+#~ msgid "Edit Item"
+#~ msgstr ""
+
+#~ msgid "Edit Map"
+#~ msgstr ""
+
+#~ msgid "Please enter prefix domain (if exist)"
+#~ msgstr "Please enter subdomain (if any)"
+
+#~ msgid "Submit form"
+#~ msgstr ""
+
+#~ msgid "學生可以按以下申請欄中的「立即申請」按鈕申請所需的物品"
+#~ msgstr ""
+#~ "Students can apply for the required "
+#~ "items by pressing the \"Apply Now\" "
+#~ "button in the application column below"
+#~ " "
+
+#~ msgid "學生可以在申請記錄查看你的記錄，並等待捐贈者捐贈所需的物品"
+#~ msgstr ""
+#~ "Students can check your record in "
+#~ "the application record and wait for "
+#~ "the donor to donor the needed "
+#~ "items "
+
+#~ msgid "步驟三"
+#~ msgstr "Step 3"
+
+#~ msgid "若學生集齊所需的物品，可在申請記錄中按下「已擁有」按鈕及填寫感謝信息給捐贈者"
+#~ msgstr ""
+#~ "If the student gathers the required "
+#~ "items, he can press the \"Owned\" "
+#~ "button in the application record and "
+#~ "fill in the thank you message to"
+#~ " the donor "
+
+#~ msgid "步驟四（選項）"
+#~ msgstr "Step 4 (Optional)"
+
+#~ msgid "學生如需要維修物品，可按維修中的「立即修理」按鈕申請維修物品"
+#~ msgstr ""
+#~ "If students need repair items, they "
+#~ "can apply for repair items by "
+#~ "pressing the \"repair now\" button "
+#~ "during repair "
+
+#~ msgid "步驟五（選項）"
+#~ msgstr "Step 5 (Optional)"
+
+#~ msgid "學生可以查看維修物品的狀態"
+#~ msgstr "Students can check the status of repaired items "
+
+#~ msgid "If you need Window System and Window Office, please tick here"
+#~ msgstr ""
+
+#~ msgid "The student has confirmed the date"
+#~ msgstr ""
+
+#~ msgid "This is the phone number to the contact student."
+#~ msgstr ""
+
+#~ msgid "Thanks for your repair"
+#~ msgstr ""
+
+#~ msgid "Thank you for your repair"
+#~ msgstr ""
+
+#~ msgid "The following is a thank you message from students"
+#~ msgstr ""
+
+#~ msgid "Thanks for your donation"
+#~ msgstr ""
+
+#~ msgid "Thank you for donating your"
+#~ msgstr ""
+
+#~ msgid "Support"
+#~ msgstr ""
+
+#~ msgid "School Address, Please click the location on the map."
+#~ msgstr ""
+
+#~ msgid "Apply Data"
+#~ msgstr ""
+
+#~ msgid "Volunteer Address, please click on the location on the map"
+#~ msgstr ""
+
+#~ msgid "Repair Address"
+#~ msgstr ""
+
+#~ msgid "Appointment Data"
+#~ msgstr ""
+
+#~ msgid "Appointment Time"
+#~ msgstr ""
+
+#~ msgid "Submit Permission"
+#~ msgstr ""
+
+#~ msgid "維修員可以在維修案例按下「新增」按鈕新增維修案例"
+#~ msgstr ""
+#~ "Volunteers can press the \"Add\" button"
+#~ " to add a maintenance case in "
+#~ "the maintenance case "
+
+#~ msgid "維修員可以查看維修記錄"
+#~ msgstr "Volunteers can view maintenance records "
+
+#~ msgid "School Adress"
+#~ msgstr ""
+
+#~ msgid "School URL"
+#~ msgstr ""
+
+#~ msgid "Your teacher have not confirmed your account yet."
+#~ msgstr ""
+
+#~ msgid "Before you can access this site you need to contect Your teacher."
+#~ msgstr "Before you can access this site you need to content Your teacher."
+
+#~ msgid "Send to donator"
+#~ msgstr ""
+
+#~ msgid "Del"
+#~ msgstr ""
+
+#~ msgid "捐贈者選擇心儀的學生來捐贈物件"
+#~ msgstr "Donors choose their favorite students to donor items "
+
+#~ msgid "Demo SendGrid Test Email"
+#~ msgstr ""
+
+#~ msgid "Please enter your transaction date "
+#~ msgstr ""
+
+#~ msgid "Successful"
+#~ msgstr ""
+
+#~ msgid "Please enter your title to donator"
+#~ msgstr ""
+
+#~ msgid "Please enter your story to donator"
+#~ msgstr ""
+
+#~ msgid "Please upload photo show to donator"
+#~ msgstr ""
+
+#~ msgid "Hi, %(username)s!"
+#~ msgstr ""
+
+#~ msgid "Newer posts"
+#~ msgstr ""
+
+#~ msgid "Older posts"
+#~ msgstr ""
+
+#~ msgid "Date of Order"
+#~ msgstr ""
+
+#~ msgid "User %(username)s not found."
+#~ msgstr ""
+
+#~ msgid "You cannot follow yourself!"
+#~ msgstr ""
+
+#~ msgid "You are following %(username)s!"
+#~ msgstr ""
+
+#~ msgid "You cannot unfollow yourself!"
+#~ msgstr ""
+
+#~ msgid "You are not following %(username)s."
+#~ msgstr ""
+
+#~ msgid "Support teacher"
+#~ msgstr ""
+
+#~ msgid "First Story"
+#~ msgstr ""
+
+#~ msgid "iShare Donation Platform"
+#~ msgstr ""
+
+#~ msgid "Congratulations you already have make a appointment with the student"
+#~ msgstr ""
+
+#~ msgid "Here is your donor item:"
+#~ msgstr ""
+
+#~ msgid "The transaction location chosen by you:"
+#~ msgstr ""
+
+#~ msgid "The transaction location provide by the donator shown as below:"
+#~ msgstr ""
+
+#~ msgid "This is the phone number for the contact student."
+#~ msgstr ""
+
+#~ msgid "[pc_donation] Reset Your Password"
+#~ msgstr ""
+
+#~ msgid "teacher Photo"
+#~ msgstr ""
+
+#~ msgid "Support Teacher"
+#~ msgstr ""
+
+#~ msgid "staff card info"
+#~ msgstr ""
+#~ "If the teacher is unable to "
+#~ "provide the staff card, the platform "
+#~ "may call the company phone number "
+#~ "to confirm the identity"
+
+#~ msgid "Volunteer Address"
+#~ msgstr ""
+
+#~ msgid "你好, %(username)s"
+#~ msgstr ""
+
+#~ msgid "Not Found"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Your student {STUDENTNAME} hopes to "
+#~ "verify the student status for getting"
+#~ " help from iShare.volunteer!"
+#~ msgstr ""
 

@@ -3,17 +3,15 @@ FROM python:3.9.6-alpine
 WORKDIR /home/pc_donation
 
 # set arugements
-ARG VAULT_URL="null"
-ARG AZURE_CLIENT_ID="null"
-ARG AZURE_TENANT_ID="null"
-ARG AZURE_CLIENT_SECRET="null"
+ARG VAULT_URL
+ARG AZURE_CLIENT_ID
+ARG AZURE_TENANT_ID
+ARG AZURE_CLIENT_SECRET
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 ENV FLASK_ENV=development
-ENV DATABASE_HOST=mysql
-ENV MAIL_SERVER=smtp4dev
 ENV NGINX_PORT=8080
 ENV VAULT_URL=${VAULT_URL}
 ENV AZURE_CLIENT_ID=${AZURE_CLIENT_ID}
@@ -31,14 +29,13 @@ COPY app app
 COPY migrations migrations
 COPY pc_donation.py config.py run.py boot.sh nginx.sh web.sh ./
 RUN chmod +x boot.sh nginx.sh web.sh
-
 COPY nginx.conf /etc/nginx/
-COPY dev/project.conf /etc/nginx/conf.d/
+COPY project.conf /etc/nginx/conf.d/
 RUN mkdir -p /run/nginx
 RUN mkdir -p /home/pc_donation/logs
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ENV FLASK_APP run.py
-ENV FLASK_DEBUG=0
+ENV FLASK_DEBUG=1
 
 EXPOSE 80 443 5000
 ENTRYPOINT ["./web.sh"]

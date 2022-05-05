@@ -127,8 +127,6 @@ class User(ModelBase, UserMixin):
     username = Column(String(LengthConstant.USERNAME_LENGTH), index=True, unique=True, nullable=False)
     first_name = Column(String(LengthConstant.NAME_LENGTH), index=True, nullable=False)
     last_name = Column(String(LengthConstant.NAME_LENGTH), index=True, nullable=False)
-    first_name_zh_hant = Column(String(LengthConstant.NAME_LENGTH, collation='utf8_bin'), index=True, nullable=False)
-    last_name_zh_hant = Column(String(LengthConstant.NAME_LENGTH, collation='utf8_bin'), index=True, nullable=False)
 
     _email = Column(String(LengthConstant.EMAIL_LENGTH), index=True, unique=True, nullable=False)
 

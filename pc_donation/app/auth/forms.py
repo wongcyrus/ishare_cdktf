@@ -31,11 +31,6 @@ class RegistrationForm(CommonForm):
                              validators=CommonForm.NAME_VALIDATORS)
     last_name = StringField(_l("Last Name (ENG)"),
                             validators=CommonForm.NAME_VALIDATORS)
-    first_name_zh_hant = StringField(_l("First Name (Chinese)"),
-                                     validators=CommonForm.CHI_NAME_VALIDATORS)
-    last_name_zh_hant = StringField(_l("Last Name (Chinese)"),
-                                    validators=CommonForm.CHI_NAME_VALIDATORS)
-
     region_id = SelectField(_l("Region"), validators=CommonForm.SELECT_VALIDATORS, coerce=int)
 
     password = PasswordField(_l("Password"),

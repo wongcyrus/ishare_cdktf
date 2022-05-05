@@ -137,11 +137,20 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">{{ _("Language") }}</a>
-                            <a class="nav-link" href="{{ url_for(RouteConstants.MainView.LANGUAGE, language="zh") }}">
-                                {{ _("Chinese") }}
-                            </a>
                             <a class="nav-link" href="{{ url_for(RouteConstants.MainView.LANGUAGE, language="en") }}">
                                 {{ _("English") }}
+                            </a>
+                            <a class="nav-link" href="{{ url_for(RouteConstants.MainView.LANGUAGE, language="zh_Hans_CN") }}">
+                                {{ _("Chinese(Simplified)") }}
+                            </a>
+                            <a class="nav-link" href="{{ url_for(RouteConstants.MainView.LANGUAGE, language="zh_Hant") }}">
+                                {{ _("Chinese(Traditional)") }}
+                            </a>
+                            <a class="nav-link" href="{{ url_for(RouteConstants.MainView.LANGUAGE, language="es") }}">
+                                {{ _("Spanish") }}
+                            </a>
+                            <a class="nav-link" href="{{ url_for(RouteConstants.MainView.LANGUAGE, language="ja") }}">
+                                {{ _("Japanese") }}
                             </a>
                         </li>
                         <li class="nav-item">

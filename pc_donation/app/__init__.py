@@ -158,8 +158,7 @@ def get_locale():
     language = request.accept_languages.best_match(
         current_app.config["LANGUAGES"])
 
-    if language == "zh":
-        language = "zh_Hant"
+
     if session.get("language") is not None:
         language = session["language"]
 
